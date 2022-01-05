@@ -1,19 +1,25 @@
 class UsersController < ApplicationController
-  def create
-    auth_hash = request.env['omniauth.auth']
-    google_id = auth_hash['uid']
-    email = auth_hash['info']['email']
-    token = auth_hash['credentials']['token']
+  def edit
+  end
 
-    user = User.find_or_create_by(email: email)
-    user.update(google_id: google_id)
-
-    session[:google_token] = token
-    session[:user_id] = user.id
+  def update
+    user = User.find(session[:user_id])
+    user.update(
+      street_address_1: params[:street_address_1],
+      street_address_2: params[:street_address_2],
+      city: params[:city],
+      state: params[:state],
+      zip_code: params[:zip_code]
+    )
     redirect_to '/dashboard'
   end
 
   def show
-    @user = User.find(session[:user_id])
+    if session[:user_id]
+      @user = User.find(session[:user_id])
+    else
+      flash[:error] = 'You must be logged in'
+      redirect_to root_path
+    end
   end
 end
