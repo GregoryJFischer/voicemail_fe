@@ -28,5 +28,4 @@ ActiveRecord::Schema.define(version: 2022_01_05_214530) do
     t.string "state"
     t.string "zip_code"
   end
-
 end
