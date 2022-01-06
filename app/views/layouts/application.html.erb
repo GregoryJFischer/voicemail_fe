@@ -10,6 +10,16 @@
   </head>
 
   <body>
+   <% flash.each do |type, msg| %>
+      <div>
+        <%= msg %>
+      </div>
+    <% end %>
+
+    <% if session[:user_id] %>
+      <%= link_to 'logout', '/logout', method: :delete %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
