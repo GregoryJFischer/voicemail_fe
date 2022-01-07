@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get '/auth/google_oauth2/callback', to: 'sessions#create'
   get '/dashboard', to: 'users#show'
-  get '/register', to: 'users#edit'
+  get '/edit', to: 'users#edit'
   patch '/update', to: 'users#update'
   delete '/logout', to: 'sessions#destroy'
 end
