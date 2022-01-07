@@ -4,7 +4,6 @@ class UsersController < ApplicationController
 
   def update
     # BackendService.update_address(address_params)
-    #
     # if address_params.present?
     #   redirect_to '/dashboard'
     # else
@@ -22,6 +21,7 @@ class UsersController < ApplicationController
   def show
     if session[:user_id]
       @user = User.find(session[:user_id])
+      # @representatives = BackendService.representatives(address_params)
     else
       flash[:error] = 'You must be logged in'
       redirect_to root_path

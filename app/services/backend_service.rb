@@ -1,5 +1,9 @@
 class BackendService
   class << self
+    def fetch(url)
+      parse_response(conn.get(url))
+    end
+
     def post(url, json)
       conn.post do |req|
         req.url "/api/v1/#{url}"
@@ -22,6 +26,10 @@ class BackendService
 
     def conn
       Faraday.new(url: "http://localhost:5000")
+    end
+
+    def representatives(address)
+      fetch("/api/v1/representatives?#{address}")
     end
   end
 end

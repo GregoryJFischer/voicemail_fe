@@ -1,3 +1,12 @@
 Welcome, <%= @user.first_name %>
 
-<%= button_to 'Add or update your current address', "/edit", method: :get %>
+<%= button_to 'Add or update your current address', "/edit", method: :get %><br>
+
+Your Representatives <br>
+<% if @user.street_address_1 != nil %>
+  <% @representatives.each do |rep| %>
+    <%= rep.name %> <%= button_to "Send Letter", "/letters/new?id=#{rep.id}", method: :get %><br>
+  <% end %>
+<% else %>
+  Please add or update your return address
+<% end %>
