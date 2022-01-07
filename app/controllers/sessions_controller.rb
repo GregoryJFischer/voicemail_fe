@@ -1,8 +1,6 @@
 class SessionsController < ApplicationController
   def create
-    # user = BackendService.find_or_create_user(email: user_params[:email])
-    user = User.find_or_create_by(email: user_params[:email])
-    user.update(google_id: user_params[:google_id], first_name: user_params[:first_name], last_name: user_params[:last_name])
+    user = BackendService.find_or_create_user(user_params)
 
     if user.present?
       redirect_to '/dashboard'
@@ -13,12 +11,6 @@ class SessionsController < ApplicationController
 
     session[:token] = user_params[:token]
     session[:user_id] = user.id
-
-    # unless user.street_address_1
-    #   redirect_to '/edit'
-    # else
-    #   redirect_to '/dashboard'
-    # end
   end
 
   def destroy
