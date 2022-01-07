@@ -3,15 +3,8 @@ class UsersController < ApplicationController
   end
 
   def update
-    # BackendService.update_address(address_params)
-    # if address_params.present?
-    #   redirect_to '/dashboard'
-    # else
-    #   flash[:error] = 'Please fill out all fields'
-    # end
-    user = User.find(session[:user_id])
-
-    if user.update(address_params)
+    BackendService.update_address(address_params, session[:user_id])
+    if address_params.present?
       redirect_to '/dashboard'
     else
       flash[:error] = 'Please fill out all fields'
@@ -20,8 +13,7 @@ class UsersController < ApplicationController
 
   def show
     if session[:user_id]
-      @user = User.find(session[:user_id])
-      # @representatives = BackendService.representatives(address_params)
+      @dashboard_facade = UserDashboardFacade.new(session[:user_id])
     else
       flash[:error] = 'You must be logged in'
       redirect_to root_path
