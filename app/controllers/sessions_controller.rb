@@ -1,7 +1,14 @@
 class SessionsController < ApplicationController
   def create
-    user = User.find_or_create_by(email: user_params[:email])
-    user.update(google_id: user_params[:google_id], first_name: user_params[:first_name], last_name: user_params[:last_name])
+    # user = User.find_or_create_by(email: user_params[:email])
+    # user.update(google_id: user_params[:google_id], first_name: user_params[:first_name], last_name: user_params[:last_name])
+    user = BackendService.find_or_create_user(email: user_params[:email])
+
+    if user.present?
+      redirect_to '/dashboard'
+    else
+      flash[:error] = 'Authentication failed. Please try again.'
+    end
 
     session[:google_token] = user_params[:token]
     session[:user_id] = user.id

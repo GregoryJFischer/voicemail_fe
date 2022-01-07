@@ -9,7 +9,7 @@ describe 'user edit' do
 
     expect(user.street_address_1).to be nil
 
-    visit '/register'
+    visit '/edit'
 
     fill_in :street_address_1, with: '123 Main Street'
     fill_in :city, with: 'city a'
