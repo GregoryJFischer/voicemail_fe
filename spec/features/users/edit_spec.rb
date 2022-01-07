@@ -23,5 +23,8 @@ describe 'user edit' do
     expect(current_path).to eq '/dashboard'
 
     expect(user.street_address_1).to eq '123 Main Street'
+    #
+    # expect(page.status_code).to eq 200
+    # expect(page).to have_content("Joseph R. Biden")
   end
 end
