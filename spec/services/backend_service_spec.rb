@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe BackendService do
 
-  it 'get an user' do
+  it 'get an user', :vcr do
     user = User.create(email: 'bob@example.com', first_name: 'Bob', last_name: 'bob', google_id: '12345')
     session = {user_id: user.id, token: 'abcd', google_id: '12345'}
 
@@ -17,6 +17,7 @@ describe BackendService do
          }).to_return(status: 200, body: "", headers: {})
 
     found_user = BackendService.get_user(11)
+    
     expect(result).to be_empty
   end
 
