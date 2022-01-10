@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     end
 
     session[:token] = user_params[:token]
-    session[:user_id] = user.id
+    session[:user_id] = user[:data][:id].to_i
   end
 
   def destroy
@@ -28,10 +28,8 @@ class SessionsController < ApplicationController
     {
       google_id: auth_hash['uid'],
       email: auth_hash['info']['email'],
-      name: auth_hash['info']['name'],
-      # token: auth_hash['credentials']['token'],
-      # first_name: auth_hash['info']['first_name'],
-      # last_name: auth_hash['info']['last_name']
+      token: auth_hash['credentials']['token'],
+      name: auth_hash['info']['name']
      }
   end
 end

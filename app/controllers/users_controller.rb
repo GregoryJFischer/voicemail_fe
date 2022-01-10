@@ -24,11 +24,11 @@ class UsersController < ApplicationController
 
   def address_params
     {
-      street_address_1: params[:street_address_1],
-      street_address_2: params[:street_address_2],
-      city: params[:city],
-      state: params[:state],
-      zip_code: params[:zip_code]
+      address_line1: params[:address_line1],
+      address_line2: params[:address_line2],
+      address_city: params[:address_city],
+      address_state: params[:address_state],
+      address_zip: params[:address_zip]
     }
   end
 end
