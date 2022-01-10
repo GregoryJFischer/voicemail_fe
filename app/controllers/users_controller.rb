@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    BackendService.update_address(address_params, session[:user_id])
+    BackendService.update_address(session[:user_id], address_params)
     if address_params.present?
       redirect_to '/dashboard'
     else
