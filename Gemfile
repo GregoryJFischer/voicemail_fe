@@ -55,8 +55,10 @@ group :development do
 end
 
 group :test do
-  # gem 'webmock'
-  # gem 'vcr'
+  gem 'webmock'
+  gem 'vcr'
+  gem 'factory_bot_rails'
+  gem 'faker'
   gem 'capybara'
   gem 'launchy'
   gem 'rspec-rails'

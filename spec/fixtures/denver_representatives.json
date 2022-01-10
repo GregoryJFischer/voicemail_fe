@@ -1,0 +1,965 @@
+{
+  "officials": [
+    {
+      "name": "Joseph R. Biden",
+      "address": [
+        {
+          "line1": "1600 Pennsylvania Avenue Northwest",
+          "city": "Washington",
+          "state": "DC",
+          "zip": "20500"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(202) 456-1111"
+      ],
+      "urls": [
+        "https://www.whitehouse.gov/",
+        "https://en.wikipedia.org/wiki/Joe_Biden"
+      ],
+      "channels": [
+        {
+          "type": "Twitter",
+          "id": "potus"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "The White House 1600 Pennsylvania Avenue NW Washington, DC 20500",
+          "featureId": {
+            "cellId": "9923602325795527449",
+            "fprint": "11513381022022344111"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 126.14545494347092,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Kamala D. Harris",
+      "address": [
+        {
+          "line1": "1600 Pennsylvania Avenue Northwest",
+          "city": "Washington",
+          "state": "DC",
+          "zip": "20500"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(202) 456-1111"
+      ],
+      "urls": [
+        "https://www.whitehouse.gov/",
+        "https://en.wikipedia.org/wiki/Kamala_Harris"
+      ],
+      "channels": [
+        {
+          "type": "Twitter",
+          "id": "VP"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "The White House 1600 Pennsylvania Avenue NW Washington, DC 20500",
+          "featureId": {
+            "cellId": "9923602325795527449",
+            "fprint": "11513381022022344111"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 126.14545494347092,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "John W. Hickenlooper",
+      "address": [
+        {
+          "line1": "B85",
+          "city": "Washington",
+          "state": "DC",
+          "zip": "20510"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(202) 224-5941"
+      ],
+      "urls": [
+        "https://www.hickenlooper.senate.gov/",
+        "https://en.wikipedia.org/wiki/John_Hickenlooper"
+      ],
+      "photoUrl": "http://www.colorado.gov/cms/governor/governor-main/images/GovernorHickenlooperInBlueShirt.jpg",
+      "channels": [
+        {
+          "type": "Twitter",
+          "id": "SenatorHick"
+        },
+        {
+          "type": "Facebook",
+          "id": "JohnHickenlooper"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "B85 Russell Senate Office Building Washington DC 20510",
+          "featureId": {
+            "cellId": "9923602777983093035",
+            "fprint": "16754435804240149550"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 154.99767133790925,
+          "addressUnderstood": false
+        }
+      ]
+    },
+    {
+      "name": "Michael F. Bennet",
+      "address": [
+        {
+          "line1": "261 Russell Senate Office Building",
+          "city": "Washington",
+          "state": "DC",
+          "zip": "20510"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(202) 224-5852"
+      ],
+      "urls": [
+        "https://www.bennet.senate.gov/",
+        "https://en.wikipedia.org/wiki/Michael_Bennet"
+      ],
+      "photoUrl": "http://bioguide.congress.gov/bioguide/photo/B/B001267.jpg",
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "senbennetco"
+        },
+        {
+          "type": "Twitter",
+          "id": "SenatorBennet"
+        },
+        {
+          "type": "YouTube",
+          "id": "SenatorBennet"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "261 Russell Senate Office Building, Washington DC 20510",
+          "featureId": {
+            "cellId": "9923602777983093035",
+            "fprint": "16754435804240149550"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 154.99767133790925,
+          "addressUnderstood": false
+        }
+      ]
+    },
+    {
+      "name": "Diana DeGette",
+      "address": [
+        {
+          "line1": "2111 Rayburn House Office Building",
+          "city": "Washington",
+          "state": "DC",
+          "zip": "20515"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(202) 225-4431"
+      ],
+      "urls": [
+        "https://degette.house.gov/",
+        "https://en.wikipedia.org/wiki/Diana_DeGette"
+      ],
+      "photoUrl": "http://degette.house.gov/sites/degette.house.gov/files/styles/congress_image_medium/public/wysiwyg_uploaded/DLD%20High%20Res%205x7_1.JPG?itok=CuIkDIeB",
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "DianaDeGette"
+        },
+        {
+          "type": "Twitter",
+          "id": "RepDianaDeGette"
+        },
+        {
+          "type": "YouTube",
+          "id": "RepDianaDeGette"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "2111 Rayburn House Office Building, Washington, DC 20515-0601",
+          "featureId": {
+            "cellId": "9923602067032561107",
+            "fprint": "3004281461341646448"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 162.19669259570352,
+          "addressUnderstood": false
+        }
+      ]
+    },
+    {
+      "name": "Jared Polis",
+      "address": [
+        {
+          "line1": "200 East Colfax Avenue",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80203"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(303) 866-2471"
+      ],
+      "urls": [
+        "https://www.colorado.gov/governor/",
+        "https://en.wikipedia.org/wiki/Jared_Polis"
+      ],
+      "emails": [
+        "governorpolis@state.co.us"
+      ],
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "jaredpolis"
+        },
+        {
+          "type": "Twitter",
+          "id": "jaredpolis"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "200 E Colfax Ave, Rm 136, Denver, CO 80203",
+          "featureId": {
+            "cellId": "9758307716424466085",
+            "fprint": "1232313823802105871"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 0,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Dianne Primavera",
+      "address": [
+        {
+          "line1": "200 East Colfax Avenue",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80203"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(303) 866-4075"
+      ],
+      "urls": [
+        "https://ltgovernor.colorado.gov/",
+        "https://en.wikipedia.org/wiki/Dianne_Primavera"
+      ],
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "LtGovofCO"
+        },
+        {
+          "type": "Twitter",
+          "id": "LtGovofCO"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "200 E Colfax Ave, Rm 130, Denver, CO 80203",
+          "featureId": {
+            "cellId": "9758307716424466085",
+            "fprint": "18179886712718882446"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 0,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Jena Griswold",
+      "address": [
+        {
+          "line1": "1700 Broadway",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80290"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(303) 894-2200"
+      ],
+      "urls": [
+        "https://www.sos.state.co.us/",
+        "https://en.wikipedia.org/wiki/Jena_Griswold"
+      ],
+      "channels": [
+        {
+          "type": "Twitter",
+          "id": "JenaGriswold"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "1700 Broadway, Suite 200, Denver, CO 80290",
+          "featureId": {
+            "cellId": "9758307353337350127",
+            "fprint": "8422501143254341385"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 0,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Dave Young",
+      "address": [
+        {
+          "line1": "200 East Colfax Avenue",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80203"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(303) 866-2441"
+      ],
+      "urls": [
+        "https://treasury.colorado.gov/",
+        "https://en.wikipedia.org/wiki/Dave_Young_%28Colorado_politician%29"
+      ],
+      "emails": [
+        "treasurer.young@state.co.us"
+      ],
+      "channels": [
+        {
+          "type": "Twitter",
+          "id": "colotreasurer"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "200 East Colfax Avenue, Suite 140, Denver, CO 80203-1722",
+          "featureId": {
+            "cellId": "9758307717036892053",
+            "fprint": "17108735955107736194"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 0,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Phil Weiser",
+      "address": [
+        {
+          "line1": "1300 Broadway 10th Floor",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80203"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(720) 508-6000"
+      ],
+      "urls": [
+        "https://coag.gov/",
+        "https://en.wikipedia.org/wiki/Phil_Weiser"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "1300 Broadway, 10th Floor, Denver, CO 80203",
+          "featureId": {
+            "cellId": "9758314314166316889",
+            "fprint": "13228762723769038563"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 0,
+          "addressUnderstood": false
+        }
+      ]
+    },
+    {
+      "name": "James Rashad Coleman",
+      "address": [
+        {
+          "line1": "200 East Colfax Avenue",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80203"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(303) 866-4864"
+      ],
+      "urls": [
+        "https://leg.colorado.gov/legislators/james-coleman"
+      ],
+      "emails": [
+        "james.coleman.senate@state.co.us"
+      ],
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "colemanforcolorado"
+        },
+        {
+          "type": "Twitter",
+          "id": "Coleman4CO"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "200 E COLFAX AVE STE 346, DENVER CO 80203",
+          "featureId": {
+            "cellId": "9758307717055499935",
+            "fprint": "17311159872584025120"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 0,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Leslie Herod",
+      "address": [
+        {
+          "line1": "200 East Colfax Avenue",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80203"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(303) 866-2959"
+      ],
+      "urls": [
+        "https://leg.colorado.gov/legislators/leslie-herod",
+        "https://en.wikipedia.org/wiki/Leslie_Herod"
+      ],
+      "photoUrl": "http://leg.colorado.gov/sites/default/files/styles/width_300/public/2017A_rsz_herod-co-17.jpg?itok=EHIaodcP",
+      "emails": [
+        "leslie.herod.house@state.co.us"
+      ],
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "LeslieforColorado"
+        },
+        {
+          "type": "Twitter",
+          "id": "leslieherod"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "200 E COLFAX AVE STE 307, DENVER CO 80203",
+          "featureId": {
+            "cellId": "9758307717055499935",
+            "fprint": "7430916508509853459"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 0,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Brian D. Boatright",
+      "address": [
+        {
+          "line1": "2 East 14th Avenue",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80203"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(720) 625-5410"
+      ],
+      "urls": [
+        "https://www.courts.state.co.us/Courts/Supreme_Court/",
+        "https://en.wikipedia.org/wiki/Brian_Boatright"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "2 E. 14th Avenue, Denver, CO 80203",
+          "featureId": {
+            "cellId": "9758314314168259297",
+            "fprint": "16661316701410091202"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 49.847449272724326,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Carlos A. Samour, Jr.",
+      "address": [
+        {
+          "line1": "2 East 14th Avenue",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80203"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(720) 625-5460"
+      ],
+      "urls": [
+        "https://www.courts.state.co.us/Courts/Supreme_Court/",
+        "https://en.wikipedia.org/wiki/Carlos_Samour"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "2 E. 14th Avenue, Denver, CO 80203",
+          "featureId": {
+            "cellId": "9758314314168259297",
+            "fprint": "16661316701410091202"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 49.847449272724326,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Maria E. Berkenkotter",
+      "address": [
+        {
+          "line1": "2 East 14th Avenue",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80203"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(720) 625-5420"
+      ],
+      "urls": [
+        "https://www.courts.state.co.us/Courts/Supreme_Court/",
+        "https://en.wikipedia.org/wiki/Maria_Berkenkotter"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "2 E. 14th Avenue, Denver, CO 80203",
+          "featureId": {
+            "cellId": "9758314314168259297",
+            "fprint": "16661316701410091202"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 49.847449272724326,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Melissa Hart",
+      "address": [
+        {
+          "line1": "2 East 14th Avenue",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80203"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(720) 625-5430"
+      ],
+      "urls": [
+        "https://www.courts.state.co.us/Courts/Supreme_Court/",
+        "https://en.wikipedia.org/wiki/Melissa_Hart_%28judge%29"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "2 E. 14th Avenue, Denver, CO 80203",
+          "featureId": {
+            "cellId": "9758314314168259297",
+            "fprint": "16661316701410091202"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 49.847449272724326,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Monica M. Márquez",
+      "address": [
+        {
+          "line1": "2 East 14th Avenue",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80203"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(720) 625-5450"
+      ],
+      "urls": [
+        "https://www.courts.state.co.us/Courts/Supreme_Court/",
+        "https://en.wikipedia.org/wiki/Monica_M%C3%A1rquez"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "2 E. 14th Avenue, Denver, CO 80203",
+          "featureId": {
+            "cellId": "9758314314168259297",
+            "fprint": "16661316701410091202"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 49.847449272724326,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Richard L. Gabriel",
+      "address": [
+        {
+          "line1": "2 East 14th Avenue",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80203"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(720) 625-5440"
+      ],
+      "urls": [
+        "https://www.courts.state.co.us/Courts/Supreme_Court/",
+        "https://en.wikipedia.org/wiki/Richard_L._Gabriel"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "2 E. 14th Avenue, Denver, CO 80203",
+          "featureId": {
+            "cellId": "9758314314168259297",
+            "fprint": "16661316701410091202"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 49.847449272724326,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "William W. Hood III",
+      "address": [
+        {
+          "line1": "2 East 14th Avenue",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80203"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(720) 625-5400"
+      ],
+      "urls": [
+        "https://www.courts.state.co.us/Courts/Supreme_Court/",
+        "https://en.wikipedia.org/wiki/William_W._Hood_III"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "2 E. 14th Avenue, Denver, CO 80203",
+          "featureId": {
+            "cellId": "9758314314168259297",
+            "fprint": "16661316701410091202"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 49.847449272724326,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Beth McCann",
+      "address": [
+        {
+          "line1": "201 West Colfax Avenue",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80202"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(720) 913-9000"
+      ],
+      "urls": [
+        "https://www.denverda.org/"
+      ],
+      "emails": [
+        "info@denverda.org"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "201 W. Colfax Avenue 8th Floor, Denver, CO 80202",
+          "featureId": {
+            "cellId": "9758307346270912277",
+            "fprint": "18070239957904869031"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 95.816929324151758,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Michael Hancock",
+      "address": [
+        {
+          "line1": "1437 Bannock Street",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80202"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(720) 865-9000"
+      ],
+      "urls": [
+        "https://www.denvergov.org/content/denvergov/en/mayors-office.html"
+      ],
+      "photoUrl": "https://www.denvergov.org/content/dam/denvergov/Portals/728/images/Mayor-Hancock-Web.jpg",
+      "emails": [
+        "milehighmayor@denvergov.org"
+      ],
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "5280mayor"
+        },
+        {
+          "type": "Twitter",
+          "id": "MayorHancock"
+        },
+        {
+          "type": "YouTube",
+          "id": "mayormichaelbhancock"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "1437 Bannock Street Rm 350 Denver, CO 80202",
+          "featureId": {
+            "cellId": "9758307347106155619",
+            "fprint": "15369778533764422432"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 0,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Paul López",
+      "address": [
+        {
+          "line1": "201 West Colfax Avenue",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80202"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(720) 865-8400"
+      ],
+      "urls": [
+        "https://www.denvergov.org/content/denvergov/en/denver-office-of-the-clerk-and-recorder/contact.html"
+      ],
+      "emails": [
+        "clerkandrecorder@denvergov.org"
+      ],
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "DenverClerk"
+        },
+        {
+          "type": "Twitter",
+          "id": "DenverElections"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "201 W. Colfax Avenue Dept. 101 Denver, CO 80202",
+          "featureId": {
+            "cellId": "9758307346270912277",
+            "fprint": "7026990011131404416"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 95.816929324151758,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Timothy M. O'Brien",
+      "address": [
+        {
+          "line1": "201 W Colfax Ave Dept 705",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80202"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(720) 913-5000"
+      ],
+      "urls": [
+        "https://denverauditor.org/"
+      ],
+      "emails": [
+        "auditor@denvergov.org"
+      ],
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "DenverAuditorOBrien"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "201 W Colfax Ave, Dept 705 Denver CO 80202",
+          "featureId": {
+            "cellId": "9758307716366806279",
+            "fprint": "17073063012333960254"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 0,
+          "addressUnderstood": false
+        }
+      ]
+    },
+    {
+      "name": "Deborah \"Debbie\" Ortega",
+      "address": [
+        {
+          "line1": "1437 Bannock Street",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80202"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(720) 337-2000"
+      ],
+      "urls": [
+        "https://denvergov.org/Government/Elected-Officials/Denver-City-Council"
+      ],
+      "photoUrl": "https://www.denvergov.org/content/dam/denvergov/Portals/695/images/CouncilHeadshots/DeborahOrtega_web.jpg",
+      "emails": [
+        "ortegaatlarge@denvergov.org"
+      ],
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "ortegaatlarge"
+        },
+        {
+          "type": "Twitter",
+          "id": "ortegaatlarge"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "1437 Bannock Street #451 Denver, CO 80202",
+          "featureId": {
+            "cellId": "9758307347106155619",
+            "fprint": "7421373213161551713"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 0,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Robin Kniech",
+      "address": [
+        {
+          "line1": "1437 Bannock Street",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80202"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(720) 337-2000"
+      ],
+      "urls": [
+        "https://denvergov.org/Government/Elected-Officials/Denver-City-Council"
+      ],
+      "photoUrl": "https://www.denvergov.org/content/dam/denvergov/Portals/695/images/CouncilHeadshots/RobinKniech_web.jpg",
+      "emails": [
+        "kniechatlarge@denvergov.org"
+      ],
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "CityCouncilwomanRobinKniech"
+        },
+        {
+          "type": "Twitter",
+          "id": "KniechAtLarge"
+        },
+        {
+          "type": "YouTube",
+          "id": "UC3TrKMuRXWi_KsWAv50aajA"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "1437 Bannock Street #451 Denver, CO 80202",
+          "featureId": {
+            "cellId": "9758307347106155619",
+            "fprint": "7421373213161551713"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 0,
+          "addressUnderstood": true
+        }
+      ]
+    }
+  ]
+}

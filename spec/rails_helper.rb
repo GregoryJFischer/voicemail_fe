@@ -33,6 +33,7 @@ end
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.include FactoryBot::Syntax::Methods
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
@@ -68,4 +69,21 @@ Shoulda::Matchers.configure do |config|
     with.test_framework :rspec
     with.library :rails
   end
+
+  VCR.configure do |c|
+    c.ignore_localhost = false
+    c.cassette_library_dir = 'spec/vcr'
+    c.hook_into :webmock
+    c.configure_rspec_metadata!
+    c.default_cassette_options = {
+      match_requests_on: %i[method]
+    }
+  end
 end
+OmniAuth.config.silence_get_warning = true
+OmniAuth.config.test_mode = true
+OmniAuth.config.add_mock(:google_oauth2, {
+  :email => 'example@gmail.com',
+  :name => 'Jeffrey Dahmer',
+  :credentials => { :token => '89y123jnasd' }
+  })
