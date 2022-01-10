@@ -7,8 +7,6 @@ describe 'user edit' do
 
     allow_any_instance_of(ApplicationController).to receive(:session).and_return(session)
 
-    expect(user.street_address_1).to be nil
-
     visit '/edit'
 
     fill_in :address_line1, with: '123 Main Street'
@@ -22,7 +20,7 @@ describe 'user edit' do
 
     expect(current_path).to eq '/dashboard'
 
-    expect(user.street_address_1).to eq '123 Main Street'
+    expect(user.address_line1).to eq '123 Main Street'
 
     # expect(page.status_code).to eq 200
     # expect(page).to have_content("Joseph R. Biden")
