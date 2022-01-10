@@ -1,0 +1,7 @@
+<h1>Create New Letter</h1>
+
+<%= form_with url: "/letters/new", method: :post, local: true do |f| %>
+  <%= f.label :body %>
+  <%= f.text_area :body, :cols => 30, :rows => 10 %><br/><br/>
+  <%= f.submit 'Create Letter' %>
+<% end %>
