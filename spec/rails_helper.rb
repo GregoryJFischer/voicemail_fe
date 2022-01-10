@@ -71,7 +71,7 @@ Shoulda::Matchers.configure do |config|
   end
 
   VCR.configure do |c|
-    c.ignore_localhost = true
+    c.ignore_localhost = false
     c.cassette_library_dir = 'spec/vcr'
     c.hook_into :webmock
     c.configure_rspec_metadata!
@@ -80,11 +80,10 @@ Shoulda::Matchers.configure do |config|
     }
   end
 end
-
 OmniAuth.config.silence_get_warning = true
 OmniAuth.config.test_mode = true
 OmniAuth.config.add_mock(:google_oauth2, {
   :email => 'example@gmail.com',
   :name => 'Jeffrey Dahmer',
   :credentials => { :token => '89y123jnasd' }
-})
+  })
