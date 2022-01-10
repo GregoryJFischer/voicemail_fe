@@ -6,18 +6,19 @@ class LettersController < ApplicationController
      confirmation = JSON.parse(response.body, symbolize_names: true)
      if confirmation[:data][:attributes].has_key?(:send_date)
        @sent_letter_params = confirmation[:date][:attributes]
+       redirect_to '/users/:id/letters'
      elsif confirmation.has_key?(:message)
        flash[:error] = confirmation[:message]
      else
        flash[:error] = 'Error and error message not found'
   end
 
-
+end
   private
     def user_params
       user_id = session[:user_id]
-      get "api/v1/users/#{user_id}"
-      user_body = JSON.parse(response.body, symbolize_names: true)
+      BackendService.get_user(user_id)
+      binding.pry
       user_attributes = user_body[:data][:attributes]
 
       get "/api/v1/users/#{user.id}/representatives"
@@ -40,4 +41,4 @@ class LettersController < ApplicationController
         from_name: user_attributes[:name]
        }
     end
-end
+  end
