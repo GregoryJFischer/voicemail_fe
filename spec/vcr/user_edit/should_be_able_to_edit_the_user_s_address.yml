@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/252
+    body:
+      encoding: UTF-8
+      string: '{"address_line1":"330 Main Street","address_city":"city a","address_state":"state
+        b","address_zip":"12345"}'
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 43c03a7d-7d2c-470b-9926-190f947d7d9f
+      X-Runtime:
+      - '0.011204'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"error":"Couldn''t find User with ''id''=252"}'
+  recorded_at: Mon, 10 Jan 2022 20:35:15 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/252
+    body:
+      encoding: UTF-8
+      string: '{"address_line1":"330 Main Street","address_line2":"","address_city":"city
+        a","address_state":"state b","address_zip":"12345"}'
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - a2a0c703-628b-46d7-b6ae-5ab30dbafa76
+      X-Runtime:
+      - '0.004771'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"error":"Couldn''t find User with ''id''=252"}'
+  recorded_at: Mon, 10 Jan 2022 20:35:15 GMT
+recorded_with: VCR 6.0.0

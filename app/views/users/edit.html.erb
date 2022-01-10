@@ -1,13 +1,13 @@
 <%= form_with url: '/update', method: :patch, local: true do |f| %>
-  <%= f.label :street_address_1 %>
-  <%= f.text_field :street_address_1 %><br>
-  <%= f.label :street_address_2 %>
-  <%= f.text_field :street_address_2 %><br>
-  <%= f.label :city %>
-  <%= f.text_field :city %><br>
-  <%= f.label :state %>
-  <%= f.text_field :state %><br>
-  <%= f.label :zip_code %>
-  <%= f.text_field :zip_code %><br>
+  <%= f.label :address_line1 %>
+  <%= f.text_field :address_line1 %><br>
+  <%= f.label :address_line2 %>
+  <%= f.text_field :address_line2 %><br>
+  <%= f.label :address_city %>
+  <%= f.text_field :address_city %><br>
+  <%= f.label :address_state %>
+  <%= f.text_field :address_state %><br>
+  <%= f.label :address_zip %>
+  <%= f.text_field :address_zip %><br>
   <%= f.submit %>
 <% end %>

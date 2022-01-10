@@ -1,47 +1,82 @@
 require 'rails_helper'
 
 describe BackendService do
+  before :each do
+    @user = User.create(email: 'prisonmike@theoffice.com', name: 'Michael Scott')
+    @session = {user_id: @user.id, token: 'abcd', google_id: '12345'}
+    allow_any_instance_of(ApplicationController).to receive(:session).and_return(@session)
+  end
+
   it 'get an user', :vcr do
-    user = User.create(email: 'prisonmike@theoffice.com', name: 'Michael Scott')
-    session = {user_id: user.id, token: 'abcd', google_id: '12345'}
-
-    allow_any_instance_of(ApplicationController).to receive(:session).and_return(session)
-
-    stub_request(:get, "http://localhost:5000/users/11").
-       with(
-         headers: {
+    stub_request(:get, "http://localhost:5000/api/v1/users/#{@user.id}").
+    with(
+      headers: {
         'Accept'=>'*/*',
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
         'User-Agent'=>'Faraday v1.8.0'
-         }).to_return(status: 200, body: "", headers: {})
+        }).to_return(status: 200, body:
+          { data: {
+            id: @user.id,
+            type: "user",
+            attributes: {
+              email: @user.email,
+              name: @user.name,
+              google_id: @user.google_id,
+              address_line1: nil,
+              address_line2: nil,
+              address_city: nil,
+              address_state: nil,
+              address_zip: nil
+            }
+          }
+        }.to_json,
+        headers: {} )
 
-    found_user = BackendService.get_user(11)
+    response = BackendService.get_user(@user.id)
 
-    expect(result).to be_empty
+    expect(response).to be_a Hash
+  end
+
+  it 'can patch data', :vcr do
+    stub_request(:patch, "http://localhost:5000/api/v1/users/#{@user.id}").
+    with(
+      headers: {
+        'Accept'=>'*/*',
+        'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+        'User-Agent'=>'Faraday v1.8.0'
+        }).to_return(status: 200, body:
+          { data: {
+            id: @user.id,
+            type: "user",
+            attributes: {
+              email: @user.email,
+              name: @user.name,
+              google_id: @user.google_id,
+              address_line1: nil,
+              address_line2: nil,
+              address_city: nil,
+              address_state: nil,
+              address_zip: nil
+            }
+          }
+        }.to_json,
+        headers: {} )
+
+    address_params = {
+                      address_line1: '123 Main Street',
+                      address_city: 'city a',
+                      address_state: 'state b',
+                      address_zip: '12345'
+                      }
+
+    response = BackendService.update_address(@user.id, address_params)
   end
 
   it 'can get data' do
+    # found_user = BackendService.get_user("#{@user.id}")
+    # found_rep = BackendService.representatives("#{@user.id}")
     # fetch = BackendService.fetch('/api/v1/')
-
     # expect(result).to be_a Hash
     # expect(result).not_to be_empty
   end
-
-  # it 'stubs the response' do
-  # end
-
-  # it 'can patch data' do
-  #   url = '/api/v1/users/1'
-  #   address_params = {
-  #           street_address_1: params[:street_address_1],
-  #           street_address_2: params[:street_address_2],
-  #           city: params[:city],
-  #           state: params[:state],
-  #           zip_code: params[:zip_code]
-  #         }.to_json
-  #
-  #   result = BackendService.update_address(address_params, url)
-  #
-  #   expect(result).to be_empty
-  # end
 end
