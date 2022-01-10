@@ -1,11 +1,10 @@
-Welcome, <%= @dashboard_facade.user.name %>
-<%= button_to 'Add or update your current address', "/edit", method: :get %><br>
-
-Your Representatives <br>
-<% if @dashboard_facade.user.address_line1 != nil %>
+Welcome, <%= @dashboard_facade.user.name %><br>
+<% if @dashboard_facade.user.address_line1 == nil %>
+  <%= button_to 'Add or update your current address', "/edit", method: :get %><br>
+<% else %>
+  <%= @dashboard_facade.user.address_line1 %><br>
+  Your Representatives <br>
   <% @dashboard_facade.representatives.each do |rep| %>
     <%= rep.name %> <%= button_to "Send Letter", "/letters/new?id=#{rep.id}", method: :get %><br>
   <% end %>
-<% else %>
-  Please add or update your return address
 <% end %>

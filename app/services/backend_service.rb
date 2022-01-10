@@ -8,8 +8,9 @@ class BackendService
       parse_response(post("users", user_params))
     end
 
-    def update_address(address_params, user_id)
+    def update_address(user_id, address_params)
       patch("users/#{user_id}", address_params)
+      # parse_response(patch("users/#{user_id}", address_params))
     end
 
     def representatives(user_id)
@@ -32,7 +33,7 @@ class BackendService
       conn.patch do |req|
         req.url "/api/v1/#{url}"
         req.headers['Content-Type'] = 'application/json'
-        req.body = json
+        req.body = json.to_json
       end
     end
 
@@ -41,7 +42,8 @@ class BackendService
     end
 
     def conn
-      Faraday.new(url: "http://localhost:5000")
+      Faraday.new(url: "https://voicemail-be.herokuapp.com")
+      # Faraday.new(url: "http://localhost:5000")
     end
   end
 end

@@ -1,5 +1,6 @@
 class UserBe
-  attr_reader :name,
+  attr_reader :id,
+              :name,
               :email,
               :address_line1,
               :address_line2,

@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    BackendService.update_address(address_params, session[:user_id])
+    BackendService.update_address(session[:user_id], address_params)
     if address_params.present?
       redirect_to '/dashboard'
     else
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     if session[:user_id]
       @dashboard_facade = UserDashboardFacade.new(session[:user_id])
     else
-      flash[:error] = 'You must be logged in'
+      flash[:error] = 'You must be logged in to visit this page'
       redirect_to root_path
     end
   end
