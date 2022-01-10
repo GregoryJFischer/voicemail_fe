@@ -42,7 +42,7 @@ class BackendService
     end
 
     def conn
-      Faraday.new(url: "https://voicemail-be.herokuapp.com")
+      Faraday.new(url: "https://voicemail-be.herokuapp.com/")
     end
   end
 end
