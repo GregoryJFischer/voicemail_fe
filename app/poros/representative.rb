@@ -7,11 +7,11 @@ class Representative
               :address_zip
 
   def initialize(rep)
-    @name = rep[1][0][:attributes][:name]
-    @address_line1 = rep[1][0][:attributes][:address_line1]
-    @address_city  = rep[1][0][:attributes][:address_city]
-    @address_state = rep[1][0][:attributes][:address_state]
-    @address_zip   = rep[1][0][:attributes][:address_zip]
+    @name = rep[:attributes][:name]
+    @address_line1 = rep[:attributes][:address_line1]
+    @address_city  = rep[:attributes][:address_city]
+    @address_state = rep[:attributes][:address_state]
+    @address_zip   = rep[:attributes][:address_zip]
   end
 
   def set_id(integer)
