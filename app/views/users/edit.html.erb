@@ -1,13 +1,27 @@
 <%= form_with url: '/update', method: :patch, local: true do |f| %>
-  <%= f.label :street_address_1 %>
-  <%= f.text_field :street_address_1 %><br>
-  <%= f.label :street_address_2 %>
-  <%= f.text_field :street_address_2 %><br>
-  <%= f.label :city %>
-  <%= f.text_field :city %><br>
-  <%= f.label :state %>
-  <%= f.text_field :state %><br>
-  <%= f.label :zip_code %>
-  <%= f.text_field :zip_code %><br>
-  <%= f.submit %>
+  <br/>
+  <div class="row mb-3">
+    <%= f.label :address_line1, "Address Line 1", class: "col-sm-2 col-form-label text-center" %>
+    <%= f.text_field :address_line1, class: "col-sm-3" %><br>
+  </div>
+  <div class="row mb-3">
+    <%= f.label :address_line2, "Address Line 2", class: "col-sm-2 col-form-label text-center" %>
+    <%= f.text_field :address_line2, class: "col-sm-3" %><br>
+  </div>
+  <div class="row mb-3">
+    <%= f.label :address_city, "City", class: "col-sm-2 col-form-label text-center" %>
+    <%= f.text_field :address_city, class: "col-sm-3" %><br>
+  </div>
+  <div class="row mb-3">
+    <%= f.label :address_state, "State", class: "col-sm-2 col-form-label text-center" %>
+    <%= f.text_field :address_state, class: "col-sm-3" %><br>
+  </div>
+  <div class="row mb-3">
+    <%= f.label :address_zip, "Zip Code", class: "col-sm-2 col-form-label text-center" %>
+    <%= f.text_field :address_zip, class: "col-sm-3" %><br>
+  </div>
+  <div class="row mb-3">
+    <div class="col-sm-2"> </div>
+    <%= f.submit class: "col-sm-3" %>
+  </div>
 <% end %>
