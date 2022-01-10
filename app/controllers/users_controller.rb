@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     if session[:user_id]
       @dashboard_facade = UserDashboardFacade.new(session[:user_id])
     else
-      flash[:error] = 'You must be logged in'
+      flash[:error] = 'You must be logged in to visit this page'
       redirect_to root_path
     end
   end
