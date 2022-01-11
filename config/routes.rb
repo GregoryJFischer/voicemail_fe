@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   get '/edit', to: 'users#edit'
   patch '/update', to: 'users#update'
   delete '/logout', to: 'sessions#destroy'
+
+
+  resources :letters, only: [:show, :new, :create]
 end
