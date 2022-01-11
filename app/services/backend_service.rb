@@ -10,7 +10,6 @@ class BackendService
 
     def update_address(user_id, address_params)
       patch("users/#{user_id}", address_params)
-      # parse_response(patch("users/#{user_id}", address_params))
     end
 
     def representatives(user_id)
