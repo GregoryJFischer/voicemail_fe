@@ -10,14 +10,14 @@ class UserDashboardFacade
   end
 
   def representatives
-    representative_service.map do |rep|
+    representative_service[:data].map do |rep|
       Representative.new(rep)
     end
   end
 
   def representative_service
     if user.address_line1
-      BackendService.representatives(user.id)
+      BackendService.representatives(@user[:data][:id])
     else
       nil
     end

@@ -1,7 +1,8 @@
 Welcome, <%= @dashboard_facade.user.name %><br>
 <% if @dashboard_facade.user.address_line1 == nil %>
-  <%= button_to 'Add or update your current address', "/edit", method: :get %><br>
+  <%= button_to 'Add your return address', "/edit", method: :get %><br>
 <% else %>
+  <%= button_to 'Edit your return address', "/edit", method: :get %><br>
   <%= @dashboard_facade.user.address_line1 %><br>
   Your Representatives <br>
   <% @dashboard_facade.representatives.each do |rep| %>
