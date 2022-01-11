@@ -58,12 +58,12 @@ describe 'users dashboard', :vcr do
     expect(page).to have_content "Welcome, Michael Scott"
   end
 
-  it 'should have a button to update addresses' do
+  it 'should have a button to add a return address' do
     visit '/dashboard'
 
-    expect(page).to have_button "Add or update your current address"
+    expect(page).to have_button "Add your return address"
 
-    click_button "Add or update your current address"
+    click_button "Add your return address"
 
     expect(current_path).to eq("/edit")
   end
