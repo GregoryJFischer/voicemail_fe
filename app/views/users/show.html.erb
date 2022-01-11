@@ -6,6 +6,6 @@ Welcome, <%= @dashboard_facade.user.name %><br>
   <%= @dashboard_facade.user.address_line1 %><br>
   Your Representatives <br>
   <% @dashboard_facade.representatives.each do |rep| %>
-    <%= rep.name %> <%= button_to "Send Letter", "/letters/new?id=#{rep.id}", method: :get %><br>
+    <%= rep.name %> <%= button_to "Send Letter", "/letters/new", method: :get, params: rep.attributes %><br>
   <% end %>
 <% end %>

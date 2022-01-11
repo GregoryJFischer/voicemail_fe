@@ -31,4 +31,7 @@ class UsersController < ApplicationController
       address_zip: params[:address_zip]
     }
   end
+  def rep_params
+
+  end 
 end
