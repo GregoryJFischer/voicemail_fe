@@ -9,6 +9,6 @@ class LettersFacade
 
     letter = Letter.new(rep_attributes, user_attributes, body)
     response = BackendService.post("letters", letter.attributes)
-    confirmation = BackendService.parse_response(response)
+    BackendService.parse_response(response)
   end
 end
