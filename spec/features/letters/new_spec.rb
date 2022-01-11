@@ -6,7 +6,7 @@ describe 'letters new' do
   it 'can show a new letter page' do
     visit '/letters/new' do
 
-    expect(page).to have_content("Create New Letter")
+    expect(page).to have_content("Sending letter to")
     end
   end
 end
