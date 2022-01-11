@@ -1,5 +1,5 @@
 class UserBe
-  attr_reader :id,
+  attr_reader :user_id,
               :name,
               :email,
               :address_line1,
@@ -9,6 +9,7 @@ class UserBe
               :address_zip
 
   def initialize(info)
+    @user_id = info[:data][:id]
     @name = info[:data][:attributes][:name]
     @email = info[:data][:attributes][:email]
     @address_line1 = info[:data][:attributes][:address_line1]

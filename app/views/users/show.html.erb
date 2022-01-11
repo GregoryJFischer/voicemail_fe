@@ -4,8 +4,11 @@ Welcome, <%= @dashboard_facade.user.name %><br>
 <% else %>
   <%= button_to 'Edit your return address', "/edit", method: :get %><br>
   <%= @dashboard_facade.user.address_line1 %><br>
-  Your Representatives <br>
-  <% @dashboard_facade.representatives.each do |rep| %>
-    <%= rep.name %> <%= button_to "Send Letter", "/letters/new?id=#{rep.id}", method: :get %><br>
+
+  <% cache "representatives-#{@dashboard_facade.user.user_id}", expires_in: 1.month do %>
+    Your Representatives <br>
+    <% @dashboard_facade.representatives.each do |rep| %>
+      <%= rep.name %> <%= button_to "Send Letter", "/letters/new?id=#{rep.id}", method: :get %><br>
+    <% end %>
   <% end %>
 <% end %>

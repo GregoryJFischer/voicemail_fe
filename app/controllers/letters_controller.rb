@@ -15,5 +15,5 @@ class LettersController < ApplicationController
        flash[:error] = 'Error and error message not found'
        redirect_to "/letters/new"
      end
-   end
+  end
 end
