@@ -1,6 +1,13 @@
 require 'rails_helper'
 
-describe 'user edit', :vcr do
+describe 'user edit' do
+  it "cant access the page without being logged in" do
+    visit '/edit'
+
+    expect(page).to have_content('You must be logged in to visit this page')
+    expect(current_path).to eq root_path
+  end
+
   it "should be able to edit the user's address" do
     @user = User.create(email: 'prisonmike@theoffice.com', name: 'Michael Scott')
     @session = {user_id: @user.id, token: 'abcd', google_id: '12345'}
@@ -29,27 +36,27 @@ describe 'user edit', :vcr do
           }
         }.to_json,
         headers: {} )
-    stub_request(:get, "http://localhost:5000/api/v1/users/#{@user.id}/representatives").
-    with(
-      headers: {
-        'Accept'=>'*/*',
-        'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'User-Agent'=>'Faraday v1.8.0'
-        }).to_return(status: 200, body:
-          {
-            data: [
-              {
-                id: 0,
-                type: "representative",
-                attributes: {
-                  address_city: "Washington",
-                  address_line1: "1600 Pennsylvania Avenue Northwest",
-                  address_state: "DC",
-                  address_zip: "20500",
-                  name: "Joseph R. Biden"
-                }
-            }]}.to_json,
-            headers: {})
+    # stub_request(:get, "http://localhost:5000/api/v1/users/#{@user.id}/representatives").
+    # with(
+    #   headers: {
+    #     'Accept'=>'*/*',
+    #     'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+    #     'User-Agent'=>'Faraday v1.8.0'
+    #     }).to_return(status: 200, body:
+    #       {
+    #         data: [
+    #           {
+    #             id: 0,
+    #             type: "representative",
+    #             attributes: {
+    #               address_city: "Washington",
+    #               address_line1: "1600 Pennsylvania Avenue Northwest",
+    #               address_state: "DC",
+    #               address_zip: "20500",
+    #               name: "Joseph R. Biden"
+    #             }
+    #         }]}.to_json,
+    #         headers: {})
 
     visit '/edit'
 
