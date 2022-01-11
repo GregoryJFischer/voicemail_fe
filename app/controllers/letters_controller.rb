@@ -1,29 +1,32 @@
 class LettersController < ApplicationController
+
   def new
   end
+
   def create
-     post "/api/v1/letters", params: user_params
-     confirmation = JSON.parse(response.body, symbolize_names: true)
-     if confirmation[:data][:attributes].has_key?(:send_date)
-       @sent_letter_params = confirmation[:date][:attributes]
-       redirect_to '/users/:id/letters'
-     elsif confirmation.has_key?(:message)
+     response = BackendService.post("letters", letter_params)
+     confirmation = BackendService.parse_response(response)
+     if confirmation.has_key?(:message)
        flash[:error] = confirmation[:message]
+     elsif confirmation[:data][:attributes][:send_date]
+       flash[:notice] = 'Your letter has been sent!'
+       redirect_to "/dashboard"
      else
        flash[:error] = 'Error and error message not found'
   end
 
 end
   private
-    def user_params
+    def letter_params
       user_id = session[:user_id]
-      BackendService.get_user(user_id)
-      binding.pry
+      user_body = BackendService.get_user(user_id)
       user_attributes = user_body[:data][:attributes]
 
-      get "/api/v1/users/#{user.id}/representatives"
-      rep_body = JSON.parse(response.body, symbolize_names: true)
-      rep_attributes = rep_body[:data][:attributes]
+      rep_body = BackendService.representatives(user_id)
+
+      #This line needs to be updated once we have our reps page up and running
+      rep_attributes = rep_body[:data][11][:attributes]
+
       {
         to_address_line1: rep_attributes[:address_line1],
         to_address_line2: rep_attributes[:address_line2],
@@ -36,7 +39,7 @@ end
         from_address_state: user_attributes[:address_state],
         from_address_zip: user_attributes[:address_zip],
         body: params[:body],
-        user_id: user_attributes[:user_id],
+        user_id: user_id,
         to_name: rep_attributes[:name],
         from_name: user_attributes[:name]
        }

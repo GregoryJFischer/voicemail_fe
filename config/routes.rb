@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   patch '/update', to: 'users#update'
   delete '/logout', to: 'sessions#destroy'
 
+
   resources :letters, only: [:show, :new, :create]
 end
