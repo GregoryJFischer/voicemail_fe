@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'users dashboard', :vcr do
+describe 'users dashboard' do
   before :each do
     @user = User.create(email: 'prisonmike@theoffice.com', name: 'Michael Scott')
     @session = {user_id: @user.id, token: 'abcd', google_id: '12345'}
@@ -11,7 +11,7 @@ describe 'users dashboard', :vcr do
       headers: {
         'Accept'=>'*/*',
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'User-Agent'=>'Faraday v1.8.0'
+        'User-Agent'=>'Faraday v1.9.3'
         }).to_return(status: 200, body:
           { data: {
             id: @user.id,
@@ -34,7 +34,7 @@ describe 'users dashboard', :vcr do
       headers: {
         'Accept'=>'*/*',
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'User-Agent'=>'Faraday v1.8.0'
+        'User-Agent'=>'Faraday v1.9.3'
         }).to_return(status: 200, body:
           {
             data: [

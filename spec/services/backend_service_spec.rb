@@ -13,7 +13,7 @@ describe BackendService do
       headers: {
         'Accept'=>'*/*',
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'User-Agent'=>'Faraday v1.8.0'
+        'User-Agent'=>'Faraday v1.9.3'
         }).to_return(status: 200, body:
           { data: {
             id: @user.id,
@@ -42,7 +42,7 @@ describe BackendService do
       headers: {
         'Accept'=>'*/*',
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'User-Agent'=>'Faraday v1.8.0'
+        'User-Agent'=>'Faraday v1.9.3'
         }).to_return(status: 200, body:
           { data: {
             id: @user.id,
