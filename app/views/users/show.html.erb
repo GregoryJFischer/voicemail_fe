@@ -1,11 +1,26 @@
-Welcome, <%= @dashboard_facade.user.name %><br>
+<div class="container">
+<h1>Welcome, <%= @dashboard_facade.user.name %></h1>
 <% if @dashboard_facade.user.address_line1 == nil %>
-  <%= button_to 'Add your return address', "/edit", method: :get %><br>
+  <%= button_to 'Add your return address', "/edit", class: "btn btn-secondary", method: :get %><br>
 <% else %>
-  <%= button_to 'Edit your return address', "/edit", method: :get %><br>
-  <%= @dashboard_facade.user.address_line1 %><br>
-  Your Representatives <br>
-  <% @dashboard_facade.representatives.each do |rep| %>
-    <%= rep.name %> <%= button_to "Send Letter", "/letters/new?id=#{rep.id}", method: :get %><br>
-  <% end %>
+  <p>
+    <h5>Your Current Address:</h5>
+    <%= @dashboard_facade.user.address %>
+  </p>
+  <%= button_to 'Edit your return address', "/edit", class: "btn btn-secondary", method: :get %><br>
+    <% cache "representatives-#{@dashboard_facade.user.user_id}", expires_in: 1.month do %>
+      <h2>Your Representatives:</h2>
+        <% @dashboard_facade.representatives.each_with_index do |rep, index| %>
+            <p>
+              <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#representative-<%= index %>" aria-expanded="false" aria-controls="collapseExample">
+                <%= rep.name %> - <%= rep.title %>
+              </button>
+            </p>
+              <div class="collapse" id="representative-<%= index %>">
+                <%= button_to "Send Letter", "/letters/new?id=#{rep.id}", class: "btn btn-secondary", method: :get %><br/>
+              </div>
+
+        <% end %>
+    <% end %>
 <% end %>
+</div>
