@@ -18,4 +18,12 @@ class UserBe
     @address_state = info[:data][:attributes][:address_state]
     @address_zip   = info[:data][:attributes][:address_zip]
   end
+
+  def address
+    unless @address_line2.empty?
+      @address_line1 + ' ' + @address_line2 + ' ' + @address_city + ', ' + @address_state + ' ' + @address_zip
+    else
+      @address_line1 + ' ' + @address_city + ', ' + @address_state + ' ' + @address_zip
+    end
+  end
 end
