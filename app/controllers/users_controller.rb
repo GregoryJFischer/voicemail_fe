@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
   def edit
+    unless session[:user_id]
+      flash[:error] = 'You must be logged in to visit this page'
+      redirect_to root_path
+    end
   end
 
   def update

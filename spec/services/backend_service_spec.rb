@@ -7,13 +7,13 @@ describe BackendService do
     allow_any_instance_of(ApplicationController).to receive(:session).and_return(@session)
   end
 
-  it 'get an user', :vcr do
+  it 'get an user' do
     stub_request(:get, "http://localhost:5000/api/v1/users/#{@user.id}").
     with(
       headers: {
         'Accept'=>'*/*',
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'User-Agent'=>'Faraday v1.8.0'
+        'User-Agent'=>'Faraday v1.9.3'
         }).to_return(status: 200, body:
           { data: {
             id: @user.id,
@@ -33,17 +33,16 @@ describe BackendService do
         headers: {} )
 
     response = BackendService.get_user(@user.id)
-
     expect(response).to be_a Hash
   end
 
-  it 'can patch data', :vcr do
+  it 'can patch data' do
     stub_request(:patch, "http://localhost:5000/api/v1/users/#{@user.id}").
     with(
       headers: {
         'Accept'=>'*/*',
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'User-Agent'=>'Faraday v1.8.0'
+        'User-Agent'=>'Faraday v1.9.3'
         }).to_return(status: 200, body:
           { data: {
             id: @user.id,
@@ -69,14 +68,5 @@ describe BackendService do
                       address_zip: '12345'
                       }
 
-    response = BackendService.update_address(@user.id, address_params)
-  end
-
-  it 'can get data' do
-    # found_user = BackendService.get_user("#{@user.id}")
-    # found_rep = BackendService.representatives("#{@user.id}")
-    # fetch = BackendService.fetch('/api/v1/')
-    # expect(result).to be_a Hash
-    # expect(result).not_to be_empty
   end
 end

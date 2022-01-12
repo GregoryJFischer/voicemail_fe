@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'users dashboard', :vcr do
+describe 'users dashboard' do
   before :each do
     @user = User.create(email: 'prisonmike@theoffice.com', name: 'Michael Scott')
     @session = {user_id: @user.id, token: 'abcd', google_id: '12345'}
@@ -11,7 +11,7 @@ describe 'users dashboard', :vcr do
       headers: {
         'Accept'=>'*/*',
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'User-Agent'=>'Faraday v1.8.0'
+        'User-Agent'=>'Faraday v1.9.3'
         }).to_return(status: 200, body:
           { data: {
             id: @user.id,
@@ -34,7 +34,7 @@ describe 'users dashboard', :vcr do
       headers: {
         'Accept'=>'*/*',
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'User-Agent'=>'Faraday v1.8.0'
+        'User-Agent'=>'Faraday v1.9.3'
         }).to_return(status: 200, body:
           {
             data: [
@@ -58,12 +58,12 @@ describe 'users dashboard', :vcr do
     expect(page).to have_content "Welcome, Michael Scott"
   end
 
-  it 'should have a button to update addresses' do
+  it 'should have a button to add a return address' do
     visit '/dashboard'
 
-    expect(page).to have_button "Add or update your current address"
+    expect(page).to have_button "Add your return address"
 
-    click_button "Add or update your current address"
+    click_button "Add your return address"
 
     expect(current_path).to eq("/edit")
   end
