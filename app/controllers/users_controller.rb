@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   def update
     BackendService.update_address(session[:user_id], address_params)
     if address_params.present?
+      Rails.cache.delete_matched("representatives-#{session[:user_id]}")
       redirect_to '/dashboard'
     else
       flash[:error] = 'Please fill out all fields'

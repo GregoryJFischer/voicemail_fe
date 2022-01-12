@@ -19,9 +19,15 @@
   <body>
     <% flash.each do |type, msg| %>
       <br/>
-      <div class="alert alert-danger container" style="text-align:center;" role="alert">
-        <%= msg %>
-      </div>
+      <% if type == "error" %>
+        <div class="alert alert-danger container" style="text-align:center;" role="alert">
+          <%= msg %>
+        </div>
+      <% elsif type == "notice" %>
+        <div class="alert alert-success container" style="text-align:center;" role="alert">
+          <%= msg %>
+        </div>
+      <% end %>
     <% end %>
 
     <% if session[:user_id] %>
