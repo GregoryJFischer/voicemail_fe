@@ -29,36 +29,36 @@ describe 'users dashboard' do
           }
         }.to_json,
         headers: {} )
-    stub_request(:get, "http://localhost:5000/api/v1/users/#{@user.id}/representatives").
-    with(
-      headers: {
-        'Accept'=>'*/*',
-        'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'User-Agent'=>'Faraday v1.9.3'
-        }).to_return(status: 200, body:
-          {
-            data: [
-              {
-                id: 0,
-                type: "representative",
-                attributes: {
-                  address_city: "Washington",
-                  address_line1: "1600 Pennsylvania Avenue Northwest",
-                  address_state: "DC",
-                  address_zip: "20500",
-                  name: "Joseph R. Biden"
-                }
-            }]}.to_json,
-            headers: {})
+    # stub_request(:get, "http://localhost:5000/api/v1/users/#{@user.id}/representatives").
+    # with(
+    #   headers: {
+    #     'Accept'=>'*/*',
+    #     'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+    #     'User-Agent'=>'Faraday v1.9.3'
+    #     }).to_return(status: 200, body:
+    #       {
+    #         data: [
+    #           {
+    #             id: 0,
+    #             type: "representative",
+    #             attributes: {
+    #               address_city: "Washington",
+    #               address_line1: "1600 Pennsylvania Avenue Northwest",
+    #               address_state: "DC",
+    #               address_zip: "20500",
+    #               name: "Joseph R. Biden"
+    #             }
+    #         }]}.to_json,
+    #         headers: {})
   end
 
-  it 'should say hello' do
+  it 'should say hello', :vcr do
     visit '/dashboard'
 
     expect(page).to have_content "Welcome, Michael Scott"
   end
 
-  it 'should have a button to add a return address' do
+  it 'should have a button to add a return address', :vcr do
     visit '/dashboard'
 
     expect(page).to have_button "Add your return address"
