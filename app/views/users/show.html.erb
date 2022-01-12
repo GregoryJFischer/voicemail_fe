@@ -12,7 +12,7 @@
       <h2>Your Representatives:</h2>
         <% @dashboard_facade.representatives.each_with_index do |rep, index| %>
             <p>
-              <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#representative-<%= index %>" aria-expanded="false" aria-controls="collapseExample">
+              <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#representative-<%= index %>" aria-expanded="false" aria-controls="#representative-<%= index %>">
                 <%= rep.name %> - <%= rep.title %>
               </button>
             </p>
