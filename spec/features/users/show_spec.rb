@@ -61,9 +61,7 @@ describe 'users dashboard' do
   it 'should have a button to add a return address' do
     visit '/dashboard'
 
-    expect(page).to have_button "Add your return address"
-
-    click_button "Add your return address"
+    click_button "Add a valid return address to see your representatives"
 
     expect(current_path).to eq("/edit")
   end
