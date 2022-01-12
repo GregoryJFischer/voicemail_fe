@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     response = BackendService.update_address(session[:user_id], address_params)
  
     if response.body.include?("Address failed to pass verification; please try again.") || address_params.except(:address_line2).values.any? { |address_param| address_param.blank?}
-      flash[:error] = 'Please fill out all fields (with a valid return address)'
+      flash[:error] = 'Please fill out fields with a valid return address.'
       redirect_to '/edit'
     else
       Rails.cache.delete_matched("representatives-#{session[:user_id]}")
