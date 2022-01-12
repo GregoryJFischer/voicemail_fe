@@ -17,7 +17,7 @@
               </button>
             </p>
               <div class="collapse" id="representative-<%= index %>">
-                <%= button_to "Send Letter", "/letters/new?id=#{rep.id}", class: "btn btn-secondary", method: :get %><br/>
+                <%= button_to "Send Letter", "/letters/new", class: "btn btn-secondary", method: :get, params: rep.attributes %><br/>
               </div>
 
         <% end %>
