@@ -1,7 +1,9 @@
 <h3>Sending letter to <%= @rep.name %></h3> <br>
+  <div class="row">
+    <div class="col">
 
 <%= form_with url: "/letters", method: :post, local: true do |f| %>
-  <%= f.text_area :body, :cols => 50, :rows => 10 %><br/><br/>
+  <%= f.text_area :body, class: "form-control", rows: "29" %><br/><br/>
   <%= f.hidden_field :rep_name, value: @rep.name %>
   <%= f.hidden_field :rep_address_line1, value: @rep.address_line1 %>
   <%= f.hidden_field :rep_address_city, value: @rep.address_city %>
@@ -9,3 +11,9 @@
   <%= f.hidden_field :rep_address_zip, value: @rep.address_zip %>
   <%= f.submit 'Create Letter' %>
 <% end %>
+</div>
+
+<div class="col">
+<%= render "preview" %>
+</div>
+</div>
