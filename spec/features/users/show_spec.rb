@@ -60,7 +60,7 @@ describe 'users dashboard' do
 
   it 'should have a button to add a return address' do
     visit '/dashboard'
-
+    save_and_open_page
     click_button "Add a valid return address to see your representatives"
 
     expect(current_path).to eq("/edit")

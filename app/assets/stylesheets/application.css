@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+.background_dc {
+ background-image: url(‘DC.jpg’);
+ background-size: cover;
+ background-repeat: no-repeat;
+}
