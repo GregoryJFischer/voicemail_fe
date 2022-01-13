@@ -18,24 +18,24 @@
   </head>
   <body>
     <% if session[:user_id] %>
-    <nav class="navbar navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand">VoiceMail</a>
-        <%= link_to 'logout', '/logout', class: "btn btn-secondary", method: :delete %>
-      </div>
-    </nav>
-    <% end %>
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">VoiceMail</a>
+          <%= link_to 'logout', '/logout', class: "btn btn-secondary", method: :delete %>
+        </div>
+      </nav>
 
-    <% flash.each do |type, msg| %>
-      <br/>
-      <% if type == "error" %>
-        <div class="alert alert-danger container" style="text-align:center;" role="alert">
-          <%= msg %>
-        </div>
-      <% elsif type == "notice" %>
-        <div class="alert alert-success container" style="text-align:center;" role="alert">
-          <%= msg %>
-        </div>
+      <% flash.each do |type, msg| %>
+        <br/>
+        <% if type == "error" %>
+          <div class="alert alert-danger container" style="text-align:center;" role="alert">
+            <%= msg %>
+          </div>
+        <% elsif type == "notice" %>
+          <div class="alert alert-success container" style="text-align:center;" role="alert">
+            <%= msg %>
+          </div>
+        <% end %>
       <% end %>
     <% end %>
 
