@@ -23,21 +23,57 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a3e4a73455bee9ee9429753868b4ac0c"
+      - W/"4633427328c030e4d3c508f50deebb9a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a2ec4160-08cc-48a5-9477-e6d04e3178bd
+      - c4119ae8-c5f1-4137-ba0d-d8af1563c083
       X-Runtime:
-      - '0.003208'
+      - '0.002970'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex
         McConnell","google_id":"101243487143508063284","address_line1":"3431 N Vine
-        St","address_line2":"","address_city":"Denver","address_state":"CO","address_zip":"80205"}}}'
-  recorded_at: Wed, 12 Jan 2022 23:22:04 GMT
+        St","address_line2":"Apt 205","address_city":"Denver","address_state":"CO","address_zip":"80205"}}}'
+  recorded_at: Thu, 13 Jan 2022 18:57:51 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4633427328c030e4d3c508f50deebb9a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f5c9a7a8-e6d9-4555-831e-887325852529
+      X-Runtime:
+      - '0.002012'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex
+        McConnell","google_id":"101243487143508063284","address_line1":"3431 N Vine
+        St","address_line2":"Apt 205","address_city":"Denver","address_state":"CO","address_zip":"80205"}}}'
+  recorded_at: Thu, 13 Jan 2022 18:57:51 GMT
 - request:
     method: patch
     uri: http://localhost:5000/api/v1/users/1
@@ -65,9 +101,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0570a37a-782b-4dac-a5f7-ef02bc3a7c86
+      - 880436d8-7bf8-409a-ac37-d1b49ebbf4bf
       X-Runtime:
-      - '0.228536'
+      - '0.330851'
       Transfer-Encoding:
       - chunked
     body:
@@ -75,7 +111,7 @@ http_interactions:
       string: '{"data":{"id":"1","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex
         McConnell","google_id":"101243487143508063284","address_line1":"12012 Starboard
         Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194"}}}'
-  recorded_at: Wed, 12 Jan 2022 23:22:04 GMT
+  recorded_at: Thu, 13 Jan 2022 18:57:51 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -101,9 +137,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 233b9f23-8342-4f41-8ff7-998dc43eed5a
+      - 3020a7ab-0d29-4615-b04f-f485ab422f1f
       X-Runtime:
-      - '0.002290'
+      - '0.001821'
       Transfer-Encoding:
       - chunked
     body:
@@ -111,7 +147,7 @@ http_interactions:
       string: '{"data":{"id":"1","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex
         McConnell","google_id":"101243487143508063284","address_line1":"12012 Starboard
         Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194"}}}'
-  recorded_at: Wed, 12 Jan 2022 23:22:04 GMT
+  recorded_at: Thu, 13 Jan 2022 18:57:51 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1/representatives
@@ -137,9 +173,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e6a94884-c1a8-4c49-bb07-41c98a6238ea
+      - 593bf2dc-81d6-43f7-a025-f9e29cf436ad
       X-Runtime:
-      - '0.288931'
+      - '0.097285'
       Transfer-Encoding:
       - chunked
     body:
@@ -169,5 +205,63 @@ http_interactions:
         C. McKay","title":"Fairfax County Supervisor"}},{"id":"11","type":"representative","attributes":{"address_city":"Fairfax","address_line1":"12000
         Government Center Parkway","address_state":"VA","address_zip":"22035","name":"Walter
         L. Alcorn","title":"Fairfax County Supervisor"}}]}'
-  recorded_at: Wed, 12 Jan 2022 23:22:05 GMT
+  recorded_at: Thu, 13 Jan 2022 18:57:51 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1/representatives
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0701d60e6ec0b93dc21af4e8fe32e1dc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d13f7a91-dd71-403c-bf46-6e99f65e5380
+      X-Runtime:
+      - '0.152373'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"0","type":"representative","attributes":{"address_city":"Washington","address_line1":"1600
+        Pennsylvania Avenue Northwest","address_state":"DC","address_zip":"20500","name":"Joseph
+        R. Biden","title":"President of the United States"}},{"id":"1","type":"representative","attributes":{"address_city":"Washington","address_line1":"1600
+        Pennsylvania Avenue Northwest","address_state":"DC","address_zip":"20500","name":"Kamala
+        D. Harris","title":"Vice President of the United States"}},{"id":"2","type":"representative","attributes":{"address_city":"Washington","address_line1":"703
+        Hart Senate Office Building","address_state":"DC","address_zip":"20510","name":"Mark
+        R. Warner","title":"U.S. Senator"}},{"id":"3","type":"representative","attributes":{"address_city":"Washington","address_line1":"231
+        Russell Senate Office Building","address_state":"DC","address_zip":"20510","name":"Tim
+        Kaine","title":"U.S. Senator"}},{"id":"4","type":"representative","attributes":{"address_city":"Washington","address_line1":"2238
+        Rayburn House Office Building","address_state":"DC","address_zip":"20515","name":"Gerald
+        E. \"Gerry\" Connolly","title":"U.S. Representative"}},{"id":"5","type":"representative","attributes":{"address_city":"Richmond","address_line1":"PO
+        Box 1195","address_state":"VA","address_zip":"23218","name":"Ralph S. Northam","title":"Governor
+        of Virginia"}},{"id":"6","type":"representative","attributes":{"address_city":"Richmond","address_line1":"P.O.
+        Box 1195","address_state":"VA","address_zip":"23218","name":"Justin E. Fairfax","title":"Lieutenant
+        Governor of Virginia"}},{"id":"7","type":"representative","attributes":{"address_city":"Richmond","address_line1":"202
+        North 9th Street","address_state":"VA","address_zip":"23219","name":"Mark
+        R. Herring","title":"VA Attorney General"}},{"id":"8","type":"representative","attributes":{"address_city":"Richmond","address_line1":"900
+        East Main Street","address_state":"VA","address_zip":"23219","name":"Janet
+        D. Howell","title":"VA State Senator"}},{"id":"9","type":"representative","attributes":{"address_city":"Richmond","address_line1":"900
+        East Main Street","address_state":"VA","address_zip":"23219","name":"Kenneth
+        R. \"Ken\" Plum","title":"VA State Delegate"}},{"id":"10","type":"representative","attributes":{"address_city":"Fairfax","address_line1":"12000
+        Government Center Parkway","address_state":"VA","address_zip":"22035","name":"Jeffrey
+        C. McKay","title":"Fairfax County Supervisor"}},{"id":"11","type":"representative","attributes":{"address_city":"Fairfax","address_line1":"12000
+        Government Center Parkway","address_state":"VA","address_zip":"22035","name":"Walter
+        L. Alcorn","title":"Fairfax County Supervisor"}}]}'
+  recorded_at: Thu, 13 Jan 2022 18:57:51 GMT
 recorded_with: VCR 6.0.0

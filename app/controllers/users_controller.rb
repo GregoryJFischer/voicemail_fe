@@ -3,6 +3,9 @@ class UsersController < ApplicationController
     unless session[:user_id]
       flash[:error] = 'You must be logged in to visit this page'
       redirect_to root_path
+    else
+      current_user = BackendService.get_user(session[:user_id])
+      @current_address = current_user[:data][:attributes]
     end
   end
 
