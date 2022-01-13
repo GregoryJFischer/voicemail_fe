@@ -74,6 +74,7 @@ describe 'users dashboard' do
     it 'redirects user to root path' do
       visit '/dashboard'
 
+
       expect(current_path).to eq(root_path)
       expect(page).to have_content("You must be logged in to visit this page")
     end
