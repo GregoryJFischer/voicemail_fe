@@ -8,34 +8,21 @@
 
 ## Table of contents
 - [Overview](#overview)
-- [Setup](#setup)
-- [Schema](#schema)
 - [Project Management](#project-management)
 - [Wireframes](#wireframes)
+- [Setup](#setup)
 - [OAuth Setup](#oauth-setup)
 - [API Setup](#api-setup)
 - [Endpoints](#endpoints)
 - [Technologies](#technologies)
 - [Contributors](#contributors)
 
-
 ## <ins>Overview</ins>
 
 # VoiceMail
 Tackling the limitations of emailing legislators to share your opinion. Create a platform for finding, and then meaningfully influencing representatives via physical mail.
 
--Insert completed feature details here-
-
-This project was based off Turing's consultancy project. More details can be found [here](https://backend.turing.edu/module3/projects/consultancy/project_goals)
-
-### <ins>Setup</ins>
-1. Fork and Clone the repo
-2. Install gem packages: `bundle install`
-3. Setup the database: `rails db:{drop,create,migrate}`
-4. Run `bundle exec rspec` to test
-
-### <ins>Schema</ins>
-![Schema Screenshot]()
+This project is based off Turing's consultancy project. More details can be found [here](https://backend.turing.edu/module3/projects/consultancy/project_goals)
 
 ### <ins>Project Management</ins>
 - [User Stories](https://trello.com/b/6B39kgSb/consultancy-project)
@@ -49,6 +36,11 @@ This project was based off Turing's consultancy project. More details can be fou
 ![Pending Letter Show](https://user-images.githubusercontent.com/81711519/149392946-6557925c-c508-4aad-8fb4-44832c733950.png)
 ![Sent Letter Show](https://user-images.githubusercontent.com/81711519/149393100-bfe8b1de-ebed-4789-9c67-0a42ac3cc24e.png)
 
+### <ins>Setup</ins>
+1. Fork and Clone the repo
+2. Install gem packages: `bundle install`
+3. Setup the database: `rails db:{drop,create,migrate}`
+4. Run `bundle exec rspec` to test
 
 ### <ins>OAuth Setup</ins>
 [OAuth-setup](https://github.com/zquestz/omniauth-google-oauth2#installation)
@@ -56,7 +48,7 @@ This project was based off Turing's consultancy project. More details can be fou
 ### <ins>API Setup</ins>
 1. Set-up Figaro: `bundle exec figaro install`
 2. Navigate to /config/application.yml
-3. Paste the following code and replace with your credentials accordingly:
+3. Paste the following code and replace with your respective credentials:
   ```
   GOOGLE_CLIENT_ID: 'YOUR-GOOGLE-CLIENT-ID'
   GOOGLE_CLIENT_SECRET: 'YOUR-GOOGLE-CLIENT-SECRET'
@@ -64,7 +56,7 @@ This project was based off Turing's consultancy project. More details can be fou
   ```
 
 ### <ins>Endpoints</ins>
-[Endpoints](https://github.com/GregoryJFischer/voicemail_fe/blob/main/endpoints.md)
+[Endpoints](https://github.com/bfrey08/voicemail_be/blob/main/endpoints.md)
 
 ### <ins>Technologies</ins>
 
@@ -81,9 +73,7 @@ This project was based off Turing's consultancy project. More details can be fou
 ![Markdown][Markdown-img]
 ![PostgreSQL][PostgreSQL-img]
 ![Postman][Postman-img]
-![Rubocop][Rubocop-img]
 ![Ruby on Rails][Ruby on Rails-img]
-
 
 #### Languages
 ![ActiveRecord][ActiveRecord-img]
