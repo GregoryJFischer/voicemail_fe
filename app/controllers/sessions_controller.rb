@@ -2,19 +2,24 @@ class SessionsController < ApplicationController
   def create
     user = BackendService.find_or_create_user(user_params)
 
-    if user.present?
+    unless user[:error]
+      session[:token] = user_params[:token]
+      session[:user_id] = user[:data][:id].to_i
+
       redirect_to '/dashboard'
     else
-      flash[:error] = 'Authentication failed. Please try again.'
+      flash[:error] = 'Could not create user. Please try again.'
       redirect_to root_path
     end
-
-    session[:token] = user_params[:token]
-    session[:user_id] = user[:data][:id].to_i
   end
 
   def destroy
     session.destroy
+    redirect_to root_path
+  end
+
+  def failure
+    flash[:error] = 'Validation failed. Please try again.'
     redirect_to root_path
   end
 
