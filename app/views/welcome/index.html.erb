@@ -1,6 +1,19 @@
-  <div class="bg-image" 
+  <div class="bg-image"
      style="background-image: url(<%= asset_path 'DC.jpg' %>);
             height: 100vh">
+
+<% flash.each do |type, msg| %>
+  <br/>
+  <% if type == "error" %>
+    <div class="alert alert-danger container" style="text-align:center;" role="alert">
+      <%= msg %>
+    </div>
+  <% elsif type == "notice" %>
+    <div class="alert alert-success container" style="text-align:center;" role="alert">
+      <%= msg %>
+    </div>
+  <% end %>
+<% end %>
 
 <div class="text-center">
   <br>
