@@ -80,10 +80,22 @@ Shoulda::Matchers.configure do |config|
     }
   end
 end
-OmniAuth.config.silence_get_warning = true
+# OmniAuth.config.silence_get_warning = true
 OmniAuth.config.test_mode = true
-OmniAuth.config.add_mock(:google_oauth2, {
-  :email => 'example@gmail.com',
-  :name => 'Jeffrey Dahmer',
-  :credentials => { :token => '89y123jnasd' }
-  })
+OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+  provider: "google_oauth2",
+  uid: "123456789",
+  info: {
+    name: "John Doe",
+    email: "john.doe@example.com",
+    first_name: "John",
+    last_name: "Doe",
+    image: "https://lh3.googleusercontent.com/url/photo.jpg"
+  },
+  credentials: {
+      token: "token",
+      refresh_token: "another_token",
+      expires_at: 1354920555,
+      expires: true
+  }
+})
