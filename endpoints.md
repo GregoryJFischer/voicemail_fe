@@ -1,268 +1,190 @@
 # Endpoints
 
-## Dogs
+## User
+POST /api/v1/users
+GET /api/v1/users/:id
+PUT /api/v1/users/:id
+PATCH  /api/v1/users/:id
 
-#### `GET /api/v1/`
-- 20 per page
-##### Optional Query Params:
-- `page={integer}`
+#### `POST /api/v1/users`
+##### Required Body Content:
+```json
+{  "email": "{string}"  }
+```
 
+#### `GET /api/v1/users/1`
  ```json
  {
-  "data": [
-    {
-      "id": "1",
-      "type": "dog",
-      "attributes": {
-        "name": "Zoey",
-        "size": "small",
-        "age": 7,
-        "breed": "Appenzeller",
-        "vaccinated": "false",
-        "sex": "Male",
-        "trained": "yes",
-        "user_id": 2,
-        "description": "blep"
-      }
-    },
-    {
-      "id": "2",
-      "type": "dog",
-      "attributes": {
-        "name": "Charlie",
-        "size": "small",
-        "age": 25,
-        "breed": "Labrador",
-        "vaccinated": "true",
-        "sex": "Female",
-        "trained": "no",
-        "user_id": 2,
-        "description": "11/10"
-      }
+    "data": {
+        "id": "1",
+        "type": "user",
+        "attributes": {
+            "email": "cdelpone@gmail.com",
+            "name": "Christina Delpone",
+            "google_id": "109023684884237070706",
+            "address_line1": "3431 Vine Street",
+            "address_line2": "",
+            "address_city": "Denver",
+            "address_state": "CO",
+            "address_zip": "80205"
+        }
     }
-  ]
 }
  ```
 
-#### `GET /api/v1/user_dogs`
-##### Requried Query Params:
- - `user_id={integer}`
+#### `PUT /api/v1/users/1` || `PATCH /api/v1/users/1`
+##### Required Query Params:
 ```json
- {
-  "data": [
-    {
-      "id": "5",
-      "type": "dog",
-      "attributes": {
-        "name": "Duke",
-        "size": "large",
-        "age": 25,
-        "breed": "Dachshund",
-        "vaccinated": "true",
-        "sex": "Male",
-        "trained": "no",
-        "user_id": 1,
-        "description": "thicc doggo"
-      }
-    },
-    {
-      "id": "13",
-      "type": "dog",
-      "attributes": {
-        "name": "Annie",
-        "size": "medium",
-        "age": 1,
-        "breed": "English Setter",
-        "vaccinated": "true",
-        "sex": "Female",
-        "trained": "no",
-        "user_id": 1,
-        "description": "long boi"
-      }
-    }
-  ]
-}
+{  "user_id": "{integer}"  }
 ```
 
-#### `POST /api/v1/dogs`
 ##### Required Body Content:
 ```json
 {
-  "user_id": "{integer}",
-  "size": "{small, medium, large}",
-  "breed": "{string}",
-  "age": "{integer}",
-  "sex": "{string}",
-  "description": "{string}",
-  "vaccinated": "{true, false}",
-  "trained": "{yes, no}"
+  "address_line1": "{string}",
+  "address_line2": "{string}",
+  "address_city": "{string}",
+  "address_state": "{string}",
+  "address_zip": "{string}"
 }
 ```
 
-#### `GET /api/v1/dogs/:id`
-```json
-{
-  "data": {
-    "id": "1",
-    "type": "dog_with_playdates",
-    "attributes": {
-      "name": "Zoey",
-      "size": "small",
-      "age": 7,
-      "breed": "Appenzeller",
-      "vaccinated": "false",
-      "sex": "Male",
-      "trained": "yes",
-      "user_id": 2,
-      "description": "blep",
-      "accepted_play_dates": [],
-      "pending_play_dates": []
-    }
-  }
-}
-```
-## Play Dates
+## Representatives
+GET /api/v1/users/:user_id/representatives
 
-#### `GET /api/v1/play_dates`
+#### `GET /api/v1/users/1/representatives`
 ##### Required Query Parameters:
 - `user_id={integer}`
+
 ```json
 {
-  "data": [
-    {
-      "id": "4",
-      "type": "play_date",
-      "attributes": {
-        "location_id": "MWFGHr6NOg7pAoLgbgFdsQ",
-        "date": "2021-11-11",
-        "time": "2000-01-01T13:36:00.000Z",
-        "invite_status": "pending"
-      },
-      "relationships": {
-        "creator_dog": {
-          "data": {
-            "id": "5",
-            "type": "dog"
-          }
+    "data": [
+        {
+            "id": "0",
+            "type": "representative",
+            "attributes": {
+                "address_city": "Washington",
+                "address_line1": "1600 Pennsylvania Avenue Northwest",
+                "address_state": "DC",
+                "address_zip": "20500",
+                "name": "Joseph R. Biden",
+                "title": "President of the United States"
+            }
         },
-        "invited_dog": {
-          "data": {
+        {
             "id": "1",
-            "type": "dog"
-          }
+            "type": "representative",
+            "attributes": {
+                "address_city": "Washington",
+                "address_line1": "1600 Pennsylvania Avenue Northwest",
+                "address_state": "DC",
+                "address_zip": "20500",
+                "name": "Kamala D. Harris",
+                "title": "Vice President of the United States"
+            }
+        },
+        {
+            "id": "2",
+            "type": "representative",
+            "attributes": {
+                "address_city": "Washington",
+                "address_line1": "B85",
+                "address_state": "DC",
+                "address_zip": "20510",
+                "name": "John W. Hickenlooper",
+                "title": "U.S. Senator"
+            }
         }
-      }
-    }
-  ]
+    ]
 }
 ```
 
-#### `POST /api/v1/play_dates`
+### Letters
+POST /api/v1/letters
+GET /api/v1/users/:user_id/letters
+DELETE /api/v1/letters/:id
+
+#### `POST /api/v1/letters`
 ##### Required Body Content:
 ```json
 {
-  "object": {
-    "date": "{year-month-day}",
-    "time": "{hour-minute-timezone}",
-    "invited_dog_id": "{integer}",
-    "creator_dog_id": "{integer}",
-    "location_id": "{string}"
-  }
+  "to_address_line1": "{string}",
+  "to_address_line2": "{string}",
+  "to_address_city": "{string}",
+  "to_address_state": "{string}",
+  "to_address_zip": "{string}",
+  "from_address_line1": "{string}",
+  "from_address_line2": "{string}",
+  "from_address_city": "{string}",
+  "from_address_state": "{string}",
+  "from_address_zip": "{string}",
+  "body": "{string}",
+  "user_id": "{integer}",
+  "to_name": "{string}",
+  "from_name": "{string}"
 }
 ```
 
-#### `GET /api/v1/play_date/:id`
+#### `GET /api/v1/users/1/letters`
+##### Required Query Parameters:
+- `user_id={integer}`
+
 ```json
 {
-  "data": {
-    "id": "4",
-    "type": "play_date",
-    "attributes": {
-      "location_id": "MWFGHr6NOg7pAoLgbgFdsQ",
-      "date": "2021-11-11",
-      "time": "2000-01-01T13:36:00.000Z",
-      "invite_status": "accepted"
-    },
-    "relationships": {
-      "creator_dog": {
-        "data": {
-          "id": "5",
-          "type": "dog"
-        }
-      },
-      "invited_dog": {
-        "data": {
-          "id": "1",
-          "type": "dog"
-        }
-      }
-    }
-  }
+   "data": [
+       {
+           "id": "5",
+           "type": "letter",
+           "attributes": {
+               "send_date": nil,
+               "delivery_date": nil,
+               "to_address_line1": "40 Massachusetts Ave NE",
+               "to_address_line2": nil,
+               "to_address_city": "Washington",
+               "to_address_state": "DC",
+               "to_address_zip": "20002",
+               "from_address_line1": "11913 Freedom Dr",
+               "from_address_line2": "#35",
+               "from_address_city": "Reston",
+               "from_address_state": "VA",
+               "from_address_zip": "20190",
+               "body": "Quam asperiores provident. Iure blanditiis unde. Pariatur et accusantium.",
+               "user_id": 10,
+               "to_name": "Britteny Jacobson",
+               "from_name": "Novella Hauck MD",
+               "preview_url": nil
+               }
+             },
+       {
+           "id": "6",
+           "type": "letter",
+           "attributes": {
+               "send_date": nil,
+               "delivery_date": nil,
+               "to_address_line1": "40 Massachusetts Ave NE",
+               "to_address_line2": nil,
+               "to_address_city": "Washington",
+               "to_address_state": "DC",
+               "to_address_zip": "20002",
+               "from_address_line1": "11913 Freedom Dr",
+               "from_address_line2": "#35",
+               "from_address_city": "Reston",
+               "from_address_state": "VA",
+               "from_address_zip": "20190",
+               "body":"Et aut dolor. Consequatur dolores dolorem. Laudantium et voluptatibus.",
+               "user_id": 10,
+               "to_name": "Burl Tremblay",
+               "from_name": "Raguel Hamill",
+               "preview_url": nil
+               }
+            }
+        ]
 }
-```
+ ```
+#### `DELETE /api/v1/letters/1`
+##### Required Query Parameters:
+- `letter_id={integer}`
 
-#### `PATCH /api/v1/play_date/:id`
-##### Required Body Content:
 ```json
-{
-  "status": "{accepted, rejected}"
-}
-```
-
-## Yelp Locations
-
-#### `GET /api/v1/yelp_locations`
-#### Required Query Params:
-- `location={string}`
-  - City name or zip code
-```json
-{
-  "data": [
-    {
-      "id": "No2VmMM6QchZSYtCk6k0vQ",
-      "name": "DP Dough",
-      "address": "1228 E Colfax Ave, Denver, CO 80218",
-      "phone": "(303) 839-9663",
-      "rating": 3.5,
-      "categories": [
-        "Pizza",
-        "Italian"
-      ],
-      "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/MBkGfvYy-rTgO8tVuYzdQQ/o.jpg"
-    },
-    {
-      "id": "RTvR4W7K-59xFFZAUTMTbQ",
-      "name": "Lucky Noodles",
-      "address": "1201 E Colfax Ave, Ste 102, Denver, CO 80218",
-      "phone": "(720) 917-1000",
-      "rating": 4.5,
-      "categories": [
-        "Thai",
-        "Noodles",
-        "Coffee & Tea"
-      ],
-      "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/uoXE8rVcYAV4R6njOCxrpw/o.jpg"
-    }
-  ]
-}
-```
-
-#### `GET /api/v1/yelp_location`
-##### Required Query Params:
-- `location_id={string}`
-```json
-{
-  "data": {
-    "id": "No2VmMM6QchZSYtCk6k0vQ",
-    "name": "DP Dough",
-    "address": "1228 E Colfax Ave, Denver, CO 80218",
-    "phone": "(303) 839-9663",
-    "rating": 3.5,
-    "categories": [
-      "Pizza",
-      "Italian"
-    ],
-    "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/MBkGfvYy-rTgO8tVuYzdQQ/o.jpg"
-  }
-}
+""
 ```
