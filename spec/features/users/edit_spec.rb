@@ -21,6 +21,7 @@ describe 'user edit' do
       visit '/edit'
 
       fill_in :address_line1, with: '3431 N Vine St'
+      fill_in :address_line2, with: ''
       fill_in :address_city, with: 'Denver'
       fill_in :address_state, with: 'CO'
       fill_in :address_zip, with: '80205'
@@ -48,6 +49,11 @@ describe 'user edit' do
 
     it 'doesnt edit the address if all parameters arent filled out' do
       visit '/edit'
+
+      fill_in :address_line1, with: ''
+      fill_in :address_city, with: ''
+      fill_in :address_state, with: ''
+      fill_in :address_zip, with: ''
 
       click_button "Save"
 
