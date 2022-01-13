@@ -16,10 +16,6 @@ class Representative
     @address_zip   = rep[:attributes][:address_zip]
   end
 
-  def set_id(integer)
-    @id = integer
-  end
-
   def attributes
     wip = {attributes: {
     id: nil,

@@ -1,0 +1,261 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"alexmmcconnell@gmail.com","name":"Alex"}'
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a3e4a73455bee9ee9429753868b4ac0c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b4cf3f50-5367-4215-a82a-e82bf5010a64
+      X-Runtime:
+      - '0.003838'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex
+        McConnell","google_id":"101243487143508063284","address_line1":"3431 N Vine
+        St","address_line2":"","address_city":"Denver","address_state":"CO","address_zip":"80205"}}}'
+  recorded_at: Wed, 12 Jan 2022 23:03:24 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: UTF-8
+      string: '{"address_line1":"","address_line2":"","address_city":"","address_state":"","address_zip":""}'
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - edd0145a-308d-4c1c-8043-b4803727a0f1
+      X-Runtime:
+      - '0.150537'
+      Content-Length:
+      - '10998'
+    body:
+      encoding: UTF-8
+      string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cLob::InvalidRequestError:
+        (Status 422) primary_line is required or address is required \n {\n    \"error\":
+        {\n        \"message\": \"primary_line is required or address is required\",\n        \"status_code\":
+        422,\n        \"code\": \"invalid\"\n    }\n}\u003e","traces":{"Application
+        Trace":[{"id":4,"trace":"app/facades/lob_facade.rb:5:in `verify_address''"},{"id":5,"trace":"app/controllers/api/v1/users_controller.rb:21:in
+        `update''"}],"Framework Trace":[{"id":0,"trace":"lob (5.4.4) lib/lob/resources/resource_base.rb:109:in
+        `handle_api_error''"},{"id":1,"trace":"lob (5.4.4) lib/lob/resources/resource_base.rb:99:in
+        `rescue in submit''"},{"id":2,"trace":"lob (5.4.4) lib/lob/resources/resource_base.rb:87:in
+        `submit''"},{"id":3,"trace":"lob (5.4.4) lib/lob/resources/us_verifications.rb:22:in
+        `verify''"},{"id":6,"trace":"actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in
+        `send_action''"},{"id":7,"trace":"actionpack (5.2.6) lib/abstract_controller/base.rb:194:in
+        `process_action''"},{"id":8,"trace":"actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in
+        `process_action''"},{"id":9,"trace":"actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in
+        `block in process_action''"},{"id":10,"trace":"activesupport (5.2.6) lib/active_support/callbacks.rb:98:in
+        `run_callbacks''"},{"id":11,"trace":"actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in
+        `process_action''"},{"id":12,"trace":"actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in
+        `process_action''"},{"id":13,"trace":"actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in
+        `block in process_action''"},{"id":14,"trace":"activesupport (5.2.6) lib/active_support/notifications.rb:168:in
+        `block in instrument''"},{"id":15,"trace":"activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in
+        `instrument''"},{"id":16,"trace":"activesupport (5.2.6) lib/active_support/notifications.rb:168:in
+        `instrument''"},{"id":17,"trace":"actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in
+        `process_action''"},{"id":18,"trace":"actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in
+        `process_action''"},{"id":19,"trace":"activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in
+        `process_action''"},{"id":20,"trace":"actionpack (5.2.6) lib/abstract_controller/base.rb:134:in
+        `process''"},{"id":21,"trace":"actionpack (5.2.6) lib/action_controller/metal.rb:191:in
+        `dispatch''"},{"id":22,"trace":"actionpack (5.2.6) lib/action_controller/metal.rb:252:in
+        `dispatch''"},{"id":23,"trace":"actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in
+        `dispatch''"},{"id":24,"trace":"actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in
+        `serve''"},{"id":25,"trace":"actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in
+        `block in serve''"},{"id":26,"trace":"actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in
+        `each''"},{"id":27,"trace":"actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in
+        `serve''"},{"id":28,"trace":"actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in
+        `call''"},{"id":29,"trace":"rack (2.2.3) lib/rack/etag.rb:27:in `call''"},{"id":30,"trace":"rack
+        (2.2.3) lib/rack/conditional_get.rb:40:in `call''"},{"id":31,"trace":"rack
+        (2.2.3) lib/rack/head.rb:12:in `call''"},{"id":32,"trace":"activerecord (5.2.6)
+        lib/active_record/migration.rb:559:in `call''"},{"id":33,"trace":"actionpack
+        (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''"},{"id":34,"trace":"activesupport
+        (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":35,"trace":"actionpack
+        (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"id":36,"trace":"actionpack
+        (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":37,"trace":"actionpack
+        (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call''"},{"id":38,"trace":"actionpack
+        (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":39,"trace":"railties
+        (5.2.6) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":40,"trace":"railties
+        (5.2.6) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":41,"trace":"activesupport
+        (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":42,"trace":"activesupport
+        (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":43,"trace":"activesupport
+        (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":44,"trace":"railties
+        (5.2.6) lib/rails/rack/logger.rb:26:in `call''"},{"id":45,"trace":"actionpack
+        (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":46,"trace":"actionpack
+        (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":47,"trace":"rack
+        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":48,"trace":"activesupport
+        (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"id":49,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in
+        `call''"},{"id":50,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in
+        `call''"},{"id":51,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":52,"trace":"railties
+        (5.2.6) lib/rails/engine.rb:524:in `call''"},{"id":53,"trace":"puma (3.12.6)
+        lib/puma/configuration.rb:227:in `call''"},{"id":54,"trace":"puma (3.12.6)
+        lib/puma/server.rb:706:in `handle_request''"},{"id":55,"trace":"puma (3.12.6)
+        lib/puma/server.rb:476:in `process_client''"},{"id":56,"trace":"puma (3.12.6)
+        lib/puma/server.rb:334:in `block in run''"},{"id":57,"trace":"puma (3.12.6)
+        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"lob
+        (5.4.4) lib/lob/resources/resource_base.rb:109:in `handle_api_error''"},{"id":1,"trace":"lob
+        (5.4.4) lib/lob/resources/resource_base.rb:99:in `rescue in submit''"},{"id":2,"trace":"lob
+        (5.4.4) lib/lob/resources/resource_base.rb:87:in `submit''"},{"id":3,"trace":"lob
+        (5.4.4) lib/lob/resources/us_verifications.rb:22:in `verify''"},{"id":4,"trace":"app/facades/lob_facade.rb:5:in
+        `verify_address''"},{"id":5,"trace":"app/controllers/api/v1/users_controller.rb:21:in
+        `update''"},{"id":6,"trace":"actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in
+        `send_action''"},{"id":7,"trace":"actionpack (5.2.6) lib/abstract_controller/base.rb:194:in
+        `process_action''"},{"id":8,"trace":"actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in
+        `process_action''"},{"id":9,"trace":"actionpack (5.2.6) lib/abstract_controller/callbacks.rb:42:in
+        `block in process_action''"},{"id":10,"trace":"activesupport (5.2.6) lib/active_support/callbacks.rb:98:in
+        `run_callbacks''"},{"id":11,"trace":"actionpack (5.2.6) lib/abstract_controller/callbacks.rb:41:in
+        `process_action''"},{"id":12,"trace":"actionpack (5.2.6) lib/action_controller/metal/rescue.rb:22:in
+        `process_action''"},{"id":13,"trace":"actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:34:in
+        `block in process_action''"},{"id":14,"trace":"activesupport (5.2.6) lib/active_support/notifications.rb:168:in
+        `block in instrument''"},{"id":15,"trace":"activesupport (5.2.6) lib/active_support/notifications/instrumenter.rb:23:in
+        `instrument''"},{"id":16,"trace":"activesupport (5.2.6) lib/active_support/notifications.rb:168:in
+        `instrument''"},{"id":17,"trace":"actionpack (5.2.6) lib/action_controller/metal/instrumentation.rb:32:in
+        `process_action''"},{"id":18,"trace":"actionpack (5.2.6) lib/action_controller/metal/params_wrapper.rb:256:in
+        `process_action''"},{"id":19,"trace":"activerecord (5.2.6) lib/active_record/railties/controller_runtime.rb:24:in
+        `process_action''"},{"id":20,"trace":"actionpack (5.2.6) lib/abstract_controller/base.rb:134:in
+        `process''"},{"id":21,"trace":"actionpack (5.2.6) lib/action_controller/metal.rb:191:in
+        `dispatch''"},{"id":22,"trace":"actionpack (5.2.6) lib/action_controller/metal.rb:252:in
+        `dispatch''"},{"id":23,"trace":"actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:52:in
+        `dispatch''"},{"id":24,"trace":"actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:34:in
+        `serve''"},{"id":25,"trace":"actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in
+        `block in serve''"},{"id":26,"trace":"actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in
+        `each''"},{"id":27,"trace":"actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in
+        `serve''"},{"id":28,"trace":"actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in
+        `call''"},{"id":29,"trace":"rack (2.2.3) lib/rack/etag.rb:27:in `call''"},{"id":30,"trace":"rack
+        (2.2.3) lib/rack/conditional_get.rb:40:in `call''"},{"id":31,"trace":"rack
+        (2.2.3) lib/rack/head.rb:12:in `call''"},{"id":32,"trace":"activerecord (5.2.6)
+        lib/active_record/migration.rb:559:in `call''"},{"id":33,"trace":"actionpack
+        (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''"},{"id":34,"trace":"activesupport
+        (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":35,"trace":"actionpack
+        (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"id":36,"trace":"actionpack
+        (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":37,"trace":"actionpack
+        (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call''"},{"id":38,"trace":"actionpack
+        (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":39,"trace":"railties
+        (5.2.6) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":40,"trace":"railties
+        (5.2.6) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":41,"trace":"activesupport
+        (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":42,"trace":"activesupport
+        (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":43,"trace":"activesupport
+        (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":44,"trace":"railties
+        (5.2.6) lib/rails/rack/logger.rb:26:in `call''"},{"id":45,"trace":"actionpack
+        (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":46,"trace":"actionpack
+        (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":47,"trace":"rack
+        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":48,"trace":"activesupport
+        (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"id":49,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in
+        `call''"},{"id":50,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in
+        `call''"},{"id":51,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":52,"trace":"railties
+        (5.2.6) lib/rails/engine.rb:524:in `call''"},{"id":53,"trace":"puma (3.12.6)
+        lib/puma/configuration.rb:227:in `call''"},{"id":54,"trace":"puma (3.12.6)
+        lib/puma/server.rb:706:in `handle_request''"},{"id":55,"trace":"puma (3.12.6)
+        lib/puma/server.rb:476:in `process_client''"},{"id":56,"trace":"puma (3.12.6)
+        lib/puma/server.rb:334:in `block in run''"},{"id":57,"trace":"puma (3.12.6)
+        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
+  recorded_at: Wed, 12 Jan 2022 23:03:24 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a3e4a73455bee9ee9429753868b4ac0c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 453451fa-c453-4d08-bc2c-9490ada4ed78
+      X-Runtime:
+      - '0.004916'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex
+        McConnell","google_id":"101243487143508063284","address_line1":"3431 N Vine
+        St","address_line2":"","address_city":"Denver","address_state":"CO","address_zip":"80205"}}}'
+  recorded_at: Wed, 12 Jan 2022 23:03:24 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1/representatives
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"087b44fa223974f0f0ff8c47aa94a89d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9559b3e1-4abb-455d-a647-330c1705b3a3
+      X-Runtime:
+      - '0.156204'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkYXRhIjpbeyJpZCI6IjAiLCJ0eXBlIjoicmVwcmVzZW50YXRpdmUiLCJhdHRyaWJ1dGVzIjp7ImFkZHJlc3NfY2l0eSI6Ildhc2hpbmd0b24iLCJhZGRyZXNzX2xpbmUxIjoiMTYwMCBQZW5uc3lsdmFuaWEgQXZlbnVlIE5vcnRod2VzdCIsImFkZHJlc3Nfc3RhdGUiOiJEQyIsImFkZHJlc3NfemlwIjoiMjA1MDAiLCJuYW1lIjoiSm9zZXBoIFIuIEJpZGVuIiwidGl0bGUiOiJQcmVzaWRlbnQgb2YgdGhlIFVuaXRlZCBTdGF0ZXMifX0seyJpZCI6IjEiLCJ0eXBlIjoicmVwcmVzZW50YXRpdmUiLCJhdHRyaWJ1dGVzIjp7ImFkZHJlc3NfY2l0eSI6Ildhc2hpbmd0b24iLCJhZGRyZXNzX2xpbmUxIjoiMTYwMCBQZW5uc3lsdmFuaWEgQXZlbnVlIE5vcnRod2VzdCIsImFkZHJlc3Nfc3RhdGUiOiJEQyIsImFkZHJlc3NfemlwIjoiMjA1MDAiLCJuYW1lIjoiS2FtYWxhIEQuIEhhcnJpcyIsInRpdGxlIjoiVmljZSBQcmVzaWRlbnQgb2YgdGhlIFVuaXRlZCBTdGF0ZXMifX0seyJpZCI6IjIiLCJ0eXBlIjoicmVwcmVzZW50YXRpdmUiLCJhdHRyaWJ1dGVzIjp7ImFkZHJlc3NfY2l0eSI6Ildhc2hpbmd0b24iLCJhZGRyZXNzX2xpbmUxIjoiQjg1IiwiYWRkcmVzc19zdGF0ZSI6IkRDIiwiYWRkcmVzc196aXAiOiIyMDUxMCIsIm5hbWUiOiJKb2huIFcuIEhpY2tlbmxvb3BlciIsInRpdGxlIjoiVS5TLiBTZW5hdG9yIn19LHsiaWQiOiIzIiwidHlwZSI6InJlcHJlc2VudGF0aXZlIiwiYXR0cmlidXRlcyI6eyJhZGRyZXNzX2NpdHkiOiJXYXNoaW5ndG9uIiwiYWRkcmVzc19saW5lMSI6IjI2MSBSdXNzZWxsIFNlbmF0ZSBPZmZpY2UgQnVpbGRpbmciLCJhZGRyZXNzX3N0YXRlIjoiREMiLCJhZGRyZXNzX3ppcCI6IjIwNTEwIiwibmFtZSI6Ik1pY2hhZWwgRi4gQmVubmV0IiwidGl0bGUiOiJVLlMuIFNlbmF0b3IifX0seyJpZCI6IjQiLCJ0eXBlIjoicmVwcmVzZW50YXRpdmUiLCJhdHRyaWJ1dGVzIjp7ImFkZHJlc3NfY2l0eSI6Ildhc2hpbmd0b24iLCJhZGRyZXNzX2xpbmUxIjoiMjExMSBSYXlidXJuIEhvdXNlIE9mZmljZSBCdWlsZGluZyIsImFkZHJlc3Nfc3RhdGUiOiJEQyIsImFkZHJlc3NfemlwIjoiMjA1MTUiLCJuYW1lIjoiRGlhbmEgRGVHZXR0ZSIsInRpdGxlIjoiVS5TLiBSZXByZXNlbnRhdGl2ZSJ9fSx7ImlkIjoiNSIsInR5cGUiOiJyZXByZXNlbnRhdGl2ZSIsImF0dHJpYnV0ZXMiOnsiYWRkcmVzc19jaXR5IjoiRGVudmVyIiwiYWRkcmVzc19saW5lMSI6IjIwMCBFYXN0IENvbGZheCBBdmVudWUiLCJhZGRyZXNzX3N0YXRlIjoiQ08iLCJhZGRyZXNzX3ppcCI6IjgwMjAzIiwibmFtZSI6IkphcmVkIFBvbGlzIiwidGl0bGUiOiJHb3Zlcm5vciBvZiBDb2xvcmFkbyJ9fSx7ImlkIjoiNiIsInR5cGUiOiJyZXByZXNlbnRhdGl2ZSIsImF0dHJpYnV0ZXMiOnsiYWRkcmVzc19jaXR5IjoiRGVudmVyIiwiYWRkcmVzc19saW5lMSI6IjIwMCBFYXN0IENvbGZheCBBdmVudWUiLCJhZGRyZXNzX3N0YXRlIjoiQ08iLCJhZGRyZXNzX3ppcCI6IjgwMjAzIiwibmFtZSI6IkRpYW5uZSBQcmltYXZlcmEiLCJ0aXRsZSI6IkxpZXV0ZW5hbnQgR292ZXJub3Igb2YgQ29sb3JhZG8ifX0seyJpZCI6IjciLCJ0eXBlIjoicmVwcmVzZW50YXRpdmUiLCJhdHRyaWJ1dGVzIjp7ImFkZHJlc3NfY2l0eSI6IkRlbnZlciIsImFkZHJlc3NfbGluZTEiOiIxNzAwIEJyb2Fkd2F5IiwiYWRkcmVzc19zdGF0ZSI6IkNPIiwiYWRkcmVzc196aXAiOiI4MDI5MCIsIm5hbWUiOiJKZW5hIEdyaXN3b2xkIiwidGl0bGUiOiJDTyBTZWNyZXRhcnkgb2YgU3RhdGUifX0seyJpZCI6IjgiLCJ0eXBlIjoicmVwcmVzZW50YXRpdmUiLCJhdHRyaWJ1dGVzIjp7ImFkZHJlc3NfY2l0eSI6IkRlbnZlciIsImFkZHJlc3NfbGluZTEiOiIyMDAgRWFzdCBDb2xmYXggQXZlbnVlIiwiYWRkcmVzc19zdGF0ZSI6IkNPIiwiYWRkcmVzc196aXAiOiI4MDIwMyIsIm5hbWUiOiJEYXZlIFlvdW5nIiwidGl0bGUiOiJDTyBTdGF0ZSBUcmVhc3VyZXIifX0seyJpZCI6IjkiLCJ0eXBlIjoicmVwcmVzZW50YXRpdmUiLCJhdHRyaWJ1dGVzIjp7ImFkZHJlc3NfY2l0eSI6IkRlbnZlciIsImFkZHJlc3NfbGluZTEiOiIxMzAwIEJyb2Fkd2F5IDEwdGggRmxvb3IiLCJhZGRyZXNzX3N0YXRlIjoiQ08iLCJhZGRyZXNzX3ppcCI6IjgwMjAzIiwibmFtZSI6IlBoaWwgV2Vpc2VyIiwidGl0bGUiOiJDTyBBdHRvcm5leSBHZW5lcmFsIn19LHsiaWQiOiIxMCIsInR5cGUiOiJyZXByZXNlbnRhdGl2ZSIsImF0dHJpYnV0ZXMiOnsiYWRkcmVzc19jaXR5IjoiRGVudmVyIiwiYWRkcmVzc19saW5lMSI6IjIwMCBFYXN0IENvbGZheCBBdmVudWUiLCJhZGRyZXNzX3N0YXRlIjoiQ08iLCJhZGRyZXNzX3ppcCI6IjgwMjAzIiwibmFtZSI6IkphbWVzIFJhc2hhZCBDb2xlbWFuIiwidGl0bGUiOiJDTyBTdGF0ZSBTZW5hdG9yIn19LHsiaWQiOiIxMSIsInR5cGUiOiJyZXByZXNlbnRhdGl2ZSIsImF0dHJpYnV0ZXMiOnsiYWRkcmVzc19jaXR5IjoiRGVudmVyIiwiYWRkcmVzc19saW5lMSI6IjIwMCBFYXN0IENvbGZheCBBdmVudWUiLCJhZGRyZXNzX3N0YXRlIjoiQ08iLCJhZGRyZXNzX3ppcCI6IjgwMjAzIiwibmFtZSI6Ikxlc2xpZSBIZXJvZCIsInRpdGxlIjoiQ08gU3RhdGUgUmVwcmVzZW50YXRpdmUifX0seyJpZCI6IjEyIiwidHlwZSI6InJlcHJlc2VudGF0aXZlIiwiYXR0cmlidXRlcyI6eyJhZGRyZXNzX2NpdHkiOiJEZW52ZXIiLCJhZGRyZXNzX2xpbmUxIjoiMiBFYXN0IDE0dGggQXZlbnVlIiwiYWRkcmVzc19zdGF0ZSI6IkNPIiwiYWRkcmVzc196aXAiOiI4MDIwMyIsIm5hbWUiOiJCcmlhbiBELiBCb2F0cmlnaHQiLCJ0aXRsZSI6IkNPIFN1cHJlbWUgQ291cnQgSnVzdGljZSJ9fSx7ImlkIjoiMTMiLCJ0eXBlIjoicmVwcmVzZW50YXRpdmUiLCJhdHRyaWJ1dGVzIjp7ImFkZHJlc3NfY2l0eSI6IkRlbnZlciIsImFkZHJlc3NfbGluZTEiOiIyIEVhc3QgMTR0aCBBdmVudWUiLCJhZGRyZXNzX3N0YXRlIjoiQ08iLCJhZGRyZXNzX3ppcCI6IjgwMjAzIiwibmFtZSI6IkNhcmxvcyBBLiBTYW1vdXIsIEpyLiIsInRpdGxlIjoiQ08gU3VwcmVtZSBDb3VydCBKdXN0aWNlIn19LHsiaWQiOiIxNCIsInR5cGUiOiJyZXByZXNlbnRhdGl2ZSIsImF0dHJpYnV0ZXMiOnsiYWRkcmVzc19jaXR5IjoiRGVudmVyIiwiYWRkcmVzc19saW5lMSI6IjIgRWFzdCAxNHRoIEF2ZW51ZSIsImFkZHJlc3Nfc3RhdGUiOiJDTyIsImFkZHJlc3NfemlwIjoiODAyMDMiLCJuYW1lIjoiTWFyaWEgRS4gQmVya2Vua290dGVyIiwidGl0bGUiOiJDTyBTdXByZW1lIENvdXJ0IEp1c3RpY2UifX0seyJpZCI6IjE1IiwidHlwZSI6InJlcHJlc2VudGF0aXZlIiwiYXR0cmlidXRlcyI6eyJhZGRyZXNzX2NpdHkiOiJEZW52ZXIiLCJhZGRyZXNzX2xpbmUxIjoiMiBFYXN0IDE0dGggQXZlbnVlIiwiYWRkcmVzc19zdGF0ZSI6IkNPIiwiYWRkcmVzc196aXAiOiI4MDIwMyIsIm5hbWUiOiJNZWxpc3NhIEhhcnQiLCJ0aXRsZSI6IkNPIFN1cHJlbWUgQ291cnQgSnVzdGljZSJ9fSx7ImlkIjoiMTYiLCJ0eXBlIjoicmVwcmVzZW50YXRpdmUiLCJhdHRyaWJ1dGVzIjp7ImFkZHJlc3NfY2l0eSI6IkRlbnZlciIsImFkZHJlc3NfbGluZTEiOiIyIEVhc3QgMTR0aCBBdmVudWUiLCJhZGRyZXNzX3N0YXRlIjoiQ08iLCJhZGRyZXNzX3ppcCI6IjgwMjAzIiwibmFtZSI6Ik1vbmljYSBNLiBNw6FycXVleiIsInRpdGxlIjoiQ08gU3VwcmVtZSBDb3VydCBKdXN0aWNlIn19LHsiaWQiOiIxNyIsInR5cGUiOiJyZXByZXNlbnRhdGl2ZSIsImF0dHJpYnV0ZXMiOnsiYWRkcmVzc19jaXR5IjoiRGVudmVyIiwiYWRkcmVzc19saW5lMSI6IjIgRWFzdCAxNHRoIEF2ZW51ZSIsImFkZHJlc3Nfc3RhdGUiOiJDTyIsImFkZHJlc3NfemlwIjoiODAyMDMiLCJuYW1lIjoiUmljaGFyZCBMLiBHYWJyaWVsIiwidGl0bGUiOiJDTyBTdXByZW1lIENvdXJ0IEp1c3RpY2UifX0seyJpZCI6IjE4IiwidHlwZSI6InJlcHJlc2VudGF0aXZlIiwiYXR0cmlidXRlcyI6eyJhZGRyZXNzX2NpdHkiOiJEZW52ZXIiLCJhZGRyZXNzX2xpbmUxIjoiMiBFYXN0IDE0dGggQXZlbnVlIiwiYWRkcmVzc19zdGF0ZSI6IkNPIiwiYWRkcmVzc196aXAiOiI4MDIwMyIsIm5hbWUiOiJXaWxsaWFtIFcuIEhvb2QgSUlJIiwidGl0bGUiOiJDTyBTdXByZW1lIENvdXJ0IEp1c3RpY2UifX0seyJpZCI6IjE5IiwidHlwZSI6InJlcHJlc2VudGF0aXZlIiwiYXR0cmlidXRlcyI6eyJhZGRyZXNzX2NpdHkiOiJEZW52ZXIiLCJhZGRyZXNzX2xpbmUxIjoiMjAxIFdlc3QgQ29sZmF4IEF2ZW51ZSIsImFkZHJlc3Nfc3RhdGUiOiJDTyIsImFkZHJlc3NfemlwIjoiODAyMDIiLCJuYW1lIjoiQmV0aCBNY0Nhbm4iLCJ0aXRsZSI6IkNPIERpc3RyaWN0IEF0dG9ybmV5In19LHsiaWQiOiIyMCIsInR5cGUiOiJyZXByZXNlbnRhdGl2ZSIsImF0dHJpYnV0ZXMiOnsiYWRkcmVzc19jaXR5IjoiRGVudmVyIiwiYWRkcmVzc19saW5lMSI6IjE0MzcgQmFubm9jayBTdHJlZXQiLCJhZGRyZXNzX3N0YXRlIjoiQ08iLCJhZGRyZXNzX3ppcCI6IjgwMjAyIiwibmFtZSI6Ik1pY2hhZWwgSGFuY29jayIsInRpdGxlIjoiTWF5b3Igb2YgRGVudmVyIn19LHsiaWQiOiIyMSIsInR5cGUiOiJyZXByZXNlbnRhdGl2ZSIsImF0dHJpYnV0ZXMiOnsiYWRkcmVzc19jaXR5IjoiRGVudmVyIiwiYWRkcmVzc19saW5lMSI6IjIwMSBXZXN0IENvbGZheCBBdmVudWUiLCJhZGRyZXNzX3N0YXRlIjoiQ08iLCJhZGRyZXNzX3ppcCI6IjgwMjAyIiwibmFtZSI6IlBhdWwgTMOzcGV6IiwidGl0bGUiOiJEZW52ZXIgQ2l0eSBDbGVyayBhbmQgUmVjb3JkZXIifX0seyJpZCI6IjIyIiwidHlwZSI6InJlcHJlc2VudGF0aXZlIiwiYXR0cmlidXRlcyI6eyJhZGRyZXNzX2NpdHkiOiJEZW52ZXIiLCJhZGRyZXNzX2xpbmUxIjoiMjAxIFcgQ29sZmF4IEF2ZSBEZXB0IDcwNSIsImFkZHJlc3Nfc3RhdGUiOiJDTyIsImFkZHJlc3NfemlwIjoiODAyMDIiLCJuYW1lIjoiVGltb3RoeSBNLiBPJ0JyaWVuIiwidGl0bGUiOiJEZW52ZXIgQ2l0eSBBdWRpdG9yIn19LHsiaWQiOiIyMyIsInR5cGUiOiJyZXByZXNlbnRhdGl2ZSIsImF0dHJpYnV0ZXMiOnsiYWRkcmVzc19jaXR5IjoiRGVudmVyIiwiYWRkcmVzc19saW5lMSI6IjE0MzcgQmFubm9jayBTdHJlZXQiLCJhZGRyZXNzX3N0YXRlIjoiQ08iLCJhZGRyZXNzX3ppcCI6IjgwMjAyIiwibmFtZSI6IkRlYm9yYWggXCJEZWJiaWVcIiBPcnRlZ2EiLCJ0aXRsZSI6IkRlbnZlciBDaXR5IENvdW5jaWwgTWVtYmVyIn19LHsiaWQiOiIyNCIsInR5cGUiOiJyZXByZXNlbnRhdGl2ZSIsImF0dHJpYnV0ZXMiOnsiYWRkcmVzc19jaXR5IjoiRGVudmVyIiwiYWRkcmVzc19saW5lMSI6IjE0MzcgQmFubm9jayBTdHJlZXQiLCJhZGRyZXNzX3N0YXRlIjoiQ08iLCJhZGRyZXNzX3ppcCI6IjgwMjAyIiwibmFtZSI6IlJvYmluIEtuaWVjaCIsInRpdGxlIjoiRGVudmVyIENpdHkgQ291bmNpbCBNZW1iZXIifX1dfQ==
+  recorded_at: Wed, 12 Jan 2022 23:03:25 GMT
+recorded_with: VCR 6.0.0
