@@ -42,8 +42,9 @@ describe 'letters new', :vcr do
                                   }
                       }
     visit new_letter_path(rep_attributes)
-
-    fill_in :body, with: "Senator Michael Bennet, Please make GrubHub free. Your other constituent, Alex"
+    within('div.m-3') do
+      fill_in :body, with: "Senator Alec Garnett, Please make GrubHub free. Your other constituent, Alex"
+    end
     click_button "Create Letter"
     expect(current_path).to eq("/dashboard")
   end
@@ -62,6 +63,6 @@ describe 'letters new', :vcr do
     click_button "Create Letter"
 
     expect(current_path).to eq(new_letter_path)
-    expect(page).to have_content('Your letter could not be sent.')
+    expect(page).to have_content('Please fill out the letter before sending it.')
   end
 end
