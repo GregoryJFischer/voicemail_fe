@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col">
 
-<%= form_with url: "/letters", method: :post, local: true do |f| %>
+<%= form_with url: "/fetch_preview", method: :get, remote: true do |f| %>
   <%= f.text_area :body, class: "form-control", rows: "29" %><br/><br/>
   <%= f.hidden_field :rep_name, value: @rep.name %>
   <%= f.hidden_field :rep_address_line1, value: @rep.address_line1 %>
@@ -10,10 +10,8 @@
   <%= f.hidden_field :rep_address_state, value: @rep.address_state %>
   <%= f.hidden_field :rep_address_zip, value: @rep.address_zip %>
   <%= f.submit 'Create Letter' %>
+  <%= f.submit 'Preview Letter' %>
 <% end %>
 </div>
-
-<div class="col">
-<%= render "preview" %>
-</div>
+<div class="col" id="preview2">
 </div>

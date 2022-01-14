@@ -5,6 +5,10 @@ class LettersController < ApplicationController
   end
 
   def create
+    binding.pry
+    if params[:commit] == "Preview Letter"
+      redirect_to('/fetch_preview', params: request.query_parameters)
+    else
      confirmation = LettersFacade.create_letter(params[:body], session[:user_id], rep_params)
      if confirmation.has_key?(:message)
        flash[:error] = confirmation[:message]
@@ -16,6 +20,12 @@ class LettersController < ApplicationController
        flash[:error] = 'Error and error message not found'
        redirect_to "/letters/new"
      end
+   end
+   end
+
+   def preview
+     confirmation = LettersFacade.create_letter(params[:body], session[:user_id], rep_params)
+     @preview_url = confirmation[:data][:attributes][:send_date]
    end
 
 private
