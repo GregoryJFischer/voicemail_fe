@@ -27,9 +27,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e0ca9d10-718d-4896-be1b-9e51db3ab61b
+      - 76d5e263-8023-4ac3-8ef9-c1640cf39f74
       X-Runtime:
-      - '0.007097'
+      - '0.006371'
       Transfer-Encoding:
       - chunked
     body:
@@ -37,7 +37,7 @@ http_interactions:
       string: '{"data":{"id":"1","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex
         McConnell","google_id":"101243487143508063284","address_line1":"3431 N Vine
         St","address_line2":"","address_city":"Denver","address_state":"CO","address_zip":"80205"}}}'
-  recorded_at: Wed, 12 Jan 2022 23:03:20 GMT
+  recorded_at: Fri, 14 Jan 2022 00:01:35 GMT
 - request:
     method: patch
     uri: http://localhost:5000/api/v1/users/1
@@ -65,9 +65,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 28cfd0bd-7d0c-4d1a-8d34-9c000fbd3d30
+      - b9c042df-28f1-41d9-8adf-5eb1523d6eb1
       X-Runtime:
-      - '0.341576'
+      - '0.383612'
       Transfer-Encoding:
       - chunked
     body:
@@ -75,5 +75,5 @@ http_interactions:
       string: '{"data":{"id":"1","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex
         McConnell","google_id":"101243487143508063284","address_line1":"3431 N Vine
         St","address_line2":"","address_city":"Denver","address_state":"CO","address_zip":"80205"}}}'
-  recorded_at: Wed, 12 Jan 2022 23:03:21 GMT
+  recorded_at: Fri, 14 Jan 2022 00:01:35 GMT
 recorded_with: VCR 6.0.0
