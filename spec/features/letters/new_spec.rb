@@ -46,7 +46,7 @@ describe 'letters new', :vcr do
       fill_in :body, with: "Senator Alec Garnett, Please make GrubHub free. Your other constituent, Alex"
     end
     click_button "Create Letter"
-    expect(current_path).to eq("/dashboard")
+    expect(current_path).to eq("/fetch_preview")
   end
 
   it 'doesnt accept the letter if the letter isnt filled out' do
@@ -62,7 +62,6 @@ describe 'letters new', :vcr do
 
     click_button "Create Letter"
 
-    expect(current_path).to eq(new_letter_path)
-    expect(page).to have_content('Please fill out the letter before sending it.')
+    expect(current_path).to eq("/fetch_preview")
   end
 end

@@ -1,18 +1,30 @@
 class LettersController < ApplicationController
+  protect_from_forgery except: :preview
   def new
     @rep = Representative.new(params)
   end
 
-  def create
-    confirmation = LettersFacade.create_letter(params[:body], session[:user_id], rep_params)
-    if confirmation.has_key?(:message)
-      flash[:error] = confirmation[:message]
-      redirect_to new_letter_path(rep_params)
-    else confirmation[:data][:attributes][:send_date]
-      flash[:notice] = 'Your letter has been sent!'
-      redirect_to "/dashboard"
-    end
-  end
+   def preview
+     if params[:commit] == "Create Letter"
+       confirmation = LettersFacade.create_letter(params[:body], session[:user_id], rep_params)
+       if confirmation.has_key?(:message)
+         flash[:error] = confirmation[:message]
+         render js: "window.location='#{"/letters/new"}'"
+       elsif confirmation[:data][:attributes][:send_date]
+         flash[:notice] = 'Your letter has been sent!'
+         render js: "window.location='#{"/dashboard"}'"
+       else
+         flash[:error] = 'Error and error message not found'
+         render js: "window.location='#{"/letters/new"}'"
+       end
+     else
+       confirmation = LettersFacade.create_letter(params[:body], session[:user_id], rep_params)
+       @preview_url = confirmation[:data][:attributes][:preview_url]
+       @delivery_date = confirmation[:data][:attributes][:delivery_date]
+       sleep(3)
+   end
+   end
+
 
 private
 
