@@ -46,7 +46,7 @@ describe 'letters new', :vcr do
       fill_in :body, with: "Senator Alec Garnett, Please make GrubHub free. Your other constituent, Alex"
     end
     click_button "Create Letter"
-    expect(current_path).to eq("/dashboard")
+    expect(current_path).to eq("/fetch_preview")
   end
 
   it 'doesnt accept the letter if the letter isnt filled out' do
@@ -62,7 +62,27 @@ describe 'letters new', :vcr do
 
     click_button "Create Letter"
 
-    expect(current_path).to eq(new_letter_path)
-    expect(page).to have_content('Please fill out the letter before sending it.')
+    expect(current_path).to eq("/fetch_preview")
   end
+
+  #  it 'doesnt accept the letter if the letter isnt filled out' do
+  #   rep_attributes = { attributes: {
+  #                                   :address_city=>"Denver",
+  #                                   :address_line1=>"200 East Colfax Avenue",
+  #                                   :address_state=>"CO",
+  #                                   :address_zip=>"80203",
+  #                                   :name=>"CO State Representative Alec Garnett"
+  #                                 }
+  #                     }
+  #   visit new_letter_path(rep_attributes)
+  #   within('div.m-3') do
+  #     fill_in :body, with: "Senator Alec Garnett, Please make GrubHub free. Your other constituent, Alex"
+  #   end
+
+  #   click_button "Preview"
+
+    
+
+  #   expect(page).to have_CSS('embed-responsive embed-responsive-16by9')
+  #  end
 end
