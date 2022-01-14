@@ -1,5 +1,5 @@
+<div class='m-3'>
 <h3>Sending letter to <%= @rep.name %></h3> <br>
-<div class='m-3'
   <%= form_with url: "/letters", method: :post, local: true do |f| %>
     <%= f.text_area :body, :cols => 50, :rows => 10 %><br/><br/>
     <%= f.hidden_field :rep_name, value: @rep.name %>
