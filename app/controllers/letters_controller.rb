@@ -1,10 +1,10 @@
 class LettersController < ApplicationController
-
   def new
     @rep = Representative.new(params)
   end
 
   def create
+<<<<<<< HEAD
     binding.pry
     if params[:commit] == "Preview Letter"
       redirect_to('/fetch_preview', params: request.query_parameters)
@@ -27,6 +27,7 @@ class LettersController < ApplicationController
      confirmation = LettersFacade.create_letter(params[:body], session[:user_id], rep_params)
      @preview_url = confirmation[:data][:attributes][:send_date]
    end
+
 
 private
 

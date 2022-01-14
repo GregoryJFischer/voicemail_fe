@@ -39,10 +39,13 @@ class BackendService
     def parse_response(response)
       JSON.parse(response.body, symbolize_names: true)
     end
-
     def conn
+<<<<<<< HEAD
        # Faraday.new(url: "https://voicemail-be.herokuapp.com")
        Faraday.new(url: "http://localhost:5000")
+=======
+      Faraday.new(url: ENV['BASE_URL'])
+>>>>>>> f617a267f332bf4c0aef34fe4db432ae42cecd17
     end
   end
 end

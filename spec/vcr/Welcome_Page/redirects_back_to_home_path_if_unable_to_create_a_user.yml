@@ -1,12 +1,12 @@
 ---
 http_interactions:
 - request:
-    method: patch
-    uri: http://localhost:5000/api/v1/users/5
+    method: post
+    uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"address_line1":"123 Main Street","address_city":"city a","address_state":"state
-        b","address_zip":"12345"}'
+      string: '{"google_id":"123456789","email":null,"token":"token","name":"John
+        Doe"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -18,21 +18,21 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 422
+      message: Unprocessable Entity
     headers:
       Content-Type:
       - application/json; charset=utf-8
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - cc650ce4-ef87-46e4-afdc-2db893af802c
+      - e7d17327-678a-410f-8396-54c454a74871
       X-Runtime:
-      - '0.002501'
+      - '0.004910'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"error":"Couldn''t find User with ''id''=5"}'
-  recorded_at: Mon, 10 Jan 2022 22:50:41 GMT
+      string: '{"error":"Validation failed: Email can''t be blank"}'
+  recorded_at: Thu, 13 Jan 2022 17:09:21 GMT
 recorded_with: VCR 6.0.0

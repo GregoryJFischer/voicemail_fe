@@ -8,53 +8,58 @@ describe 'user edit' do
     expect(current_path).to eq root_path
   end
 
-  it "should be able to edit the user's address" do
-    @user = User.create(email: 'prisonmike@theoffice.com', name: 'Michael Scott')
-    @session = {user_id: @user.id, token: 'abcd', google_id: '12345'}
+  describe 'logged in user', :vcr do
+    before(:each) do
+      user_params = {email: 'alexmmcconnell@gmail.com', name: 'Alex'}
+      new_user = BackendService.find_or_create_user(user_params)
+      session = {user_id: new_user[:data][:id]}
 
-    allow_any_instance_of(ApplicationController).to receive(:session).and_return(@session)
+      allow_any_instance_of(ApplicationController).to receive(:session).and_return(session)
+    end
 
-    visit '/edit'
+    it "can edit the user's address without an address line 2" do
+      visit '/edit'
 
-    expect(page).to have_content("Address Line 1")
-    expect(page).to have_content("Address Line 2")
-    expect(page).to have_content("City")
-    expect(page).to have_content("State")
-    expect(page).to have_content("Zip Code")
-    expect(page).to have_button("Save")
+      fill_in :address_line1, with: '3431 N Vine St'
+      fill_in :address_line2, with: ''
+      fill_in :address_city, with: 'Denver'
+      fill_in :address_state, with: 'CO'
+      fill_in :address_zip, with: '80205'
 
-    # click_on "Save"
+      click_button "Save"
 
-    # expect(current_path).to eq '/dashboard'
+      expect(current_path).to eq('/dashboard')
+      expect(page).to have_content("3431 N Vine St Denver, CO 80205")
+    end
 
-    # stub_request(:patch, "http://localhost:5000/api/v1/users/#{@user.id}").
-    # with(
-    #   headers: {
-    #     'Accept'=>'*/*',
-    #     'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-    #     'User-Agent'=>'Faraday v1.8.0'
-    #     }).to_return(status: 200, body:
-    #       { data: {
-    #         id: @user.id,
-    #         type: "user",
-    #         attributes: {
-    #           email: @user.email,
-    #           name: @user.name,
-    #           google_id: @user.google_id,
-    #           address_line1: '330 Main Street',
-    #           address_line2: nil,
-    #           address_city: 'city a',
-    #           address_state: 'state b',
-    #           address_zip: '12345'
-    #         }
-    #       }
-    #     }.to_json,
-    #     headers: {} )
+    it "can edit the user's address with an address line 2" do
+      visit '/edit'
 
-    # BackendService.update_address(@user.id, address_params)
-    # expect(page).to have_content("330 Main Street")
-    # expect(@user.address_line1).to eq '330 Main Street'
-    # expect(page).to have_content("Joseph R. Biden")
-    # expect(page.status_code).to eq 200
+      fill_in :address_line1, with: '12012 Starboard Dr'
+      fill_in :address_line2, with: 'Apt 205'
+      fill_in :address_city, with: 'Reston'
+      fill_in :address_state, with: 'VA'
+      fill_in :address_zip, with: '20194'
+
+      click_button "Save"
+
+      expect(current_path).to eq('/dashboard')
+      expect(page).to have_content("12012 Starboard Dr Apt 205 Reston, VA 20194")
+    end
+
+    it 'doesnt edit the address if all parameters arent filled out' do
+      visit '/edit'
+
+      fill_in :address_line1, with: ''
+      fill_in :address_city, with: ''
+      fill_in :address_state, with: ''
+      fill_in :address_zip, with: ''
+
+      click_button "Save"
+
+      expect(current_path).to eq('/edit')
+
+      expect(page).to have_content("Address invalid; please make sure all fields are filled in and correct.")
+    end
   end
 end

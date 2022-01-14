@@ -3,16 +3,20 @@ class UsersController < ApplicationController
     unless session[:user_id]
       flash[:error] = 'You must be logged in to visit this page'
       redirect_to root_path
+    else
+      current_user = BackendService.get_user(session[:user_id])
+      @current_address = current_user[:data][:attributes]
     end
   end
 
   def update
-    BackendService.update_address(session[:user_id], address_params)
-    if address_params.present?
+    response = BackendService.update_address(session[:user_id], address_params)
+    if response.status == 200
       Rails.cache.delete_matched("representatives-#{session[:user_id]}")
       redirect_to '/dashboard'
     else
-      flash[:error] = 'Please fill out all fields'
+      flash[:error] = 'Address invalid; please make sure all fields are filled in and correct.'
+      redirect_to '/edit'
     end
   end
 

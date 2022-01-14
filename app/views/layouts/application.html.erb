@@ -17,19 +17,6 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <% flash.each do |type, msg| %>
-      <br/>
-      <% if type == "error" %>
-        <div class="alert alert-danger container" style="text-align:center;" role="alert">
-          <%= msg %>
-        </div>
-      <% elsif type == "notice" %>
-        <div class="alert alert-success container" style="text-align:center;" role="alert">
-          <%= msg %>
-        </div>
-      <% end %>
-    <% end %>
-
     <% if session[:user_id] %>
       <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
@@ -37,7 +24,21 @@
           <%= link_to 'logout', '/logout', class: "btn btn-secondary", method: :delete %>
         </div>
       </nav>
+
+      <% flash.each do |type, msg| %>
+        <br/>
+        <% if type == "error" %>
+          <div class="alert alert-danger container" style="text-align:center;" role="alert">
+            <%= msg %>
+          </div>
+        <% elsif type == "notice" %>
+          <div class="alert alert-success container" style="text-align:center;" role="alert">
+            <%= msg %>
+          </div>
+        <% end %>
+      <% end %>
     <% end %>
+
 
     <%= yield %>
     <!-- Optional JavaScript; choose one of the two! -->

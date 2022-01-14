@@ -15,7 +15,7 @@ describe LettersFacade do
 
       expect(confirmation).to be_a(Hash)
       expect(confirmation).to have_key(:data)
-      expect(confirmation[:data][:id]).to eq("20")
-      expect(confirmation[:data][:attributes][:send_date]).to eq("2022-01-11")
+      expect(confirmation[:data][:id]).to eq("3")
+      expect(confirmation[:data][:attributes][:send_date]).to eq("2022-01-12")
   end
 end
