@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   patch '/update', to: 'users#update'
   delete '/logout', to: 'sessions#destroy'
 
-  get "/fetch_preview", to: 'letters#preview', as: 'fetch_preview'
+  get '/fetch_preview', to: 'letters#preview', as: 'fetch_preview'
 
-  resources :letters, only: [:show, :new, :create]
+  resources :letters, only: %i[show new create]
 end

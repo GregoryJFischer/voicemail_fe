@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
   def edit
-    unless session[:user_id]
-      flash[:error] = 'You must be logged in to visit this page'
-      redirect_to root_path
-    else
+    if session[:user_id]
       current_user = BackendService.get_user(session[:user_id])
       @current_address = current_user[:data][:attributes]
+    else
+      flash[:error] = 'You must be logged in to visit this page'
+      redirect_to root_path
     end
   end
 

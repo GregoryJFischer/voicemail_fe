@@ -5,14 +5,14 @@ class LettersController < ApplicationController
   end
 
   def preview
-    if params[:commit] == "Create Letter"
+    if params[:commit] == 'Create Letter'
       confirmation = LettersFacade.create_letter(params[:body], session[:user_id], rep_params)
       if confirmation.has_key?(:message)
         flash[:error] = confirmation[:message]
         render js: "window.location='#{new_letter_path(rep_params)}'"
       elsif confirmation[:data][:attributes][:send_date]
         flash[:notice] = 'Your letter has been sent!'
-        render js: "window.location='#{'/dashboard'}'"
+        render js: "window.location='/dashboard'"
       end
     else
       confirmation = LettersFacade.create_letter(params[:body], session[:user_id], rep_params)
@@ -25,14 +25,14 @@ class LettersController < ApplicationController
   private
 
   def rep_params
-  {
-  attributes: {
-    name: params[:rep_name],
-    address_line1: params[:rep_address_line1],
-    address_city: params[:rep_address_city],
-    address_state: params[:rep_address_state],
-    address_zip: params[:rep_address_zip]
+    {
+      attributes: {
+        name: params[:rep_name],
+        address_line1: params[:rep_address_line1],
+        address_city: params[:rep_address_city],
+        address_state: params[:rep_address_state],
+        address_zip: params[:rep_address_zip]
+      }
     }
-  }
   end
 end

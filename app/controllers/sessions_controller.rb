@@ -2,14 +2,14 @@ class SessionsController < ApplicationController
   def create
     user = BackendService.find_or_create_user(user_params)
 
-    unless user[:error]
+    if user[:error]
+      flash[:error] = 'Could not create user. Please try again.'
+      redirect_to root_path
+    else
       session[:token] = user_params[:token]
       session[:user_id] = user[:data][:id].to_i
 
       redirect_to '/dashboard'
-    else
-      flash[:error] = 'Could not create user. Please try again.'
-      redirect_to root_path
     end
   end
 
@@ -35,6 +35,6 @@ class SessionsController < ApplicationController
       email: auth_hash['info']['email'],
       token: auth_hash['credentials']['token'],
       name: auth_hash['info']['name']
-     }
+    }
   end
 end
