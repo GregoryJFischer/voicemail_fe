@@ -22,6 +22,9 @@ class LettersController < ApplicationController
     end
   end
 
+  def confirmation
+  end
+
   private
 
   def rep_params

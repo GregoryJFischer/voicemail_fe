@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
 
   get '/fetch_preview', to: 'letters#preview', as: 'fetch_preview'
-
+  
+  get '/letters/confirmation', to: "letters#confirmation"
   resources :letters, only: %i[show new create]
+  post 'checkout/create', to: "checkout#create"
 end
