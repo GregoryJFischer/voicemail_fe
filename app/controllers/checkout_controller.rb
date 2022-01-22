@@ -5,7 +5,7 @@ class CheckoutController < ApplicationController
     price = Stripe::Price.create(
       {
         product: "#{letter.id}",
-        unit_amount: 99,
+        unit_amount: 125,
         currency: 'usd',
       }
     )

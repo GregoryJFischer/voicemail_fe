@@ -6,16 +6,17 @@ class LettersController < ApplicationController
 
   def preview
     if params[:commit] == 'Create Letter'
-      confirmation = LettersFacade.create_letter(params[:body], session[:user_id], rep_params)
-      if confirmation.has_key?(:message)
-        flash[:error] = confirmation[:message]
-        render js: "window.location='#{new_letter_path(rep_params)}'"
-      elsif confirmation[:data][:attributes][:send_date]
-        flash[:notice] = 'Your letter has been sent!'
-        render js: "window.location='/dashboard'"
-      end
+      # confirmation = LettersFacade.create_letter(params[:body], session[:user_id], rep_params)
+      # if confirmation.has_key?(:message)
+      #   flash[:error] = confirmation[:message]
+      #   render js: "window.location='#{new_letter_path(rep_params)}'"
+      # elsif confirmation[:data][:attributes][:send_date]
+      #   flash[:notice] = 'Your letter has been sent!'
+      #   render js: "window.location='/dashboard'"
+      # end
+        render js: "window.location='#{letters_confirmation_path(params[:body], rep_params)}'"
     else
-      confirmation = LettersFacade.create_letter(params[:body], session[:user_id], rep_params)
+      confirmation = LettersFacade.preview_letter(params[:body], session[:user_id], rep_params)
       @preview_url = confirmation[:data][:attributes][:preview_url]
       @delivery_date = confirmation[:data][:attributes][:delivery_date]
       sleep(3)
@@ -23,6 +24,10 @@ class LettersController < ApplicationController
   end
 
   def confirmation
+    confirmation = LettersFacade.preview_letter(params[:format], session[:user_id], rep_preview_params)
+    @preview_url = confirmation[:data][:attributes][:preview_url]
+    @delivery_date = confirmation[:data][:attributes][:delivery_date]
+    sleep(3)
   end
 
   private
@@ -35,6 +40,18 @@ class LettersController < ApplicationController
         address_city: params[:rep_address_city],
         address_state: params[:rep_address_state],
         address_zip: params[:rep_address_zip]
+      }
+    }
+  end
+
+  def rep_preview_params
+    {
+      attributes: {
+        name: params[:attributes][:name],
+        address_line1: params[:attributes][:address_line1],
+        address_city: params[:attributes][:address_city],
+        address_state: params[:attributes][:address_state],
+        address_zip: params[:attributes][:address_zip]
       }
     }
   end
