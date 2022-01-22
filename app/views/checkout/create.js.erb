@@ -1,9 +1,6 @@
-var stripe = Stripe("<%= ENV['STRIPE_SECRET_KEY'] %>");
-var checkoutButton = document.getElementById('checkout-button');
+var stripe = Stripe("<%= "#{ENV['STRIPE_PUBLIC_KEY']}" %>");
 
-checkoutButton.addEventListener('click', function() {
-  stripe.redirectToCheckout({
-    sessionId: "<%= @session.id %>"
-  }).then(function (result) {
+stripe.redirectToCheckout({
+    sessionId: '<%= @session.id %>'
+}).then(function (result) {
   });
-});
