@@ -21,7 +21,10 @@ class UsersController < ApplicationController
   end
 
   def show
-    if session[:user_id]
+    if session[:user_id] && params[:sent]
+      flash[:notice] = 'Your letter has been sent!'
+      @dashboard_facade = UserDashboardFacade.new(session[:user_id])
+    elsif session[:user_id]
       @dashboard_facade = UserDashboardFacade.new(session[:user_id])
     else
       flash[:error] = 'You must be logged in to visit this page'

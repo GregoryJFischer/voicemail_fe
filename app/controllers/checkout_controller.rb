@@ -17,8 +17,8 @@ class CheckoutController < ApplicationController
         quantity: 1
       }],
       mode: 'payment',
-      success_url: "#{ENV['BASE_URL']}/dashboard.html",
-      cancel_url: "#{ENV['BASE_URL']}/letters/new.html"
+      success_url: "#{ENV['FRONTEND_URL']}/dashboard.html?sent=true",
+      cancel_url: "#{ENV['FRONTEND_URL']}/letters/new.html"
     })
 
     respond_to do |format|
