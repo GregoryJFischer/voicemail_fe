@@ -47,7 +47,7 @@ describe 'letters new', :vcr do
     expect(current_path).to eq('/fetch_preview')
   end
 
-  it 'doesnt accept the letter if the letter isnt filled out' do
+  it 'doesnt accept the letter if the letter isnt filled out', js: true do
     rep_attributes = { attributes: {
       address_city: 'Denver',
       address_line1: '200 East Colfax Avenue',
@@ -55,10 +55,11 @@ describe 'letters new', :vcr do
       address_zip: '80203',
       name: 'CO State Representative Alec Garnett'
     } }
+
     visit new_letter_path(rep_attributes)
 
     click_button 'Create Letter'
 
-    expect(current_path).to eq('/fetch_preview')
+    expect(page).to have_content("Please fill out the letter before sending.")
   end
 end

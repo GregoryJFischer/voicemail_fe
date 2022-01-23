@@ -59,7 +59,7 @@ describe 'user edit' do
 
       expect(current_path).to eq('/edit')
 
-      expect(page).to have_content('Address invalid; please make sure all fields are filled in and correct.')
+      expect(page).to have_content('Address invalid. Please make sure all fields are filled in and correct.')
     end
   end
 end

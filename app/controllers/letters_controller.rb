@@ -14,14 +14,20 @@ class LettersController < ApplicationController
       #   flash[:notice] = 'Your letter has been sent!'
       #   render js: "window.location='/dashboard'"
       # end
+      if params[:body].blank?
+        flash[:error] = "Please fill out the letter before sending."
+
+        render js: "window.location='#{new_letter_path(rep_params)}'"
+      elsif params[:commit] == 'Preview'
+        confirmation = LettersFacade.preview_letter(params[:body], session[:user_id], rep_params)
+        @preview_url = confirmation[:data][:attributes][:preview_url]
+        @delivery_date = confirmation[:data][:attributes][:delivery_date]
+        sleep(3)
+      else
         render js: "window.location='#{letters_confirmation_path(params[:body], rep_params)}'"
-    else
-      confirmation = LettersFacade.preview_letter(params[:body], session[:user_id], rep_params)
-      @preview_url = confirmation[:data][:attributes][:preview_url]
-      @delivery_date = confirmation[:data][:attributes][:delivery_date]
-      sleep(3)
+      end
     end
-  end
+    end
 
   def confirmation
     confirmation = LettersFacade.preview_letter(params[:format], session[:user_id], rep_preview_params)
