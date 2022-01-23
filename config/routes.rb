@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   get '/letters/confirmation', to: "letters#confirmation"
   resources :letters, only: %i[new create]
   post 'checkout/create', to: "checkout#create"
+
+  resources :webhooks, only: [:create]
 end
