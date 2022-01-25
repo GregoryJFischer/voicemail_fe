@@ -23,22 +23,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"328746f70550ad49733185cbb0ef90d7"
+      - W/"d1ae8324c2a5f1bf6b8b3bda22b1c9a4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 38460af2-b27c-4403-8456-66917d8f021b
+      - 66e1836a-e569-4a79-9cd3-57b379fe822d
       X-Runtime:
-      - '0.006327'
+      - '0.003097'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"3","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Thu, 13 Jan 2022 17:09:21 GMT
+      string: '{"data":{"id":"2","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex","google_id":null,"address_line1":"12012
+        Starboard Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194"}}}'
+  recorded_at: Tue, 25 Jan 2022 19:34:11 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/3
+    uri: http://localhost:5000/api/v1/users/2
     body:
       encoding: US-ASCII
       string: ''
@@ -57,17 +58,76 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"328746f70550ad49733185cbb0ef90d7"
+      - W/"d1ae8324c2a5f1bf6b8b3bda22b1c9a4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6ebf30ef-a779-44d8-8fbb-56141e99e6cc
+      - 0c6a4457-5252-41ef-9b96-25bbbf34770a
       X-Runtime:
-      - '0.002279'
+      - '0.001834'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"3","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Thu, 13 Jan 2022 17:09:26 GMT
+      string: '{"data":{"id":"2","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex","google_id":null,"address_line1":"12012
+        Starboard Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194"}}}'
+  recorded_at: Tue, 25 Jan 2022 19:34:11 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/2/representatives
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0701d60e6ec0b93dc21af4e8fe32e1dc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 61d60f31-bf5b-46cc-b40f-08c719510110
+      X-Runtime:
+      - '0.208278'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"0","type":"representative","attributes":{"address_city":"Washington","address_line1":"1600
+        Pennsylvania Avenue Northwest","address_state":"DC","address_zip":"20500","name":"Joseph
+        R. Biden","title":"President of the United States"}},{"id":"1","type":"representative","attributes":{"address_city":"Washington","address_line1":"1600
+        Pennsylvania Avenue Northwest","address_state":"DC","address_zip":"20500","name":"Kamala
+        D. Harris","title":"Vice President of the United States"}},{"id":"2","type":"representative","attributes":{"address_city":"Washington","address_line1":"703
+        Hart Senate Office Building","address_state":"DC","address_zip":"20510","name":"Mark
+        R. Warner","title":"U.S. Senator"}},{"id":"3","type":"representative","attributes":{"address_city":"Washington","address_line1":"231
+        Russell Senate Office Building","address_state":"DC","address_zip":"20510","name":"Tim
+        Kaine","title":"U.S. Senator"}},{"id":"4","type":"representative","attributes":{"address_city":"Washington","address_line1":"2238
+        Rayburn House Office Building","address_state":"DC","address_zip":"20515","name":"Gerald
+        E. \"Gerry\" Connolly","title":"U.S. Representative"}},{"id":"5","type":"representative","attributes":{"address_city":"Richmond","address_line1":"PO
+        Box 1195","address_state":"VA","address_zip":"23218","name":"Ralph S. Northam","title":"Governor
+        of Virginia"}},{"id":"6","type":"representative","attributes":{"address_city":"Richmond","address_line1":"P.O.
+        Box 1195","address_state":"VA","address_zip":"23218","name":"Justin E. Fairfax","title":"Lieutenant
+        Governor of Virginia"}},{"id":"7","type":"representative","attributes":{"address_city":"Richmond","address_line1":"202
+        North 9th Street","address_state":"VA","address_zip":"23219","name":"Mark
+        R. Herring","title":"VA Attorney General"}},{"id":"8","type":"representative","attributes":{"address_city":"Richmond","address_line1":"900
+        East Main Street","address_state":"VA","address_zip":"23219","name":"Janet
+        D. Howell","title":"VA State Senator"}},{"id":"9","type":"representative","attributes":{"address_city":"Richmond","address_line1":"900
+        East Main Street","address_state":"VA","address_zip":"23219","name":"Kenneth
+        R. \"Ken\" Plum","title":"VA State Delegate"}},{"id":"10","type":"representative","attributes":{"address_city":"Fairfax","address_line1":"12000
+        Government Center Parkway","address_state":"VA","address_zip":"22035","name":"Jeffrey
+        C. McKay","title":"Fairfax County Supervisor"}},{"id":"11","type":"representative","attributes":{"address_city":"Fairfax","address_line1":"12000
+        Government Center Parkway","address_state":"VA","address_zip":"22035","name":"Walter
+        L. Alcorn","title":"Fairfax County Supervisor"}}]}'
+  recorded_at: Tue, 25 Jan 2022 19:34:12 GMT
 recorded_with: VCR 6.0.0

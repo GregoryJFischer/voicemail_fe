@@ -71,7 +71,13 @@ describe 'users dashboard' do
 
       expect(current_path).to eq('/edit')
     end
+    it 'tells them they sent a letter' do
+      visit '/dashboard?sent=true'
+  
+      expect(page).to have_content('Your letter has been sent!')
+    end
   end
+
 
   describe 'user not logged in' do
     it 'redirects user to root path' do
@@ -81,4 +87,6 @@ describe 'users dashboard' do
       expect(page).to have_content('You must be logged in to visit this page')
     end
   end
+
+
 end

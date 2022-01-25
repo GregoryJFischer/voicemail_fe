@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get '/fetch_preview', to: 'letters#preview', as: 'fetch_preview'
   
   get '/letters/confirmation', to: "letters#confirmation"
+  get '/letters/confirmation.:body', to: "letters#confirmation"
   resources :letters, only: %i[new create]
   post 'checkout/create', to: "checkout#create"
 

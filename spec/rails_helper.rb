@@ -79,6 +79,7 @@ Shoulda::Matchers.configure do |config|
     c.default_cassette_options = {
       match_requests_on: %i[method]
     }
+    c.allow_http_connections_when_no_cassette = true
   end
 end
 OmniAuth.config.silence_get_warning = true

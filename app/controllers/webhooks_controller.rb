@@ -8,7 +8,7 @@ class WebhooksController < ApplicationController
 
     begin
       event = Stripe::Webhook.construct_event(
-        payload, sig_header, Rails.application.credentials[:stripe][:webhook]
+        payload, sig_header, "#{ENV['TEST_SIGNING_SECRET']}"
       )
     rescue JSON::ParserError => e
       status 400
@@ -24,7 +24,7 @@ class WebhooksController < ApplicationController
     case event.type
     when 'checkout.session.completed'
       session = event.data.object
-      require 'pry'; binding.pry
+   
       #insert logic here -- Nate
     end
 

@@ -4,7 +4,7 @@ describe 'Welcome Page', :vcr do
   it 'can log a user in / log a user out' do
     visit root_path
 
-    click_link
+    click_link('sign-in')
 
     expect(current_path).to eq dashboard_path
 
@@ -18,10 +18,7 @@ describe 'Welcome Page', :vcr do
 
     visit root_path
 
-    click_link
-
-    expect(current_path).to eq root_path
-    expect(page).to have_content 'Validation failed. Please try again.'
+    expect{ click_link('sign-in') }.to raise_error(OmniAuth::Error)
   end
 
   it 'redirects back to home path if unable to create a user' do
