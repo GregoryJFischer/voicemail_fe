@@ -45,7 +45,7 @@ describe 'letters new', type: :system do
     end
     click_button 'Create Letter'
 
-    expect(current_path).to include('/letters/confirmation')
+    expect(current_path).to include('/letters')
   end
 
   it 'doesnt accept the letter if the letter isnt filled out' do
