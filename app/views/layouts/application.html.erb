@@ -12,7 +12,7 @@
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script src="https://js.stripe.com/v3/"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -20,8 +20,8 @@
     <% if session[:user_id] %>
       <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand">VoiceMail</a>
-          <%= link_to 'logout', '/logout', class: "btn btn-secondary", method: :delete %>
+          <a class="navbar-brand fs-4">VoiceMail</a>
+          <%= link_to 'logout', '/logout', class: "btn btn-secondary", style: "width: 5%;", method: :delete %>
         </div>
       </nav>
 

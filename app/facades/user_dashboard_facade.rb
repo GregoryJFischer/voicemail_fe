@@ -1,5 +1,4 @@
 class UserDashboardFacade
-
   def initialize(user_id)
     @user = BackendService.get_user(user_id)
   end
@@ -15,10 +14,6 @@ class UserDashboardFacade
   end
 
   def representative_service
-    if user.address_line1
-      BackendService.representatives(@user[:data][:id])
-    else
-      nil
-    end
+    BackendService.representatives(@user[:data][:id]) if user.address_line1
   end
 end

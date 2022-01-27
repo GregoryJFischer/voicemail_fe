@@ -17,7 +17,10 @@
 
 <div class="text-center">
   <br>
-  <h1 style="color:white;">Welcome To VoiceMail</h1><br>
-  <%= link_to (image_tag('https://developers.google.com/identity/images/btn_google_signin_light_normal_web.png')), '/auth/google_oauth2', method: :get %>
+  <h1 style="color:white;font-family: Georgia;">Welcome To VoiceMail</h1><br>
+  <div>
+  <h5 class="rounded" style="color:white;margin: auto;width: 40%;background-color: rgba(51, 51, 51, 0.6);font-family: Futura;line-height: 1.5">Consumer Reports says that ‘letters carry significantly more weight’ with politicians than email. VoiceMail makes it easy to send snail mail to your representatives without ever needing to walk to the mailbox.</h5>
+  </div><br>
+  <%= link_to (image_tag('https://developers.google.com/identity/images/btn_google_signin_light_normal_web.png')), '/auth/google_oauth2', id:'sign-in', method: :get %>
 </div>
 </div>

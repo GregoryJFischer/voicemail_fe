@@ -3,8 +3,9 @@ require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
-abort("The Rails environment is running in production mode!") if Rails.env.production?
+abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -34,7 +35,20 @@ RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.include FactoryBot::Syntax::Methods
+  config.before(:each, type: :system) do
+      driven_by(:selenium_chrome_headless)
+    end
 
+    config.before(:each, type: :system, js: true) do
+      driven_by(:selenium_chrome_headless)
+    end
+    
+    config.after(:each, type: :system) do
+      FileUtils.rm Dir.glob(Rails.root.join('*.pdf'))
+    end
+    config.after(:each, type: :system, js: true) do
+      FileUtils.rm Dir.glob(Rails.root.join('*.pdf'))
+    end
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
@@ -78,24 +92,26 @@ Shoulda::Matchers.configure do |config|
     c.default_cassette_options = {
       match_requests_on: %i[method]
     }
+    c.allow_http_connections_when_no_cassette = true
+    c.default_cassette_options = { re_record_interval: 12.hours }
   end
 end
 OmniAuth.config.silence_get_warning = true
 OmniAuth.config.test_mode = true
 OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
-  provider: "google_oauth2",
-  uid: "123456789",
-  info: {
-    name: "John Doe",
-    email: "john.doe@example.com",
-    first_name: "John",
-    last_name: "Doe",
-    image: "https://lh3.googleusercontent.com/url/photo.jpg"
-  },
-  credentials: {
-      token: "token",
-      refresh_token: "another_token",
-      expires_at: 1354920555,
-      expires: true
-  }
-})
+                                                                     provider: 'google_oauth2',
+                                                                     uid: '123456789',
+                                                                     info: {
+                                                                       name: 'John Doe',
+                                                                       email: 'john.doe@example.com',
+                                                                       first_name: 'John',
+                                                                       last_name: 'Doe',
+                                                                       image: 'https://lh3.googleusercontent.com/url/photo.jpg'
+                                                                     },
+                                                                     credentials: {
+                                                                       token: 'token',
+                                                                       refresh_token: 'another_token',
+                                                                       expires_at: 1_354_920_555,
+                                                                       expires: true
+                                                                     }
+                                                                   })

@@ -23,24 +23,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"e6a18c103e086a9b4ac99f4311eabe20"
+      - W/"d1ae8324c2a5f1bf6b8b3bda22b1c9a4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 59836d39-d594-4a8e-8235-3037e138d650
+      - d118f5b5-c7de-4e5d-8737-112699f24802
       X-Runtime:
-      - '0.002702'
+      - '0.002602'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex
-        McConnell","google_id":"101243487143508063284","address_line1":"12012 Starboard
-        Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194"}}}'
-  recorded_at: Thu, 13 Jan 2022 18:57:51 GMT
+      string: '{"data":{"id":"2","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex","google_id":null,"address_line1":"12012
+        Starboard Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194"}}}'
+  recorded_at: Thu, 27 Jan 2022 20:28:13 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/1
+    uri: http://localhost:5000/api/v1/users/2
     body:
       encoding: US-ASCII
       string: ''
@@ -59,24 +58,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"e6a18c103e086a9b4ac99f4311eabe20"
+      - W/"d1ae8324c2a5f1bf6b8b3bda22b1c9a4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 350cd8ab-1992-4d86-a303-7644a7aef91e
+      - 6d7b4d8d-27d2-4710-87ba-f3d3fd3230d2
       X-Runtime:
-      - '0.005180'
+      - '0.002086'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex
-        McConnell","google_id":"101243487143508063284","address_line1":"12012 Starboard
-        Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194"}}}'
-  recorded_at: Thu, 13 Jan 2022 18:57:52 GMT
+      string: '{"data":{"id":"2","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex","google_id":null,"address_line1":"12012
+        Starboard Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194"}}}'
+  recorded_at: Thu, 27 Jan 2022 20:28:13 GMT
 - request:
     method: patch
-    uri: http://localhost:5000/api/v1/users/1
+    uri: http://localhost:5000/api/v1/users/2
     body:
       encoding: UTF-8
       string: '{"address_line1":"","address_line2":"Apt 205","address_city":"","address_state":"","address_zip":""}'
@@ -97,9 +95,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Request-Id:
-      - 66661650-2d04-4654-94fb-d3cbaf592264
+      - 15221865-4e6f-4051-9d7f-0daa39a272a7
       X-Runtime:
-      - '0.310797'
+      - '0.421170'
       Content-Length:
       - '10998'
     body:
@@ -108,7 +106,7 @@ http_interactions:
         (Status 422) primary_line is required or address is required \n {\n    \"error\":
         {\n        \"message\": \"primary_line is required or address is required\",\n        \"status_code\":
         422,\n        \"code\": \"invalid\"\n    }\n}\u003e","traces":{"Application
-        Trace":[{"id":4,"trace":"app/facades/lob_facade.rb:5:in `verify_address''"},{"id":5,"trace":"app/controllers/api/v1/users_controller.rb:21:in
+        Trace":[{"id":4,"trace":"app/facades/lob_facade.rb:5:in `verify_address''"},{"id":5,"trace":"app/controllers/api/v1/users_controller.rb:17:in
         `update''"}],"Framework Trace":[{"id":0,"trace":"lob (5.4.4) lib/lob/resources/resource_base.rb:109:in
         `handle_api_error''"},{"id":1,"trace":"lob (5.4.4) lib/lob/resources/resource_base.rb:99:in
         `rescue in submit''"},{"id":2,"trace":"lob (5.4.4) lib/lob/resources/resource_base.rb:87:in
@@ -169,7 +167,7 @@ http_interactions:
         (5.4.4) lib/lob/resources/resource_base.rb:99:in `rescue in submit''"},{"id":2,"trace":"lob
         (5.4.4) lib/lob/resources/resource_base.rb:87:in `submit''"},{"id":3,"trace":"lob
         (5.4.4) lib/lob/resources/us_verifications.rb:22:in `verify''"},{"id":4,"trace":"app/facades/lob_facade.rb:5:in
-        `verify_address''"},{"id":5,"trace":"app/controllers/api/v1/users_controller.rb:21:in
+        `verify_address''"},{"id":5,"trace":"app/controllers/api/v1/users_controller.rb:17:in
         `update''"},{"id":6,"trace":"actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in
         `send_action''"},{"id":7,"trace":"actionpack (5.2.6) lib/abstract_controller/base.rb:194:in
         `process_action''"},{"id":8,"trace":"actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in
@@ -222,10 +220,10 @@ http_interactions:
         lib/puma/server.rb:476:in `process_client''"},{"id":56,"trace":"puma (3.12.6)
         lib/puma/server.rb:334:in `block in run''"},{"id":57,"trace":"puma (3.12.6)
         lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Thu, 13 Jan 2022 18:57:52 GMT
+  recorded_at: Thu, 27 Jan 2022 20:28:13 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/1
+    uri: http://localhost:5000/api/v1/users/2
     body:
       encoding: US-ASCII
       string: ''
@@ -244,19 +242,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"e6a18c103e086a9b4ac99f4311eabe20"
+      - W/"d1ae8324c2a5f1bf6b8b3bda22b1c9a4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d66ddd54-fcce-4322-be45-90278653e05d
+      - e85b04bd-a162-4986-b712-16ed5eeee417
       X-Runtime:
-      - '0.003621'
+      - '0.004585'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex
-        McConnell","google_id":"101243487143508063284","address_line1":"12012 Starboard
-        Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194"}}}'
-  recorded_at: Thu, 13 Jan 2022 18:57:52 GMT
+      string: '{"data":{"id":"2","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex","google_id":null,"address_line1":"12012
+        Starboard Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194"}}}'
+  recorded_at: Thu, 27 Jan 2022 20:28:13 GMT
 recorded_with: VCR 6.0.0

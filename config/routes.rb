@@ -9,7 +9,12 @@ Rails.application.routes.draw do
   patch '/update', to: 'users#update'
   delete '/logout', to: 'sessions#destroy'
 
-  get "/fetch_preview", to: 'letters#preview', as: 'fetch_preview'
+  get '/fetch_preview', to: 'letters#preview', as: 'fetch_preview'
+  
+  get '/letters/confirmation', to: "letters#confirmation"
+  get '/letters/confirmation.:body', to: "letters#confirmation"
+  resources :letters, only: %i[new create]
+  post 'checkout/create', to: "checkout#create"
 
-  resources :letters, only: [:show, :new, :create]
+  resources :webhooks, only: [:create]
 end
