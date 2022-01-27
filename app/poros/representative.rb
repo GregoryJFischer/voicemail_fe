@@ -20,6 +20,7 @@ class Representative
     wip = { attributes: {
       id: nil,
       name: @name,
+      title: @title,
       address_line1: @address_line1,
       address_city: @address_city,
       address_state: @address_state,
