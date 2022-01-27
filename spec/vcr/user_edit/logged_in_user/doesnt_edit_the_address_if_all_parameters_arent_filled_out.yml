@@ -27,16 +27,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2ec2e3ab-aa76-4f29-901d-1d22204c0750
+      - d118f5b5-c7de-4e5d-8737-112699f24802
       X-Runtime:
-      - '0.004647'
+      - '0.002602'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex","google_id":null,"address_line1":"12012
         Starboard Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194"}}}'
-  recorded_at: Thu, 27 Jan 2022 02:16:59 GMT
+  recorded_at: Thu, 27 Jan 2022 20:28:13 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/2
@@ -62,16 +62,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9909f442-e3b5-4928-929a-1f2f4e21bc38
+      - 6d7b4d8d-27d2-4710-87ba-f3d3fd3230d2
       X-Runtime:
-      - '0.004821'
+      - '0.002086'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex","google_id":null,"address_line1":"12012
         Starboard Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194"}}}'
-  recorded_at: Thu, 27 Jan 2022 02:16:59 GMT
+  recorded_at: Thu, 27 Jan 2022 20:28:13 GMT
 - request:
     method: patch
     uri: http://localhost:5000/api/v1/users/2
@@ -95,9 +95,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Request-Id:
-      - 9029fb10-29e0-486e-ad25-36793bfc154e
+      - 15221865-4e6f-4051-9d7f-0daa39a272a7
       X-Runtime:
-      - '0.506295'
+      - '0.421170'
       Content-Length:
       - '10998'
     body:
@@ -220,7 +220,7 @@ http_interactions:
         lib/puma/server.rb:476:in `process_client''"},{"id":56,"trace":"puma (3.12.6)
         lib/puma/server.rb:334:in `block in run''"},{"id":57,"trace":"puma (3.12.6)
         lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Thu, 27 Jan 2022 02:16:59 GMT
+  recorded_at: Thu, 27 Jan 2022 20:28:13 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/2
@@ -246,14 +246,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ec2daccf-ee70-42f7-9024-fa02b8a5efaf
+      - e85b04bd-a162-4986-b712-16ed5eeee417
       X-Runtime:
-      - '0.002889'
+      - '0.004585'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"user","attributes":{"email":"alexmmcconnell@gmail.com","name":"Alex","google_id":null,"address_line1":"12012
         Starboard Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194"}}}'
-  recorded_at: Thu, 27 Jan 2022 02:16:59 GMT
+  recorded_at: Thu, 27 Jan 2022 20:28:13 GMT
 recorded_with: VCR 6.0.0

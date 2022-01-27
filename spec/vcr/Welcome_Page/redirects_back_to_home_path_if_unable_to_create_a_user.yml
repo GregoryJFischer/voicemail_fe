@@ -18,21 +18,15 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 422
-      message: Unprocessable Entity
+      code: 403
+      message: Forbidden
     headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Cache-Control:
-      - no-cache
-      X-Request-Id:
-      - 9d8825ec-8f89-44b8-8127-8d5f2d188c0e
-      X-Runtime:
-      - '0.013806'
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '0'
+      Server:
+      - AirTunes/600.8.1
     body:
       encoding: UTF-8
-      string: '{"error":"Validation failed: Email can''t be blank"}'
-  recorded_at: Thu, 27 Jan 2022 02:20:55 GMT
+      string: ''
+  recorded_at: Thu, 27 Jan 2022 20:27:35 GMT
 recorded_with: VCR 6.0.0
