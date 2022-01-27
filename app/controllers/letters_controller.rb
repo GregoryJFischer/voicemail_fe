@@ -4,7 +4,7 @@ class LettersController < ApplicationController
     @rep = Representative.new(params)
     @current_user = UserDashboardFacade.new(session[:user_id])
     @user = @current_user.user
-
+    @letter_format = letter_format
   end
 
   def preview
@@ -42,6 +42,10 @@ class LettersController < ApplicationController
   end
 
   private
+
+  def letter_format
+    "Dear #{@rep.title} #{@rep.name},\n\n\n\nYour constituent,\n\n#{@user.name}"
+  end
 
   def rep_params
     {

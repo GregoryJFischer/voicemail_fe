@@ -1,9 +1,8 @@
 <script>
   var text_box_input = document.getElementsByName('body')[0].value;
-  document.getElementById('preview').innerHTML = text_box_input;
+  document.getElementById('preview').innerHTML = text_box_input.replaceAll("\n", '<br>');
 
 </script>
-
 
 <style>
   *,
@@ -112,10 +111,7 @@
     <div class="page-content">
      <!-- <div id="main-logo"><img src="https://s3.us-west-2.amazonaws.com/public.lob.com/Lob_For_Good/voter+access+program+(1).png" width="240px"></div> -->
       <div class="text">
-        <%= @rep.title %> <%= @rep.name %>
         <p id='preview'></p>
-        Your constituent, <br>
-        <%= @user.name %>
       </div>
 
       <!-- This div represents a white box which will be printed on top of all artwork to hold address and barcode information. Any content provided underneath this area will be covered. -->
