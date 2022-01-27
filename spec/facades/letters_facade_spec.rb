@@ -15,6 +15,6 @@ describe LettersFacade do
     expect(confirmation).to be_a(Hash)
     expect(confirmation).to have_key(:data)
     expect(confirmation[:data]).to have_key(:id)
-    expect(confirmation[:data][:attributes][:send_date]).to eq(Date.today.strftime('%Y-%m-%d'))
+    expect(confirmation[:data][:attributes][:send_date]).to eq(Date.today.strftime('%Y-%m-%d')).or eq(Date.current.strftime('%Y-%m-%d'))
   end
 end

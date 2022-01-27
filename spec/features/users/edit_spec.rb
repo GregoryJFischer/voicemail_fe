@@ -20,16 +20,16 @@ describe 'user edit' do
     it "can edit the user's address without an address line 2" do
       visit '/edit'
 
-      fill_in :address_line1, with: '3431 N Vine St'
+      fill_in :address_line1, with: '1551 Utica St'
       fill_in :address_line2, with: ''
       fill_in :address_city, with: 'Denver'
       fill_in :address_state, with: 'CO'
-      fill_in :address_zip, with: '80205'
+      fill_in :address_zip, with: '80204'
 
       click_button 'Save'
 
       expect(current_path).to eq('/dashboard')
-      expect(page).to have_content('3431 N Vine St Denver, CO 80205')
+      expect(page).to have_content('1551 Utica St Denver, CO 80204')
     end
 
     it "can edit the user's address with an address line 2" do

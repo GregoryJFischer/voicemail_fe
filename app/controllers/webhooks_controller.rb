@@ -23,8 +23,8 @@ class WebhooksController < ApplicationController
     # Handle the event
     case event.type
     when 'checkout.session.completed'
-      session = event.data.object
-   
+      stripe_session = event.data.object
+      # User.find_by(email: params[:email])
       #insert logic here -- Nate
     end
 

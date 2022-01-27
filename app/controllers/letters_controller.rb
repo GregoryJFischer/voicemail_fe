@@ -27,7 +27,7 @@ class LettersController < ApplicationController
         render js: "window.location='#{letters_confirmation_path(params[:body], rep_params)}'"
       end
     end
-    end
+  end
 
   def confirmation
     confirmation = LettersFacade.preview_letter(params[:format], session[:user_id], rep_preview_params)

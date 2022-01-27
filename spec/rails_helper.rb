@@ -35,7 +35,20 @@ RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.include FactoryBot::Syntax::Methods
+  config.before(:each, type: :system) do
+      driven_by(:selenium_chrome_headless)
+    end
 
+    config.before(:each, type: :system, js: true) do
+      driven_by(:selenium_chrome_headless)
+    end
+    
+    config.after(:each, type: :system) do
+      FileUtils.rm Dir.glob(Rails.root.join('*.pdf'))
+    end
+    config.after(:each, type: :system, js: true) do
+      FileUtils.rm Dir.glob(Rails.root.join('*.pdf'))
+    end
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
@@ -80,6 +93,7 @@ Shoulda::Matchers.configure do |config|
       match_requests_on: %i[method]
     }
     c.allow_http_connections_when_no_cassette = true
+    c.default_cassette_options = { re_record_interval: 12.hours }
   end
 end
 OmniAuth.config.silence_get_warning = true

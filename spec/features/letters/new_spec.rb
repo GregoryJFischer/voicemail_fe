@@ -7,10 +7,10 @@ describe 'letters new', type: :system do
     session = { user_id: new_user[:data][:id] }
 
     address = {
-      address_line1: '3431 N Vine St',
+      address_line1: '1551 Utica St',
       address_city: 'Denver',
       address_state: 'CO',
-      address_zip: '80205'
+      address_zip: '80204'
     }
 
     response = BackendService.update_address(new_user[:data][:id], address)
