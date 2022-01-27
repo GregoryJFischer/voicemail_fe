@@ -41,7 +41,7 @@ describe 'Welcome Page', :vcr do
                                                                        })
 
     visit root_path
-
+                                                                         
     click_link
 
     expect(current_path).to eq root_path
