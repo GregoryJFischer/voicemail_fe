@@ -1,15 +1,8 @@
 <div class='m-3'>
 <h3>Sending letter to <%= @rep.name %></h3> <br>
 
-  <div class="row">
-    <div class="col">
-
-<script>
-function wip() {
-  $( "#preview2" ).html("<%= escape_javascript(render 'html_preview', commit: 'Preview Letter') %>");
-}
-</script>
-
+<div class="row">
+  <div class="col">
 <%= form_with url: "/fetch_preview", method: :get, remote: true do |f| %>
   <%= f.text_area :body, name: 'body', class: "form-control", rows: "29", onKeyUp: "wip()", value: @letter_format %><br/><br/>
   <%= f.hidden_field :rep_name, value: @rep.name %>
@@ -18,8 +11,8 @@ function wip() {
   <%= f.hidden_field :rep_address_state, value: @rep.address_state %>
   <%= f.hidden_field :rep_address_zip, value: @rep.address_zip %>
   <%= f.submit 'Create Letter' %>
-  <%= f.submit 'Preview Letter' %>
 <% end %>
+
 </div>
 <div class="col" id="preview2">
 

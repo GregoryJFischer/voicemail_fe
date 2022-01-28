@@ -21,11 +21,10 @@ class LettersController < ApplicationController
         flash[:error] = "Please fill out the letter before sending."
 
         render js: "window.location='#{new_letter_path(rep_params)}'"
-
       else
         render js: "window.location='#{letters_confirmation_path(params[:body], rep_params)}'"
-
       end
+      
     elsif params[:commit] == 'Preview Letter'
       confirmation = LettersFacade.preview_letter(params[:body], session[:user_id], rep_params)
       @preview_url = confirmation[:data][:attributes][:preview_url]
