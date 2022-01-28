@@ -18,6 +18,7 @@
             </p>
               <div class="collapse" id="representative-<%= index %>">
                 <%= button_to "Send Letter", "/letters/new", class: "btn btn-secondary", method: :get, params: rep.attributes %><br/>
+                <%= image_tag(rep.photo_url) if rep.photo_url %>
               </div>
 
         <% end %>

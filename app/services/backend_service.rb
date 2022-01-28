@@ -13,7 +13,7 @@ class BackendService
     end
 
     def representatives(user_id)
-      fetch("users/#{user_id}/representatives")
+      wip = fetch("users/#{user_id}/representatives")
     end
 
     def fetch(url)

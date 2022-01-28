@@ -10,7 +10,12 @@ describe LettersFacade do
       name: 'CO State Representative Alec Garnett'
     } }
     body = 'test'
-    confirmation = LettersFacade.create_letter(body, 1, rep_attributes)
+    letter = LettersFacade.create_letter(body, 1, rep_attributes)
+    user = BackendService.get_user(1)
+
+    email = {email: user[:data][:email]}
+      
+    confirmation = BackendService.post('letters/send', email)
 
     expect(confirmation).to be_a(Hash)
     expect(confirmation).to have_key(:data)
