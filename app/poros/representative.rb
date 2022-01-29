@@ -17,13 +17,13 @@ class Representative
   end
 
   def attributes
-    wip = {attributes: {
-    id: nil,
-    name: @name,
-    address_line1: @address_line1,
-    address_city: @address_city,
-    address_state: @address_state,
-    address_zip: @address_zip
-    }}
+    wip = { attributes: {
+      id: nil,
+      name: @name,
+      address_line1: @address_line1,
+      address_city: @address_city,
+      address_state: @address_state,
+      address_zip: @address_zip
+    } }
   end
 end

@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     unless user[:error]
       session[:token] = oauth_params[:token]
       session[:user_id] = user[:data][:id].to_i
-
+      
       redirect_to '/dashboard'
     else
       flash[:error] = 'Could not create user. Please try again.'
@@ -55,7 +55,7 @@ class SessionsController < ApplicationController
       email: auth_hash['info']['email'],
       token: auth_hash['credentials']['token'],
       name: auth_hash['info']['name']
-     }
+    }
   end
 
   def user_params

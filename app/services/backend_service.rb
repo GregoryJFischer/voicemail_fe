@@ -5,7 +5,7 @@ class BackendService
     end
 
     def find_or_create_user(user_params)
-      parse_response(post("users", user_params))
+      parse_response(post('users', user_params))
     end
 
     def create_session(user_params)
@@ -30,6 +30,7 @@ class BackendService
         req.headers['Content-Type'] = 'application/json'
         req.body = json.to_json
       end
+
     end
 
     def patch(url, json)
@@ -45,7 +46,7 @@ class BackendService
     end
 
     def conn
-      Faraday.new(url: "#{ENV['BASE_URL']}")
+      Faraday.new(url: (ENV['BASE_URL']).to_s)
     end
   end
 end
