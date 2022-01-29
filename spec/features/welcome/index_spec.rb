@@ -4,7 +4,9 @@ describe 'Welcome Page', :vcr do
   it 'can log a user in / log a user out' do
     visit root_path
 
-    click_link
+    within('#google-button') do
+      click_link
+    end
 
     expect(current_path).to eq dashboard_path
 
@@ -18,7 +20,9 @@ describe 'Welcome Page', :vcr do
 
     visit root_path
 
-    click_link
+    within('#google-button') do
+      click_link
+    end
 
     expect(current_path).to eq root_path
     expect(page).to have_content 'Validation failed. Please try again.'
@@ -45,7 +49,9 @@ describe 'Welcome Page', :vcr do
 
     visit root_path
 
-    click_link
+    within('#google-button') do
+      click_link
+    end
 
     expect(current_path).to eq root_path
     expect(page).to have_content 'Could not create user. Please try again.'
@@ -61,5 +67,21 @@ describe 'Welcome Page', :vcr do
     visit root_path
 
     expect(current_path).to eq dashboard_path
+  end
+
+  it 'links to the register page' do
+    visit root_path
+
+    click_link 'Register an Account'
+
+    expect(current_path).to eq '/register'
+  end
+
+  it 'links to the log in page' do
+    visit root_path
+
+    click_link 'Log In With Email'
+
+    expect(current_path).to eq '/login'
   end
 end

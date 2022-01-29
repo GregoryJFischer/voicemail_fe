@@ -1,0 +1,39 @@
+<% flash.each do |type, msg| %>
+  <br/>
+  <% if type == "error" %>
+    <div class="alert alert-danger container" style="text-align:center;" role="alert">
+      <%= msg %>
+    </div>
+  <% elsif type == "notice" %>
+    <div class="alert alert-success container" style="text-align:center;" role="alert">
+      <%= msg %>
+    </div>
+  <% end %>
+<% end %>
+
+<br>
+<div class="container-lg text-center">
+  <h2>Register a New Account</h2>
+
+
+  <%= form_with url: '/users', method: :post, local: true do |f| %>
+    <br/>
+    <div class="row mb-3">
+      <%= f.label :name, "Name", class: "col-sm-3 col-form-label text-center" %>
+      <%= f.text_field :name, class: "col-sm-8" %><br>
+    </div>
+    <div class="row mb-3">
+      <%= f.label :email, "Email", class: "col-sm-3 col-form-label text-center" %>
+      <%= f.text_field :email, class: "col-sm-8" %><br>
+    </div>
+    <div class="row mb-3">
+      <%= f.label :password, "Password", class: "col-sm-3 col-form-label text-center" %>
+      <%= f.password_field :password, class: "col-sm-8" %><br>
+    </div>
+    <div class="row mb-3">
+      <%= f.label :password_confirmation, "Confirm Your Password", class: "col-sm-3 col-form-label text-center" %>
+      <%= f.password_field :password_confirmation, class: "col-sm-8" %><br>
+    </div>
+    <%= f.submit "Create Account", class: "col-sm-3" %>
+  <% end %>
+</div>

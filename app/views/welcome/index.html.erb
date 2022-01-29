@@ -1,23 +1,31 @@
-  <div class="bg-image"
-     style="background-image: url(<%= asset_path 'DC.jpg' %>);
-            height: 100vh">
+<div class="bg-image"
+    style="background-image: url(<%= asset_path 'DC.jpg' %>);
+          height: 100vh">
 
-<% flash.each do |type, msg| %>
-  <br/>
-  <% if type == "error" %>
-    <div class="alert alert-danger container" style="text-align:center;" role="alert">
-      <%= msg %>
-    </div>
-  <% elsif type == "notice" %>
-    <div class="alert alert-success container" style="text-align:center;" role="alert">
-      <%= msg %>
-    </div>
+  <% flash.each do |type, msg| %>
+    <br/>
+    <% if type == "error" %>
+      <div class="alert alert-danger container" style="text-align:center;" role="alert">
+        <%= msg %>
+      </div>
+    <% elsif type == "notice" %>
+      <div class="alert alert-success container" style="text-align:center;" role="alert">
+        <%= msg %>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
 
-<div class="text-center">
-  <br>
-  <h1 style="color:white;">Welcome To VoiceMail</h1><br>
-  <%= link_to (image_tag('https://developers.google.com/identity/images/btn_google_signin_light_normal_web.png')), '/auth/google_oauth2', method: :get %>
-</div>
+  <div class="text-center">
+    <br>
+    <h1 style="color:white;">Welcome To VoiceMail</h1><br>
+    <h3 id="google-button">
+      <%= link_to (image_tag('https://developers.google.com/identity/images/btn_google_signin_light_normal_web.png')), '/auth/google_oauth2', method: :get %>
+    </h3>
+    <h3>
+      <%= link_to "Log In With Email", '/login', method: :get, class: "btn btn-secondary"%>
+    </h3>
+    <h3>
+      <%= link_to "Register an Account", '/register', method: :get, class: "btn btn-secondary"%>
+    </h3>
+  </div>
 </div>
