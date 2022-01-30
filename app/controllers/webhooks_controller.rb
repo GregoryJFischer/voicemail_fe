@@ -24,8 +24,9 @@ class WebhooksController < ApplicationController
     case event.type
     when 'checkout.session.completed'
       stripe_session = event.data.object
-      # User.find_by(email: params[:email])
-      #insert logic here -- Nate
+      email = {email: params["data"]["object"]["customer_details"]["email"]}
+      
+      BackendService.post('letters/send', email)
     end
 
     render json: { message: 'success' }
