@@ -11,11 +11,12 @@ describe LettersFacade do
     } }
     body = 'test'
     letter = LettersFacade.create_letter(body, 1, rep_attributes)
-    user = BackendService.get_user(1)
 
-    email = {email: user[:data][:email]}
+    email = {email: 'nathan.brown263@gmail.com'}
       
-    confirmation = BackendService.post('letters/send', email)
+    response = BackendService.post('letters/send', email)
+
+    confirmation = JSON.parse(response.body, symbolize_names: true)
 
     expect(confirmation).to be_a(Hash)
     expect(confirmation).to have_key(:data)
