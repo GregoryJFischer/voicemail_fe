@@ -15,19 +15,6 @@ describe 'Welcome Page', :vcr do
     expect(current_path).to eq root_path
   end
 
-  it 'redirects back to root path if credentials are invalid' do
-    OmniAuth.config.mock_auth[:google_oauth2] = :invalid_credentials
-
-    visit root_path
-
-    within('#google-button') do
-      click_link
-    end
-
-    expect(current_path).to eq root_path
-    expect(page).to have_content 'Validation failed. Please try again.'
-  end
-
   it 'redirects back to home path if unable to create a user' do
     OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
                                                                          provider: 'google_oauth2',
@@ -58,7 +45,7 @@ describe 'Welcome Page', :vcr do
   end
 
   it 'redirects to dashboard_path if the user is logged in' do
-    user_params = { email: 'alexmmcconnell@gmail.com', name: 'Alex' }
+    user_params = { email: Faker::Internet.unique.email, name: 'Alex' }
     new_user = BackendService.find_or_create_user(user_params)
     session = { user_id: new_user[:data][:id] }
 

@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"madie@konopelski-walsh.net","name":"Alex"}'
+      string: '{"email":"steven_macgyver@friesen.com","name":"Alex"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f14678871c39bd43baee84b363bf0da8"
+      - W/"946acd903a46104b7c01b2b118ad317d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b6dc0488-f51a-4412-8600-19fed4fd4488
+      - 0ea35fd8-517e-48e3-91e8-f385d13b37e2
       X-Runtime:
-      - '0.005047'
+      - '0.009175'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"31","type":"user","attributes":{"email":"madie@konopelski-walsh.net","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Sat, 29 Jan 2022 15:44:52 GMT
+      string: '{"data":{"id":"64","type":"user","attributes":{"email":"steven_macgyver@friesen.com","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:57 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/31
+    uri: http://localhost:5000/api/v1/users/64
     body:
       encoding: US-ASCII
       string: ''
@@ -57,17 +57,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f14678871c39bd43baee84b363bf0da8"
+      - W/"946acd903a46104b7c01b2b118ad317d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0f97caff-b8a0-4e4e-a8f2-0001992f4abf
+      - 672abf93-e141-4fa4-bd37-126421bb51ee
       X-Runtime:
-      - '0.002131'
+      - '0.002261'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"31","type":"user","attributes":{"email":"madie@konopelski-walsh.net","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Sat, 29 Jan 2022 15:44:52 GMT
+      string: '{"data":{"id":"64","type":"user","attributes":{"email":"steven_macgyver@friesen.com","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:57 GMT
 recorded_with: VCR 6.0.0
