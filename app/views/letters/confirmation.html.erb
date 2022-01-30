@@ -1,6 +1,9 @@
+<div class="container">
 <h3>Does this look right?</h3>
 
 <%= render 'preview_new' %>
 
-<%= button_to 'Confirm Letter and Pay', checkout_create_path, remote: true %>
-<%= link_to 'Back', 'javascript:history.back()' %>
+<%= button_to 'Confirm Letter and Pay', checkout_create_path, class: "btn btn-secondary", remote: true %>
+<br>
+<%= link_to 'Back', 'javascript:history.back()', class: "link-secondary" %>
+</div>
