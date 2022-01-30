@@ -8,6 +8,10 @@ class BackendService
       parse_response(post('users', user_params))
     end
 
+    def create_session(user_params)
+      parse_response(post("sessions", user_params))
+    end
+
     def update_address(user_id, address_params)
       patch("users/#{user_id}", address_params)
     end

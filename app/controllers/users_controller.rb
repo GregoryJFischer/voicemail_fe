@@ -9,6 +9,20 @@ class UsersController < ApplicationController
     end
   end
 
+  def create
+    user = BackendService.find_or_create_user(user_params)
+
+    unless user[:error]
+      session[:token] = user_params[:token]
+      session[:user_id] = user[:data][:id].to_i
+
+      redirect_to '/dashboard'
+    else
+      flash[:error] = user[:error]
+      redirect_to '/register'
+    end
+  end
+
   def update
     response = BackendService.update_address(session[:user_id], address_params)
 
@@ -18,6 +32,12 @@ class UsersController < ApplicationController
     else
       flash[:error] = 'Address invalid. Please make sure all fields are filled in and correct.'
       redirect_to '/edit'
+    end
+  end
+
+  def new
+    if session[:user_id]
+      redirect_to dashboard_path
     end
   end
 
@@ -43,5 +63,9 @@ class UsersController < ApplicationController
       address_state: params[:address_state],
       address_zip: params[:address_zip]
     }
+  end
+
+  def user_params
+    params.permit(:name, :email, :password, :password_confirmation)
   end
 end
