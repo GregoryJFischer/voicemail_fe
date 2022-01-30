@@ -47,20 +47,4 @@ describe 'letters new', type: :system do
 
     expect(current_path).to include('/letters')
   end
-
-  it 'doesnt accept the letter if the letter isnt filled out' do
-    rep_attributes = { attributes: {
-      address_city: 'Denver',
-      address_line1: '200 East Colfax Avenue',
-      address_state: 'CO',
-      address_zip: '80203',
-      name: 'CO State Representative Alec Garnett'
-    } }
-
-    visit new_letter_path(rep_attributes)
-    
-    click_button 'Create Letter'
-
-    expect(page).to have_content("Please fill out the letter before sending.")
-  end
 end

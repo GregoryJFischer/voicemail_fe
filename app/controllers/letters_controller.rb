@@ -38,6 +38,7 @@ class LettersController < ApplicationController
     @preview_url = confirmation[:data][:attributes][:preview_url]
     @delivery_date = confirmation[:data][:attributes][:delivery_date]
     sleep(3)
+    require 'pry'; binding.pry
   end
 
   private
