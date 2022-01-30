@@ -2,6 +2,9 @@ class LettersController < ApplicationController
   protect_from_forgery except: :preview
   def new
     @rep = Representative.new(params)
+    @current_user = UserDashboardFacade.new(session[:user_id])
+    @user = @current_user.user
+    @letter_format = letter_format
   end
 
   def preview
@@ -18,11 +21,10 @@ class LettersController < ApplicationController
         flash[:error] = "Please fill out the letter before sending."
 
         render js: "window.location='#{new_letter_path(rep_params)}'"
-
       else
         render js: "window.location='#{letters_confirmation_path(params[:body], rep_params)}'"
-
       end
+      
     elsif params[:commit] == 'Preview Letter'
       confirmation = LettersFacade.preview_letter(params[:body], session[:user_id], rep_params)
       @preview_url = confirmation[:data][:attributes][:preview_url]
@@ -39,6 +41,10 @@ class LettersController < ApplicationController
   end
 
   private
+
+  def letter_format
+    "Dear #{@rep.title} #{@rep.name},\n\n\n\nYour constituent,\n\n#{@user.name}"
+  end
 
   def rep_params
     {
