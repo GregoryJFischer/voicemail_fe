@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"zulema_ebert@tremblay-littel.co","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"stefan@goyette.biz","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"d76ce5af88be008b58fdd22e8b86aabd"
+      - W/"fce88addfd1fbceb67eacd4fbff14954"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2a1178f0-c33b-436f-8e55-81c4111cdf52
+      - 2ffa018e-7689-405d-bc86-0966ebb4e680
       X-Runtime:
-      - '0.288095'
+      - '0.277784'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"29","type":"user","attributes":{"email":"zulema_ebert@tremblay-littel.co","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Sat, 29 Jan 2022 15:44:52 GMT
+      string: '{"data":{"id":"62","type":"user","attributes":{"email":"stefan@goyette.biz","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:56 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/29
+    uri: http://localhost:5000/api/v1/users/62
     body:
       encoding: US-ASCII
       string: ''
@@ -57,17 +57,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"d76ce5af88be008b58fdd22e8b86aabd"
+      - W/"fce88addfd1fbceb67eacd4fbff14954"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6b533a69-ff3f-4026-9f39-c4ae5bdc4aa7
+      - 3c879940-e3c0-4f11-93b7-3b625a826416
       X-Runtime:
-      - '0.003507'
+      - '0.001993'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"29","type":"user","attributes":{"email":"zulema_ebert@tremblay-littel.co","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Sat, 29 Jan 2022 15:44:52 GMT
+      string: '{"data":{"id":"62","type":"user","attributes":{"email":"stefan@goyette.biz","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:56 GMT
 recorded_with: VCR 6.0.0

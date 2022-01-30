@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"merry_fadel@koelpin-renner.co","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"jade@crooks.com","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"72db199385a96bc8f7ff0ac187181df4"
+      - W/"ad95bd46011cc295b0e00980d68ee18d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f9c02513-4d3f-45d5-b290-3fc2124be986
+      - 7ae1673f-a204-480e-8f49-4a3fdfea4684
       X-Runtime:
-      - '0.285470'
+      - '0.278542'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"26","type":"user","attributes":{"email":"merry_fadel@koelpin-renner.co","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Sat, 29 Jan 2022 15:44:51 GMT
+      string: '{"data":{"id":"56","type":"user","attributes":{"email":"jade@crooks.com","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:53 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/26
+    uri: http://localhost:5000/api/v1/users/56
     body:
       encoding: US-ASCII
       string: ''
@@ -57,25 +57,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"72db199385a96bc8f7ff0ac187181df4"
+      - W/"ad95bd46011cc295b0e00980d68ee18d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4e3a03b6-9082-4119-879f-473686a6df27
+      - 384d1215-9749-4ef3-88d4-fbaa7404dbd2
       X-Runtime:
-      - '0.004489'
+      - '0.002431'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"26","type":"user","attributes":{"email":"merry_fadel@koelpin-renner.co","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Sat, 29 Jan 2022 15:44:51 GMT
+      string: '{"data":{"id":"56","type":"user","attributes":{"email":"jade@crooks.com","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:53 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"pat.conn@thiel.org","name":"Alex"}'
+      string: '{"email":"enoch@breitenberg-funk.info","name":"Alex"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -93,22 +93,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9095bf3569b1be2f5caccbd49fc7265c"
+      - W/"bbb8388ee290b23301cefb2e1a98c142"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 030f7f7a-109a-4e9d-8252-e4e7d32df5c2
+      - bb759d1a-4e8a-4a13-8ccb-b5a6126ae16f
       X-Runtime:
-      - '0.005761'
+      - '0.011172'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"27","type":"user","attributes":{"email":"pat.conn@thiel.org","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Sat, 29 Jan 2022 15:44:51 GMT
+      string: '{"data":{"id":"57","type":"user","attributes":{"email":"enoch@breitenberg-funk.info","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:54 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/27
+    uri: http://localhost:5000/api/v1/users/57
     body:
       encoding: US-ASCII
       string: ''
@@ -127,17 +127,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9095bf3569b1be2f5caccbd49fc7265c"
+      - W/"bbb8388ee290b23301cefb2e1a98c142"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 61e16860-45d3-4eed-b5dd-d5eb6f67b731
+      - e2475ec9-a17c-4bdb-811e-f17a724d3100
       X-Runtime:
-      - '0.002608'
+      - '0.001849'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"27","type":"user","attributes":{"email":"pat.conn@thiel.org","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Sat, 29 Jan 2022 15:44:51 GMT
+      string: '{"data":{"id":"57","type":"user","attributes":{"email":"enoch@breitenberg-funk.info","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:54 GMT
 recorded_with: VCR 6.0.0
