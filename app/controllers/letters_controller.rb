@@ -22,9 +22,10 @@ class LettersController < ApplicationController
 
         render js: "window.location='#{new_letter_path(rep_params)}'"
       else
+        binding.pry
         render js: "window.location='#{letters_confirmation_path(params[:body], rep_params)}'"
       end
-      
+
     elsif params[:commit] == 'Preview Letter'
       confirmation = LettersFacade.preview_letter(params[:body], session[:user_id], rep_params)
       @preview_url = confirmation[:data][:attributes][:preview_url]
@@ -34,7 +35,8 @@ class LettersController < ApplicationController
   end
 
   def confirmation
-    confirmation = LettersFacade.preview_letter(params[:format], session[:user_id], rep_preview_params)
+    binding.pry
+    confirmation = LettersFacade.preview_letter(params[:body], session[:user_id], rep_preview_params)
     @preview_url = confirmation[:data][:attributes][:preview_url]
     @delivery_date = DateTime.parse(confirmation[:data][:attributes][:delivery_date]).strftime("%B %e, %Y")
     sleep(3)
