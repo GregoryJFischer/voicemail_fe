@@ -22,7 +22,6 @@ class LettersController < ApplicationController
 
         render js: "window.location='#{new_letter_path(rep_params)}'"
       else
-        binding.pry
         render js: "window.location='#{letters_confirmation_path(params[:body], rep_params)}'"
       end
 
