@@ -34,7 +34,6 @@ class LettersController < ApplicationController
   end
 
   def confirmation
-    binding.pry
     confirmation = LettersFacade.preview_letter(params[:body], session[:user_id], rep_preview_params)
     @preview_url = confirmation[:data][:attributes][:preview_url]
     @delivery_date = DateTime.parse(confirmation[:data][:attributes][:delivery_date]).strftime("%B %e, %Y")
