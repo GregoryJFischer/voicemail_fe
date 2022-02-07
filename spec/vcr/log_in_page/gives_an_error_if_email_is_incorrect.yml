@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"donte.durgan@kshlerin.io","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"hang@lebsack.io","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"5c878282938cefe17a110f4e56d2bf7e"
+      - W/"614ccf3a5f5afe6ef6fa54781d729ac4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7b7a59c6-fa71-48e9-b23c-0647534f09eb
+      - e9809328-7523-4444-8b16-39ca1e226600
       X-Runtime:
-      - '0.273013'
+      - '0.276966'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"25","type":"user","attributes":{"email":"donte.durgan@kshlerin.io","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Sat, 29 Jan 2022 15:44:50 GMT
+      string: '{"data":{"id":"55","type":"user","attributes":{"email":"hang@lebsack.io","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:53 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/25
+    uri: http://localhost:5000/api/v1/users/55
     body:
       encoding: US-ASCII
       string: ''
@@ -57,19 +57,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"5c878282938cefe17a110f4e56d2bf7e"
+      - W/"614ccf3a5f5afe6ef6fa54781d729ac4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 56389d7b-0faf-43e2-9278-e19160d94410
+      - 06717165-c77d-46a4-b713-289935b8c593
       X-Runtime:
-      - '0.001773'
+      - '0.002243'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"25","type":"user","attributes":{"email":"donte.durgan@kshlerin.io","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Sat, 29 Jan 2022 15:44:50 GMT
+      string: '{"data":{"id":"55","type":"user","attributes":{"email":"hang@lebsack.io","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:53 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/sessions
@@ -95,13 +95,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 313193c5-c535-4307-b05c-fb01770ffb80
+      - 151d4906-06d0-4681-bfde-82bb38efda5e
       X-Runtime:
-      - '0.002134'
+      - '0.002315'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"error":"Invalid Credentials"}'
-  recorded_at: Sat, 29 Jan 2022 15:44:50 GMT
+  recorded_at: Sun, 30 Jan 2022 20:28:53 GMT
 recorded_with: VCR 6.0.0

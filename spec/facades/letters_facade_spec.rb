@@ -9,12 +9,26 @@ describe LettersFacade do
       address_zip: '80203',
       name: 'CO State Representative Alec Garnett'
     } }
-    body = 'test'
-    letter = LettersFacade.create_letter(body, 1, rep_attributes)
 
-    email = {email: 'nathan.brown263@gmail.com'}
-      
-    response = BackendService.post('letters/send', email)
+    address_params = {
+      address_line1: '12012 starboard dr',
+      address_line2: 'apt 205',
+      address_city: 'reston',
+      address_state: 'va',
+      address_zip: '20194'
+     }
+
+    body = 'test'
+
+    email = Faker::Internet.unique.email
+
+    user = BackendService.find_or_create_user({email: email, name: 'Greg'})
+
+    BackendService.update_address(user[:data][:id], address_params)
+
+    LettersFacade.create_letter(body, user[:data][:id], rep_attributes)
+
+    response = BackendService.post('letters/send', {email: email})
 
     confirmation = JSON.parse(response.body, symbolize_names: true)
 

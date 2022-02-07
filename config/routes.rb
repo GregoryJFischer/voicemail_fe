@@ -15,9 +15,9 @@ Rails.application.routes.draw do
   patch '/update', to: 'users#update'
 
   get '/fetch_preview', to: 'letters#preview', as: 'fetch_preview'
-  
+
   get '/letters/confirmation', to: "letters#confirmation"
-  get '/letters/confirmation.:body', to: "letters#confirmation"
+  get '/letters/confirmation.:body', to: "letters#confirmation", body: /[^\/]+/
   resources :letters, only: %i[new create]
   post 'checkout/create', to: "checkout#create"
 

@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"myong@kuhn-adams.info","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"tanya@howe-welch.co","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f33ac8ea32135d95eedb1a833876d51c"
+      - W/"39c142617b359638158f0bfa43661ee0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 63c0095a-2939-497f-8b79-063d4f0d0411
+      - e46773e4-d3c2-4aa5-b905-57f1c5f73eb5
       X-Runtime:
-      - '0.313035'
+      - '0.298967'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"22","type":"user","attributes":{"email":"myong@kuhn-adams.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Sat, 29 Jan 2022 15:44:49 GMT
+      string: '{"data":{"id":"52","type":"user","attributes":{"email":"tanya@howe-welch.co","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:51 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/22
+    uri: http://localhost:5000/api/v1/users/52
     body:
       encoding: US-ASCII
       string: ''
@@ -57,25 +57,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f33ac8ea32135d95eedb1a833876d51c"
+      - W/"39c142617b359638158f0bfa43661ee0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d8c139fa-dc35-4cf0-a9e1-fe24be9ff3b5
+      - 53801957-e1b3-40e7-9c48-f0a7736da50a
       X-Runtime:
-      - '0.001984'
+      - '0.005031'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"22","type":"user","attributes":{"email":"myong@kuhn-adams.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Sat, 29 Jan 2022 15:44:49 GMT
+      string: '{"data":{"id":"52","type":"user","attributes":{"email":"tanya@howe-welch.co","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:51 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/sessions
     body:
       encoding: UTF-8
-      string: '{"email":"myong@kuhn-adams.info","password":"password"}'
+      string: '{"email":"tanya@howe-welch.co","password":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -93,22 +93,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f33ac8ea32135d95eedb1a833876d51c"
+      - W/"39c142617b359638158f0bfa43661ee0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bfbecbe4-760d-4759-abd9-5ab587cb44a7
+      - 0d8b120c-cbc1-4f44-9300-dd37d80dcfe5
       X-Runtime:
-      - '0.262734'
+      - '0.275092'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"22","type":"user","attributes":{"email":"myong@kuhn-adams.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Sat, 29 Jan 2022 15:44:49 GMT
+      string: '{"data":{"id":"52","type":"user","attributes":{"email":"tanya@howe-welch.co","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:52 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/22
+    uri: http://localhost:5000/api/v1/users/52
     body:
       encoding: US-ASCII
       string: ''
@@ -127,17 +127,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f33ac8ea32135d95eedb1a833876d51c"
+      - W/"39c142617b359638158f0bfa43661ee0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8cf65801-9127-42cd-8df0-52f5f9e92478
+      - 0accad13-bbb2-4553-bfad-9084a62475b1
       X-Runtime:
-      - '0.002375'
+      - '0.002285'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"22","type":"user","attributes":{"email":"myong@kuhn-adams.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Sat, 29 Jan 2022 15:44:49 GMT
+      string: '{"data":{"id":"52","type":"user","attributes":{"email":"tanya@howe-welch.co","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:52 GMT
 recorded_with: VCR 6.0.0

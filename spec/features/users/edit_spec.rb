@@ -10,7 +10,7 @@ describe 'user edit' do
 
   describe 'logged in user', :vcr do
     before(:each) do
-      user_params = { email: 'alexmmcconnell@gmail.com', name: 'Alex' }
+      user_params = { email: Faker::Internet.unique.email, name: 'Alex' }
       new_user = BackendService.find_or_create_user(user_params)
       session = { user_id: new_user[:data][:id] }
 

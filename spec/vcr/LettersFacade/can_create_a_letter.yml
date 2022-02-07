@@ -1,0 +1,249 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"leora@kuhic.com","name":"Greg"}'
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ec215a3479521386b771d16837be1716"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4416f626-b29a-4e46-8003-7dc8d7dac5d6
+      X-Runtime:
+      - '0.021205'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"48","type":"user","attributes":{"email":"leora@kuhic.com","name":"Greg","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:26 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/48
+    body:
+      encoding: UTF-8
+      string: '{"address_line1":"12012 starboard dr","address_line2":"apt 205","address_city":"reston","address_state":"va","address_zip":"20194"}'
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b8983bf7f2bcc0509f2648290a0ae7f7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ed0d08e7-5fde-455b-89e7-acd909219d1b
+      X-Runtime:
+      - '0.679086'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"48","type":"user","attributes":{"email":"leora@kuhic.com","name":"Greg","google_id":null,"address_line1":"12012
+        starboard dr","address_line2":"apt 205","address_city":"reston","address_state":"va","address_zip":"20194"}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:26 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/48
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b8983bf7f2bcc0509f2648290a0ae7f7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 61ab0f0d-59ac-4280-ba0b-d7fb1a251641
+      X-Runtime:
+      - '0.005937'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"48","type":"user","attributes":{"email":"leora@kuhic.com","name":"Greg","google_id":null,"address_line1":"12012
+        starboard dr","address_line2":"apt 205","address_city":"reston","address_state":"va","address_zip":"20194"}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:26 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/48/representatives
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"7fdfd589da714849e9c477f16b171a0e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 49577405-aa52-41bc-9c02-248b9129554a
+      X-Runtime:
+      - '0.296773'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"0","type":"representative","attributes":{"address_city":"Washington","address_line1":"1600
+        Pennsylvania Avenue Northwest","address_state":"DC","address_zip":"20500","name":"Joseph
+        R. Biden","title":"President of the United States","photo_url":null}},{"id":"1","type":"representative","attributes":{"address_city":"Washington","address_line1":"1600
+        Pennsylvania Avenue Northwest","address_state":"DC","address_zip":"20500","name":"Kamala
+        D. Harris","title":"Vice President of the United States","photo_url":null}},{"id":"2","type":"representative","attributes":{"address_city":"Washington","address_line1":"703
+        Hart Senate Office Building","address_state":"DC","address_zip":"20510","name":"Mark
+        R. Warner","title":"U.S. Senator","photo_url":"http://bioguide.congress.gov/bioguide/photo/W/W000805.jpg"}},{"id":"3","type":"representative","attributes":{"address_city":"Washington","address_line1":"231
+        Russell Senate Office Building","address_state":"DC","address_zip":"20510","name":"Tim
+        Kaine","title":"U.S. Senator","photo_url":"http://bioguide.congress.gov/bioguide/photo/K/K000384.jpg"}},{"id":"4","type":"representative","attributes":{"address_city":"Washington","address_line1":"2238
+        Rayburn House Office Building","address_state":"DC","address_zip":"20515","name":"Gerald
+        E. \"Gerry\" Connolly","title":"U.S. Representative","photo_url":"http://bioguide.congress.gov/bioguide/photo/C/C001078.jpg"}},{"id":"5","type":"representative","attributes":{"address_city":"Richmond","address_line1":"P.O.
+        Box 1475","address_state":"VA","address_zip":"23218","name":"Glenn Youngkin","title":"Governor
+        of Virginia","photo_url":null}},{"id":"6","type":"representative","attributes":{"address_city":"Richmond","address_line1":"P.O.
+        Box 1475","address_state":"VA","address_zip":"23218","name":"Winsome Earle-Sears","title":"Lieutenant
+        Governor of Virginia","photo_url":null}},{"id":"7","type":"representative","attributes":{"address_city":"Richmond","address_line1":"202
+        North 9th Street","address_state":"VA","address_zip":"23219","name":"Jason
+        S. Miyares","title":"VA Attorney General","photo_url":null}},{"id":"8","type":"representative","attributes":{"address_city":"Richmond","address_line1":"900
+        East Main Street","address_state":"VA","address_zip":"23219","name":"Janet
+        D. Howell","title":"VA State Senator","photo_url":"http://apps.lis.virginia.gov/senatepics/newbiopics/Howell32.jpg"}},{"id":"9","type":"representative","attributes":{"address_city":"Richmond","address_line1":"900
+        East Main Street","address_state":"VA","address_zip":"23219","name":"Kenneth
+        R. Plum","title":"VA State Delegate","photo_url":"http://virginiageneralassembly.gov/house/members/photos/36.jpg"}},{"id":"10","type":"representative","attributes":{"address_city":"Fairfax","address_line1":"12000
+        Government Center Parkway","address_state":"VA","address_zip":"22035","name":"Jeffrey
+        C. McKay","title":"Fairfax County Supervisor","photo_url":null}},{"id":"11","type":"representative","attributes":{"address_city":"Fairfax","address_line1":"12000
+        Government Center Parkway","address_state":"VA","address_zip":"22035","name":"Walter
+        L. Alcorn","title":"Fairfax County Supervisor","photo_url":null}}]}'
+  recorded_at: Sun, 30 Jan 2022 20:28:27 GMT
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/letters
+    body:
+      encoding: UTF-8
+      string: '{"to_address_line1":"200 East Colfax Avenue","to_address_line2":null,"to_address_city":"Denver","to_address_state":"CO","to_address_zip":"80203","from_address_line1":"12012
+        starboard dr","from_address_line2":"apt 205","from_address_city":"reston","from_address_state":"va","from_address_zip":"20194","body":"test","user_id":"48","to_name":"CO
+        State Representative Alec Garnett","from_name":"Greg"}'
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9fd318ff18b4ec9170e1d16afa8077d9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 51383c46-16d0-4680-8596-0b1a6aba854e
+      X-Runtime:
+      - '0.010932'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"7","type":"letter","attributes":{"send_date":null,"delivery_date":null,"to_address_line1":"200
+        East Colfax Avenue","to_address_line2":null,"to_address_city":"Denver","to_address_state":"CO","to_address_zip":"80203","from_address_line1":"12012
+        starboard dr","from_address_line2":"apt 205","from_address_city":"reston","from_address_state":"va","from_address_zip":"20194","body":"test","user_id":48,"to_name":"CO
+        State Representative Alec Garnett","from_name":"Greg","preview_url":null}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:27 GMT
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/letters/send
+    body:
+      encoding: UTF-8
+      string: '{"email":"leora@kuhic.com"}'
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"9fc667991d2dd5137ecda6d30991fa5a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b85efe91-b312-4920-86b3-5b4ddb1c53e2
+      X-Runtime:
+      - '1.338600'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"7","type":"letter","attributes":{"send_date":"2022-01-30","delivery_date":"2022-02-07","to_address_line1":"200
+        East Colfax Avenue","to_address_line2":null,"to_address_city":"Denver","to_address_state":"CO","to_address_zip":"80203","from_address_line1":"12012
+        starboard dr","from_address_line2":"apt 205","from_address_city":"reston","from_address_state":"va","from_address_zip":"20194","body":"test","user_id":48,"to_name":"CO
+        State Representative Alec Garnett","from_name":"Greg","preview_url":"https://lob-assets.com/letters/ltr_ac2251b3bce904d1.pdf?version=v1\u0026expires=1646166508\u0026signature=MF4Obbze9cRzUhFyJa39r4Dhoh1DmlmDNGQHfO4FefUHJPn8uwXaLZ1mVtNyVhzJ6iYnaCwXfOX_Ktnb-VrKAg"}}}'
+  recorded_at: Sun, 30 Jan 2022 20:28:28 GMT
+recorded_with: VCR 6.0.0
