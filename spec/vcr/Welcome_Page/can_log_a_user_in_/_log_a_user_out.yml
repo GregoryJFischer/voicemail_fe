@@ -24,23 +24,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"d96337142d46984566ab630aa2cb22c5"
+      - W/"d971a1384fc0894b4bbd5c3753e37ece"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 746138d0-e4ac-400e-94bb-fcc8122aa4bb
+      - 3ab82756-8c53-429d-856d-590acae80a8c
       X-Runtime:
-      - '0.007023'
+      - '0.010166'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"22","type":"user","attributes":{"email":"john.doe@example.com","name":"John
+      string: '{"data":{"id":"3","type":"user","attributes":{"email":"john.doe@example.com","name":"John
         Doe","google_id":"123456789","address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Sun, 30 Jan 2022 20:28:57 GMT
+  recorded_at: Mon, 07 Feb 2022 00:15:40 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/22
+    uri: http://localhost:5000/api/v1/users/3
     body:
       encoding: US-ASCII
       string: ''
@@ -59,18 +59,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"d96337142d46984566ab630aa2cb22c5"
+      - W/"d971a1384fc0894b4bbd5c3753e37ece"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0a781e15-e7c1-4b05-9a82-561a2056edc8
+      - 3cb899b5-87a5-4a21-b9e7-208ab2235af5
       X-Runtime:
-      - '0.006917'
+      - '0.002494'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"22","type":"user","attributes":{"email":"john.doe@example.com","name":"John
+      string: '{"data":{"id":"3","type":"user","attributes":{"email":"john.doe@example.com","name":"John
         Doe","google_id":"123456789","address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Sun, 30 Jan 2022 20:28:57 GMT
+  recorded_at: Mon, 07 Feb 2022 00:15:40 GMT
 recorded_with: VCR 6.0.0
