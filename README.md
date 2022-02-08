@@ -1,6 +1,5 @@
 # [VoiceMail Front-End](https://github.com/GregoryJFischer/voicemail_fe)
 
-[![VoiceMail](https://circleci.com/gh/GregoryJFischer/voicemail_fe.svg?style=svg)](https://app.circleci.com/pipelines/github/GregoryJFischer/voicemail_fe)
 
 #### [VoiceMail App](https://voicemail-fe.herokuapp.com/)
 
