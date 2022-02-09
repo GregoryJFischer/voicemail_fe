@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"milan@mitchell.com","name":"Alex"}'
+      string: '{"email":"lorrine_mcclure@swift-friesen.org","name":"Alex"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c241023cf20336d0afac93f4438dd151"
+      - W/"df52ba7bd2e1b25b45cf74a744b23bc7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 037e75c4-3151-4d5b-af6c-f2648ca4a4ba
+      - 422cac49-faf7-496c-b671-b1e485d27e8b
       X-Runtime:
-      - '0.004336'
+      - '0.016351'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"41","type":"user","attributes":{"email":"milan@mitchell.com","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Mon, 07 Feb 2022 00:15:40 GMT
+      string: '{"data":{"id":"62","type":"user","attributes":{"email":"lorrine_mcclure@swift-friesen.org","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 08 Feb 2022 03:13:24 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/41
+    uri: http://localhost:5000/api/v1/users/62
     body:
       encoding: US-ASCII
       string: ''
@@ -57,17 +57,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c241023cf20336d0afac93f4438dd151"
+      - W/"df52ba7bd2e1b25b45cf74a744b23bc7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fb2bb220-9d7b-42e9-8a27-d0950ed16fc8
+      - 222b006a-5fba-4363-9997-db52ce3d50a9
       X-Runtime:
-      - '0.021672'
+      - '0.016637'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"41","type":"user","attributes":{"email":"milan@mitchell.com","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Mon, 07 Feb 2022 00:15:40 GMT
+      string: '{"data":{"id":"62","type":"user","attributes":{"email":"lorrine_mcclure@swift-friesen.org","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 08 Feb 2022 03:13:24 GMT
 recorded_with: VCR 6.0.0

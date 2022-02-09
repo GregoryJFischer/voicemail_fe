@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"ruben_predovic@kovacek.net","name":"Alex"}'
+      string: '{"email":"renee@runolfsdottir.io","name":"Alex"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9b2a9e386c185bee41b34ce92e01a7fc"
+      - W/"1e3a585dd7f14ab94a5cc2d3199d2036"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7b74ee9d-752f-41a9-a541-c0f7ebf81cd5
+      - b4f82ec3-4f36-48f8-97a6-383f69f1ecbb
       X-Runtime:
-      - '0.008507'
+      - '0.011998'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"37","type":"user","attributes":{"email":"ruben_predovic@kovacek.net","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Mon, 07 Feb 2022 00:15:38 GMT
+      string: '{"data":{"id":"58","type":"user","attributes":{"email":"renee@runolfsdottir.io","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 08 Feb 2022 03:13:22 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/37
+    uri: http://localhost:5000/api/v1/users/58
     body:
       encoding: US-ASCII
       string: ''
@@ -57,22 +57,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9b2a9e386c185bee41b34ce92e01a7fc"
+      - W/"1e3a585dd7f14ab94a5cc2d3199d2036"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 53542dc0-62b1-4caf-81d6-14b9be167791
+      - '03906b5f-a6f1-4a5e-895b-ecc32089b988'
       X-Runtime:
-      - '0.002731'
+      - '0.003476'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"37","type":"user","attributes":{"email":"ruben_predovic@kovacek.net","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Mon, 07 Feb 2022 00:15:38 GMT
+      string: '{"data":{"id":"58","type":"user","attributes":{"email":"renee@runolfsdottir.io","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 08 Feb 2022 03:13:22 GMT
 - request:
     method: patch
-    uri: http://localhost:5000/api/v1/users/37
+    uri: http://localhost:5000/api/v1/users/58
     body:
       encoding: UTF-8
       string: '{"address_line1":"","address_line2":"","address_city":"","address_state":"","address_zip":""}'
@@ -93,9 +93,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Request-Id:
-      - f162d644-52c0-403b-804b-3066f7741ad1
+      - 2ee33559-f0d0-4b68-a999-9ef4fe20bc78
       X-Runtime:
-      - '0.392858'
+      - '0.728117'
       Content-Length:
       - '11000'
     body:
@@ -218,10 +218,10 @@ http_interactions:
         lib/puma/server.rb:476:in `process_client''"},{"id":56,"trace":"puma (3.12.6)
         lib/puma/server.rb:334:in `block in run''"},{"id":57,"trace":"puma (3.12.6)
         lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Mon, 07 Feb 2022 00:15:39 GMT
+  recorded_at: Tue, 08 Feb 2022 03:13:23 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/37
+    uri: http://localhost:5000/api/v1/users/58
     body:
       encoding: US-ASCII
       string: ''
@@ -240,17 +240,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9b2a9e386c185bee41b34ce92e01a7fc"
+      - W/"1e3a585dd7f14ab94a5cc2d3199d2036"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2aa3fd9e-9338-438d-8b9e-d05ad54c1737
+      - be3aeaed-9ef2-488d-a4a7-bd83878f9080
       X-Runtime:
-      - '0.003182'
+      - '0.005943'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"37","type":"user","attributes":{"email":"ruben_predovic@kovacek.net","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Mon, 07 Feb 2022 00:15:39 GMT
+      string: '{"data":{"id":"58","type":"user","attributes":{"email":"renee@runolfsdottir.io","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 08 Feb 2022 03:13:23 GMT
 recorded_with: VCR 6.0.0
