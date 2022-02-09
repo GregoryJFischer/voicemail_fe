@@ -1,148 +1,6 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://localhost:5000/api/v1/users
-    body:
-      encoding: UTF-8
-      string: '{"email":"warren_lebsack@bosco.info","name":"Alex"}'
-    headers:
-      User-Agent:
-      - Faraday v1.9.3
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"cf59bd4b9fb7f2c9b2ca865f2511c500"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 0e27f62c-2615-41f6-9533-0dae3ff34061
-      X-Runtime:
-      - '0.006358'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"36","type":"user","attributes":{"email":"warren_lebsack@bosco.info","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Mon, 07 Feb 2022 00:15:37 GMT
-- request:
-    method: get
-    uri: http://localhost:5000/api/v1/users/36
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.9.3
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"cf59bd4b9fb7f2c9b2ca865f2511c500"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - e1c823db-879d-4b44-9d7a-248e7cd2b69e
-      X-Runtime:
-      - '0.003433'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"36","type":"user","attributes":{"email":"warren_lebsack@bosco.info","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Mon, 07 Feb 2022 00:15:37 GMT
-- request:
-    method: patch
-    uri: http://localhost:5000/api/v1/users/36
-    body:
-      encoding: UTF-8
-      string: '{"address_line1":"12012 Starboard Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194"}'
-    headers:
-      User-Agent:
-      - Faraday v1.9.3
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"0fb38466e272f7f6ec3c31a5808e3370"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 24317383-bf7d-4ceb-b49d-a474493100e8
-      X-Runtime:
-      - '0.410655'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"36","type":"user","attributes":{"email":"warren_lebsack@bosco.info","name":"Alex","google_id":null,"address_line1":"12012
-        Starboard Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194"}}}'
-  recorded_at: Mon, 07 Feb 2022 00:15:38 GMT
-- request:
-    method: get
-    uri: http://localhost:5000/api/v1/users/36
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.9.3
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"0fb38466e272f7f6ec3c31a5808e3370"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 131fbdb1-4774-4608-a2cf-aa5df3c225c7
-      X-Runtime:
-      - '0.001862'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"36","type":"user","attributes":{"email":"warren_lebsack@bosco.info","name":"Alex","google_id":null,"address_line1":"12012
-        Starboard Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194"}}}'
-  recorded_at: Mon, 07 Feb 2022 00:15:38 GMT
-- request:
     method: get
     uri: http://localhost:5000/api/v1/users/36/representatives
     body:
@@ -200,4 +58,142 @@ http_interactions:
         Government Center Parkway","address_state":"VA","address_zip":"22035","name":"Walter
         L. Alcorn","title":"Fairfax County Supervisor","photo_url":null}}]}'
   recorded_at: Mon, 07 Feb 2022 00:15:38 GMT
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"camie_quigley@koss.name","name":"Alex"}'
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8c6812ff7064c516d77d35ac5df50b9e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e0112033-f756-4e41-8f2e-6a777a664eef
+      X-Runtime:
+      - '0.009103'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"57","type":"user","attributes":{"email":"camie_quigley@koss.name","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 08 Feb 2022 03:13:21 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/57
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8c6812ff7064c516d77d35ac5df50b9e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 55ba19d2-6167-4158-aefc-c404130cb5bd
+      X-Runtime:
+      - '0.002213'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"57","type":"user","attributes":{"email":"camie_quigley@koss.name","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 08 Feb 2022 03:13:21 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/57
+    body:
+      encoding: UTF-8
+      string: '{"address_line1":"12012 Starboard Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194"}'
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 0df2905a-fce1-4eba-a3d9-5094b0328cdc
+      X-Runtime:
+      - '0.825452'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"Address failed to pass verification; please try again."}'
+  recorded_at: Tue, 08 Feb 2022 03:13:22 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/57
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8c6812ff7064c516d77d35ac5df50b9e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a730cc23-f03e-486a-83aa-8df4bf3c10d0
+      X-Runtime:
+      - '0.004214'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"57","type":"user","attributes":{"email":"camie_quigley@koss.name","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 08 Feb 2022 03:13:22 GMT
 recorded_with: VCR 6.0.0

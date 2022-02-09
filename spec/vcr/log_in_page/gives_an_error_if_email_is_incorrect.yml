@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"alberto_hermann@hilpert.info","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"marsha@casper.com","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c63421c9dca85b2aa80a5c5d3a35843e"
+      - W/"59cfe2b599d212248ccf3d0babfd5405"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 25d6a603-58e7-4ce8-b5a2-14f8f032d3ba
+      - c5a1c19d-018f-4ad8-aa5e-991309e46832
       X-Runtime:
-      - '0.407334'
+      - '0.272294'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"32","type":"user","attributes":{"email":"alberto_hermann@hilpert.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Mon, 07 Feb 2022 00:15:35 GMT
+      string: '{"data":{"id":"53","type":"user","attributes":{"email":"marsha@casper.com","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 08 Feb 2022 03:13:19 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/32
+    uri: http://localhost:5000/api/v1/users/53
     body:
       encoding: US-ASCII
       string: ''
@@ -57,19 +57,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c63421c9dca85b2aa80a5c5d3a35843e"
+      - W/"59cfe2b599d212248ccf3d0babfd5405"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b83c603a-5aef-4480-b674-de7139c033ad
+      - 69d0a93f-33de-463e-a921-af4eb631cc20
       X-Runtime:
-      - '0.026342'
+      - '0.003079'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"32","type":"user","attributes":{"email":"alberto_hermann@hilpert.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Mon, 07 Feb 2022 00:15:35 GMT
+      string: '{"data":{"id":"53","type":"user","attributes":{"email":"marsha@casper.com","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 08 Feb 2022 03:13:19 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/sessions
@@ -95,13 +95,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 7b1f83b5-562e-4879-9523-975f341f334c
+      - 96c2de8e-66f7-4078-95e9-63cc3a94891d
       X-Runtime:
-      - '0.001868'
+      - '0.001980'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"error":"Invalid Credentials"}'
-  recorded_at: Mon, 07 Feb 2022 00:15:36 GMT
+  recorded_at: Tue, 08 Feb 2022 03:13:19 GMT
 recorded_with: VCR 6.0.0
