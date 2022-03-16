@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"marsha@casper.com","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"salley_greenfelder@parisian.io","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"59cfe2b599d212248ccf3d0babfd5405"
+      - W/"8918e739685225c24e5579138a5166a0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c5a1c19d-018f-4ad8-aa5e-991309e46832
+      - c477e5a2-e41f-405c-83f9-ff6918a4deee
       X-Runtime:
-      - '0.272294'
+      - '0.268488'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"53","type":"user","attributes":{"email":"marsha@casper.com","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:19 GMT
+      string: '{"data":{"id":"84","type":"user","attributes":{"email":"salley_greenfelder@parisian.io","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 16 Mar 2022 03:23:42 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/53
+    uri: http://localhost:5000/api/v1/users/84
     body:
       encoding: US-ASCII
       string: ''
@@ -57,19 +57,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"59cfe2b599d212248ccf3d0babfd5405"
+      - W/"8918e739685225c24e5579138a5166a0"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 69d0a93f-33de-463e-a921-af4eb631cc20
+      - 005bbf17-be76-4aef-a2bc-44da6032d0a9
       X-Runtime:
-      - '0.003079'
+      - '0.005318'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"53","type":"user","attributes":{"email":"marsha@casper.com","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:19 GMT
+      string: '{"data":{"id":"84","type":"user","attributes":{"email":"salley_greenfelder@parisian.io","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 16 Mar 2022 03:23:42 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/sessions
@@ -95,13 +95,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 96c2de8e-66f7-4078-95e9-63cc3a94891d
+      - f8d09637-4f24-4549-999a-f7a8f26c6792
       X-Runtime:
-      - '0.001980'
+      - '0.001831'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"error":"Invalid Credentials"}'
-  recorded_at: Tue, 08 Feb 2022 03:13:19 GMT
+  recorded_at: Wed, 16 Mar 2022 03:23:42 GMT
 recorded_with: VCR 6.0.0

@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"kyle.berge@considine.info","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"bobby@balistreri-wintheiser.name","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c2e1577635b7ab71068a78ab4ba19670"
+      - W/"1ccfe61914eb4cd733fd665911d4ee7c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a460dc6c-a21d-4e4b-918f-186590e2cfdb
+      - 44f98110-79fe-4c9b-9e5b-f73cf07544bb
       X-Runtime:
-      - '0.306777'
+      - '0.280637'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"50","type":"user","attributes":{"email":"kyle.berge@considine.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:17 GMT
+      string: '{"data":{"id":"81","type":"user","attributes":{"email":"bobby@balistreri-wintheiser.name","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 16 Mar 2022 03:23:41 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/50
+    uri: http://localhost:5000/api/v1/users/81
     body:
       encoding: US-ASCII
       string: ''
@@ -57,25 +57,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c2e1577635b7ab71068a78ab4ba19670"
+      - W/"1ccfe61914eb4cd733fd665911d4ee7c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d606c059-6380-4921-98a5-e252a17eb05a
+      - 987a0a03-8e47-4068-a594-321e3ce94ee6
       X-Runtime:
-      - '0.005213'
+      - '0.003322'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"50","type":"user","attributes":{"email":"kyle.berge@considine.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:17 GMT
+      string: '{"data":{"id":"81","type":"user","attributes":{"email":"bobby@balistreri-wintheiser.name","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 16 Mar 2022 03:23:41 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/sessions
     body:
       encoding: UTF-8
-      string: '{"email":"kyle.berge@considine.info","password":"password"}'
+      string: '{"email":"bobby@balistreri-wintheiser.name","password":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -93,22 +93,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c2e1577635b7ab71068a78ab4ba19670"
+      - W/"1ccfe61914eb4cd733fd665911d4ee7c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e4c0557e-18fc-41cd-ae4e-8804f7ca4a02
+      - bd6ace6f-3813-4a8b-9aca-b99cbd18f960
       X-Runtime:
-      - '0.360047'
+      - '0.270147'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"50","type":"user","attributes":{"email":"kyle.berge@considine.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:18 GMT
+      string: '{"data":{"id":"81","type":"user","attributes":{"email":"bobby@balistreri-wintheiser.name","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 16 Mar 2022 03:23:41 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/50
+    uri: http://localhost:5000/api/v1/users/81
     body:
       encoding: US-ASCII
       string: ''
@@ -127,17 +127,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c2e1577635b7ab71068a78ab4ba19670"
+      - W/"1ccfe61914eb4cd733fd665911d4ee7c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e27f1a0f-cf05-4194-b48f-f25f943f3986
+      - de942870-1a09-4790-b8f3-b450702b03ae
       X-Runtime:
-      - '0.005532'
+      - '0.003272'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"50","type":"user","attributes":{"email":"kyle.berge@considine.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:18 GMT
+      string: '{"data":{"id":"81","type":"user","attributes":{"email":"bobby@balistreri-wintheiser.name","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 16 Mar 2022 03:23:41 GMT
 recorded_with: VCR 6.0.0

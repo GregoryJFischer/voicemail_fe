@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"kirby_keebler@schuster.biz","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"leif@mraz.info","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8ac6ae976bd78c6bbbe614a2aed812b6"
+      - W/"46b16e45e6cfbe6c6c10e6adb0c48d6d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9eedcc99-09d6-4d0c-af15-510097ce9e6d
+      - '071857bf-c889-41a3-a375-56731d08f36a'
       X-Runtime:
-      - '0.398412'
+      - '0.266064'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"61","type":"user","attributes":{"email":"kirby_keebler@schuster.biz","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:24 GMT
+      string: '{"data":{"id":"103","type":"user","attributes":{"email":"leif@mraz.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 16 Mar 2022 03:30:20 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/61
+    uri: http://localhost:5000/api/v1/users/103
     body:
       encoding: US-ASCII
       string: ''
@@ -57,25 +57,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8ac6ae976bd78c6bbbe614a2aed812b6"
+      - W/"46b16e45e6cfbe6c6c10e6adb0c48d6d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bb30b05f-6e99-4ac0-8d7c-f5e821849592
+      - a171ac67-0d1a-4fe3-85c9-232ea4ea4e4e
       X-Runtime:
-      - '0.012940'
+      - '0.002669'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"61","type":"user","attributes":{"email":"kirby_keebler@schuster.biz","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:24 GMT
+      string: '{"data":{"id":"103","type":"user","attributes":{"email":"leif@mraz.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 16 Mar 2022 03:30:20 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"kirby_keebler@schuster.biz","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"leif@mraz.info","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -95,13 +95,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - c52fe6f9-f559-46c0-b34f-c301c6193142
+      - 90f83838-bb3f-42e9-b77d-6327196bf042
       X-Runtime:
-      - '0.002594'
+      - '0.002459'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"error":"Email has already been registered"}'
-  recorded_at: Tue, 08 Feb 2022 03:13:24 GMT
+  recorded_at: Wed, 16 Mar 2022 03:30:20 GMT
 recorded_with: VCR 6.0.0

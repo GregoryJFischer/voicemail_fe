@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"wilbert@ferry.info","name":"Alex"}'
+      string: '{"email":"alethea@stehr.co","name":"Alex"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8b59368807c8b22b023247d5881ee1c1"
+      - W/"06e30dae8ac03a8db21b282fdd18c7fc"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f0cba62c-baef-46af-a27d-3e0624691150
+      - ab475957-cc96-4dbc-92f1-71c8af2fe515
       X-Runtime:
-      - '0.007228'
+      - '0.005029'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"63","type":"user","attributes":{"email":"wilbert@ferry.info","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:25 GMT
+      string: '{"data":{"id":"108","type":"user","attributes":{"email":"alethea@stehr.co","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 16 Mar 2022 03:31:52 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/63
+    uri: http://localhost:5000/api/v1/users/108
     body:
       encoding: US-ASCII
       string: ''
@@ -57,17 +57,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"8b59368807c8b22b023247d5881ee1c1"
+      - W/"06e30dae8ac03a8db21b282fdd18c7fc"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ddeec808-0da8-45ee-97ac-a3a64efd35eb
+      - 71627bbd-75a0-4154-a0da-b1aacab179ac
       X-Runtime:
-      - '0.002603'
+      - '0.001975'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"63","type":"user","attributes":{"email":"wilbert@ferry.info","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:25 GMT
+      string: '{"data":{"id":"108","type":"user","attributes":{"email":"alethea@stehr.co","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 16 Mar 2022 03:31:52 GMT
 recorded_with: VCR 6.0.0
