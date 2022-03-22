@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"genaro@ankunding-connelly.net","name":"Alex"}'
+      string: '{"email":"mimi@king.org","name":"Alex"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"dd180a5a839c70062262ae40a7560efe"
+      - W/"13b8622f4112d0fbf12946bd6e16b5a8"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8c53922d-f61d-4cfa-919b-9fc717c1a932
+      - 9ef67616-a5fa-4859-b3ce-f87cb55cb0e2
       X-Runtime:
-      - '0.011577'
+      - '0.009407'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"89","type":"user","attributes":{"email":"genaro@ankunding-connelly.net","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 16 Mar 2022 03:23:46 GMT
+      string: '{"data":{"id":"184","type":"user","attributes":{"email":"mimi@king.org","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 22 Mar 2022 18:54:32 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/89
+    uri: http://localhost:5000/api/v1/users/184
     body:
       encoding: US-ASCII
       string: ''
@@ -57,22 +57,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"dd180a5a839c70062262ae40a7560efe"
+      - W/"13b8622f4112d0fbf12946bd6e16b5a8"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d053a618-15b9-4fb4-9997-c45423f58044
+      - 9474af5b-9103-4c77-bc64-28bd9e146c95
       X-Runtime:
-      - '0.006680'
+      - '0.008967'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"89","type":"user","attributes":{"email":"genaro@ankunding-connelly.net","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 16 Mar 2022 03:23:46 GMT
+      string: '{"data":{"id":"184","type":"user","attributes":{"email":"mimi@king.org","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 22 Mar 2022 18:54:32 GMT
 - request:
     method: patch
-    uri: http://localhost:5000/api/v1/users/89
+    uri: http://localhost:5000/api/v1/users/184
     body:
       encoding: UTF-8
       string: '{"address_line1":"","address_line2":"","address_city":"","address_state":"","address_zip":""}'
@@ -93,9 +93,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Request-Id:
-      - 70897462-b696-4b05-8344-d6b7e4d033ae
+      - dc4fe53e-e763-408f-91aa-10f1e9750471
       X-Runtime:
-      - '1.123603'
+      - '0.355260'
       Content-Length:
       - '11000'
     body:
@@ -218,10 +218,10 @@ http_interactions:
         lib/puma/server.rb:476:in `process_client''"},{"id":56,"trace":"puma (3.12.6)
         lib/puma/server.rb:334:in `block in run''"},{"id":57,"trace":"puma (3.12.6)
         lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Wed, 16 Mar 2022 03:23:47 GMT
+  recorded_at: Tue, 22 Mar 2022 18:54:33 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/89
+    uri: http://localhost:5000/api/v1/users/184
     body:
       encoding: US-ASCII
       string: ''
@@ -240,17 +240,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"dd180a5a839c70062262ae40a7560efe"
+      - W/"13b8622f4112d0fbf12946bd6e16b5a8"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c5733f83-9e90-42c8-ad7d-f6cb4be1f264
+      - e35d72cc-110f-4c86-97f1-2d919d08c500
       X-Runtime:
-      - '0.002482'
+      - '0.002397'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"89","type":"user","attributes":{"email":"genaro@ankunding-connelly.net","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 16 Mar 2022 03:23:47 GMT
+      string: '{"data":{"id":"184","type":"user","attributes":{"email":"mimi@king.org","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 22 Mar 2022 18:54:33 GMT
 recorded_with: VCR 6.0.0

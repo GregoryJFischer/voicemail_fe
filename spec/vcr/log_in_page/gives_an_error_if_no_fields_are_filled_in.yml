@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"nathanael.gerhold@feil-wilkinson.io","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"elayne_bailey@schneider.info","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"893a65c1dde0aae02d18c7a7985e94e5"
+      - W/"bebadbec0f06e09fd0783b7bd2632892"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3d7b379e-a15f-453d-988f-bc5d7f0f8224
+      - 50c9e280-f805-4d39-9e8a-0d37161e520c
       X-Runtime:
-      - '0.264851'
+      - '0.278915'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"82","type":"user","attributes":{"email":"nathanael.gerhold@feil-wilkinson.io","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 16 Mar 2022 03:23:41 GMT
+      string: '{"data":{"id":"177","type":"user","attributes":{"email":"elayne_bailey@schneider.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 22 Mar 2022 18:54:29 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/82
+    uri: http://localhost:5000/api/v1/users/177
     body:
       encoding: US-ASCII
       string: ''
@@ -57,19 +57,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"893a65c1dde0aae02d18c7a7985e94e5"
+      - W/"bebadbec0f06e09fd0783b7bd2632892"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - be1ca9b1-a7e1-489a-866c-9ba8ecd502aa
+      - 63a7872a-d040-45e4-9801-9e62a473e5c2
       X-Runtime:
-      - '0.001892'
+      - '0.003308'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"82","type":"user","attributes":{"email":"nathanael.gerhold@feil-wilkinson.io","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 16 Mar 2022 03:23:41 GMT
+      string: '{"data":{"id":"177","type":"user","attributes":{"email":"elayne_bailey@schneider.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 22 Mar 2022 18:54:29 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/sessions
@@ -95,13 +95,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 013c50aa-9b6a-43a7-822e-42c3d0073d3c
+      - 0f5a1921-8187-4d20-b2ab-0d83678e91a9
       X-Runtime:
-      - '0.002028'
+      - '0.002376'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"error":"Invalid Credentials"}'
-  recorded_at: Wed, 16 Mar 2022 03:23:41 GMT
+  recorded_at: Tue, 22 Mar 2022 18:54:29 GMT
 recorded_with: VCR 6.0.0

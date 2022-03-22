@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"alethea@stehr.co","name":"Alex"}'
+      string: '{"email":"boris@strosin.name","name":"Alex"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"06e30dae8ac03a8db21b282fdd18c7fc"
+      - W/"88556194ccf34c7f29a4b9491332f9e5"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ab475957-cc96-4dbc-92f1-71c8af2fe515
+      - 4c25f86c-6d66-4a14-8462-b6cb6be50b3f
       X-Runtime:
-      - '0.005029'
+      - '0.006546'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"108","type":"user","attributes":{"email":"alethea@stehr.co","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 16 Mar 2022 03:31:52 GMT
+      string: '{"data":{"id":"189","type":"user","attributes":{"email":"boris@strosin.name","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 22 Mar 2022 18:54:34 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/108
+    uri: http://localhost:5000/api/v1/users/189
     body:
       encoding: US-ASCII
       string: ''
@@ -57,17 +57,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"06e30dae8ac03a8db21b282fdd18c7fc"
+      - W/"88556194ccf34c7f29a4b9491332f9e5"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 71627bbd-75a0-4154-a0da-b1aacab179ac
+      - 568f7606-0728-4d4e-a8ee-9350d5cee6b8
       X-Runtime:
-      - '0.001975'
+      - '0.002103'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"108","type":"user","attributes":{"email":"alethea@stehr.co","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 16 Mar 2022 03:31:52 GMT
+      string: '{"data":{"id":"189","type":"user","attributes":{"email":"boris@strosin.name","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 22 Mar 2022 18:54:34 GMT
 recorded_with: VCR 6.0.0

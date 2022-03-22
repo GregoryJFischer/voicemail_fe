@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"bobby@balistreri-wintheiser.name","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"everette_ritchie@hartmann.com","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"1ccfe61914eb4cd733fd665911d4ee7c"
+      - W/"cd702336d1656a5aa703cd23a781bd06"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 44f98110-79fe-4c9b-9e5b-f73cf07544bb
+      - 0574a240-20c3-41f2-8004-516077b13f8f
       X-Runtime:
-      - '0.280637'
+      - '0.282819'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"81","type":"user","attributes":{"email":"bobby@balistreri-wintheiser.name","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 16 Mar 2022 03:23:41 GMT
+      string: '{"data":{"id":"176","type":"user","attributes":{"email":"everette_ritchie@hartmann.com","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 22 Mar 2022 18:54:28 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/81
+    uri: http://localhost:5000/api/v1/users/176
     body:
       encoding: US-ASCII
       string: ''
@@ -57,25 +57,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"1ccfe61914eb4cd733fd665911d4ee7c"
+      - W/"cd702336d1656a5aa703cd23a781bd06"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 987a0a03-8e47-4068-a594-321e3ce94ee6
+      - a81966b4-dfee-4183-b860-81b58a014889
       X-Runtime:
-      - '0.003322'
+      - '0.002790'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"81","type":"user","attributes":{"email":"bobby@balistreri-wintheiser.name","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 16 Mar 2022 03:23:41 GMT
+      string: '{"data":{"id":"176","type":"user","attributes":{"email":"everette_ritchie@hartmann.com","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 22 Mar 2022 18:54:28 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/sessions
     body:
       encoding: UTF-8
-      string: '{"email":"bobby@balistreri-wintheiser.name","password":"password"}'
+      string: '{"email":"everette_ritchie@hartmann.com","password":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -93,22 +93,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"1ccfe61914eb4cd733fd665911d4ee7c"
+      - W/"cd702336d1656a5aa703cd23a781bd06"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bd6ace6f-3813-4a8b-9aca-b99cbd18f960
+      - c44b869e-9d96-49d9-9c34-d67754772685
       X-Runtime:
-      - '0.270147'
+      - '0.272954'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"81","type":"user","attributes":{"email":"bobby@balistreri-wintheiser.name","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 16 Mar 2022 03:23:41 GMT
+      string: '{"data":{"id":"176","type":"user","attributes":{"email":"everette_ritchie@hartmann.com","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 22 Mar 2022 18:54:28 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/81
+    uri: http://localhost:5000/api/v1/users/176
     body:
       encoding: US-ASCII
       string: ''
@@ -127,17 +127,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"1ccfe61914eb4cd733fd665911d4ee7c"
+      - W/"cd702336d1656a5aa703cd23a781bd06"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - de942870-1a09-4790-b8f3-b450702b03ae
+      - a0ac2f8e-e5a1-4a49-a91c-c5e88170f97c
       X-Runtime:
-      - '0.003272'
+      - '0.002357'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"81","type":"user","attributes":{"email":"bobby@balistreri-wintheiser.name","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 16 Mar 2022 03:23:41 GMT
+      string: '{"data":{"id":"176","type":"user","attributes":{"email":"everette_ritchie@hartmann.com","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 22 Mar 2022 18:54:28 GMT
 recorded_with: VCR 6.0.0

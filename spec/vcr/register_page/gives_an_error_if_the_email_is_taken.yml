@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"arlen.smith@damore.co","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"hyo@schumm.name","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"292c976e45c29e0bda734a34b6f28e2b"
+      - W/"93c921332f060eb852b7e0eb50a57aec"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7866bf3f-a373-4a60-88a7-f56a71e7f6fb
+      - 171bf459-731e-418e-ba90-b0d90316c301
       X-Runtime:
-      - '0.265618'
+      - '0.274503'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"102","type":"user","attributes":{"email":"arlen.smith@damore.co","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 16 Mar 2022 03:30:20 GMT
+      string: '{"data":{"id":"186","type":"user","attributes":{"email":"hyo@schumm.name","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 22 Mar 2022 18:54:33 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/102
+    uri: http://localhost:5000/api/v1/users/186
     body:
       encoding: US-ASCII
       string: ''
@@ -57,17 +57,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"292c976e45c29e0bda734a34b6f28e2b"
+      - W/"93c921332f060eb852b7e0eb50a57aec"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 395adc43-85a4-4d37-9676-0d34377655aa
+      - 64fff22b-1742-465d-9798-8df66db96cc5
       X-Runtime:
-      - '0.001957'
+      - '0.001923'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"102","type":"user","attributes":{"email":"arlen.smith@damore.co","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 16 Mar 2022 03:30:20 GMT
+      string: '{"data":{"id":"186","type":"user","attributes":{"email":"hyo@schumm.name","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Tue, 22 Mar 2022 18:54:33 GMT
 recorded_with: VCR 6.0.0
