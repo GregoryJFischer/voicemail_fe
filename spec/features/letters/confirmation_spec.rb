@@ -18,7 +18,7 @@ describe 'letter confirmation', type: :system do
     allow_any_instance_of(ApplicationController).to receive(:session).and_return(session)
   end
 
-  it 'allows you to fill out and send a letter' do
+  it 'allows you to fill out and send a letter', :js do
     rep_attributes = { attributes: {
       address_city: 'Denver',
       address_line1: '200 East Colfax Avenue',
@@ -30,7 +30,9 @@ describe 'letter confirmation', type: :system do
     within('div.m-3') do
       fill_in :body, with: 'Senator Alec Garnett, Please make GrubHub free. Your other constituent, Alex'
     end
-    click_button 'Create Letter'
+    within('div.button') do
+      click_button 'Create Letter'
+    end
 
     expect(current_path).to include('/letters')
       
