@@ -2,6 +2,8 @@
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+
 # Prevent database truncation if the environment is production
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
@@ -35,13 +37,6 @@ RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.include FactoryBot::Syntax::Methods
-  config.before(:each, type: :system) do
-      driven_by(:selenium_chrome_headless)
-    end
-
-    config.before(:each, type: :system, js: true) do
-      driven_by(:selenium_chrome_headless)
-    end
     
     config.after(:each, type: :system) do
       FileUtils.rm Dir.glob(Rails.root.join('*.pdf'))

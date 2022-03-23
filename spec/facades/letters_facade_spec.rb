@@ -23,10 +23,10 @@ describe LettersFacade do
     email = Faker::Internet.unique.email
 
     user = BackendService.find_or_create_user({email: email, name: 'Greg'})
-
+   
     BackendService.update_address(user[:data][:id], address_params)
 
-    LettersFacade.create_letter(body, user[:data][:id], rep_attributes)
+    letter = LettersFacade.create_letter(body, user[:data][:id], rep_attributes)
 
     response = BackendService.post('letters/send', {email: email})
 

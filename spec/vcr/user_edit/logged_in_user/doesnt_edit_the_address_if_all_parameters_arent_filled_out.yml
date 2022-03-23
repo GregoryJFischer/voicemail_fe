@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"renee@runolfsdottir.io","name":"Alex"}'
+      string: '{"email":"shanda@quitzon.net","name":"Alex"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"1e3a585dd7f14ab94a5cc2d3199d2036"
+      - W/"0d11ca9eacb280000db7fca66b1875a4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b4f82ec3-4f36-48f8-97a6-383f69f1ecbb
+      - 2339737e-59b6-420f-a459-7b62eeb10ea7
       X-Runtime:
-      - '0.011998'
+      - '0.004535'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"58","type":"user","attributes":{"email":"renee@runolfsdottir.io","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:22 GMT
+      string: '{"data":{"id":"216","type":"user","attributes":{"email":"shanda@quitzon.net","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:53 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/58
+    uri: http://localhost:5000/api/v1/users/216
     body:
       encoding: US-ASCII
       string: ''
@@ -57,22 +57,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"1e3a585dd7f14ab94a5cc2d3199d2036"
+      - W/"0d11ca9eacb280000db7fca66b1875a4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '03906b5f-a6f1-4a5e-895b-ecc32089b988'
+      - f32000bb-ecec-4d64-9ec5-fbf8030f049e
       X-Runtime:
-      - '0.003476'
+      - '0.004196'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"58","type":"user","attributes":{"email":"renee@runolfsdottir.io","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:22 GMT
+      string: '{"data":{"id":"216","type":"user","attributes":{"email":"shanda@quitzon.net","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:53 GMT
 - request:
     method: patch
-    uri: http://localhost:5000/api/v1/users/58
+    uri: http://localhost:5000/api/v1/users/216
     body:
       encoding: UTF-8
       string: '{"address_line1":"","address_line2":"","address_city":"","address_state":"","address_zip":""}'
@@ -93,9 +93,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Request-Id:
-      - 2ee33559-f0d0-4b68-a999-9ef4fe20bc78
+      - f9d1aca7-9599-4311-b7a3-9f4f6aac64bf
       X-Runtime:
-      - '0.728117'
+      - '0.284258'
       Content-Length:
       - '11000'
     body:
@@ -218,10 +218,10 @@ http_interactions:
         lib/puma/server.rb:476:in `process_client''"},{"id":56,"trace":"puma (3.12.6)
         lib/puma/server.rb:334:in `block in run''"},{"id":57,"trace":"puma (3.12.6)
         lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:23 GMT
+  recorded_at: Wed, 23 Mar 2022 21:31:54 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/58
+    uri: http://localhost:5000/api/v1/users/216
     body:
       encoding: US-ASCII
       string: ''
@@ -240,17 +240,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"1e3a585dd7f14ab94a5cc2d3199d2036"
+      - W/"0d11ca9eacb280000db7fca66b1875a4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - be3aeaed-9ef2-488d-a4a7-bd83878f9080
+      - 8b903d20-79ec-44da-8137-5ada082acf6a
       X-Runtime:
-      - '0.005943'
+      - '0.002070'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"58","type":"user","attributes":{"email":"renee@runolfsdottir.io","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:23 GMT
-recorded_with: VCR 6.0.0
+      string: '{"data":{"id":"216","type":"user","attributes":{"email":"shanda@quitzon.net","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:54 GMT
+recorded_with: VCR 6.1.0

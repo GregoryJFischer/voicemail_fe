@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"cleora@ondricka.co","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"bryan@bradtke.com","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"4764f66df19b0dd93988909164d955a9"
+      - W/"9d26e88a349600805c634f399092414b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7122ba5e-7764-486b-9b53-915bbce7f595
+      - 5635b38e-0bf4-405b-bcda-cc26f0f0df50
       X-Runtime:
-      - '0.306148'
+      - '0.275730'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"54","type":"user","attributes":{"email":"cleora@ondricka.co","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:20 GMT
+      string: '{"data":{"id":"212","type":"user","attributes":{"email":"bryan@bradtke.com","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:52 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/54
+    uri: http://localhost:5000/api/v1/users/212
     body:
       encoding: US-ASCII
       string: ''
@@ -57,25 +57,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"4764f66df19b0dd93988909164d955a9"
+      - W/"9d26e88a349600805c634f399092414b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e0bbf9c8-27a5-4b81-bc62-11ee23839286
+      - f7f1db8d-2591-49b6-aae9-8f6f2f6fe7ee
       X-Runtime:
-      - '0.007736'
+      - '0.001997'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"54","type":"user","attributes":{"email":"cleora@ondricka.co","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:20 GMT
+      string: '{"data":{"id":"212","type":"user","attributes":{"email":"bryan@bradtke.com","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:52 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"ivelisse@wiza.com","name":"Alex"}'
+      string: '{"email":"houston.wyman@spinka.co","name":"Alex"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -93,22 +93,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ca6dcf95f732d6bbbb30540a2c8fd79f"
+      - W/"a2f0482757430198424cc49f3aa1a281"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4277f44a-ebef-41b2-a0b5-540f42505530
+      - 6a18dae3-02f3-4ae9-81c7-86790d0bd1bd
       X-Runtime:
-      - '0.004958'
+      - '0.002821'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"55","type":"user","attributes":{"email":"ivelisse@wiza.com","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:20 GMT
+      string: '{"data":{"id":"213","type":"user","attributes":{"email":"houston.wyman@spinka.co","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:52 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/55
+    uri: http://localhost:5000/api/v1/users/213
     body:
       encoding: US-ASCII
       string: ''
@@ -127,17 +127,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ca6dcf95f732d6bbbb30540a2c8fd79f"
+      - W/"a2f0482757430198424cc49f3aa1a281"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f8e2c2b1-12b1-4561-aa8a-fa2581ff781a
+      - 3b894ea2-58d2-4523-9cd4-25c6ae0693dc
       X-Runtime:
-      - '0.002625'
+      - '0.001190'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"55","type":"user","attributes":{"email":"ivelisse@wiza.com","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:20 GMT
-recorded_with: VCR 6.0.0
+      string: '{"data":{"id":"213","type":"user","attributes":{"email":"houston.wyman@spinka.co","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:52 GMT
+recorded_with: VCR 6.1.0

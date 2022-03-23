@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"steve.labadie@crona.biz","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"trang@swaniawski-haag.name","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"abe113298beed948ad07f23a7c53e9c1"
+      - W/"b09e86ed5bf983c27859f3085d574d29"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 20e1b648-6687-4ee4-a46d-aecd1e93bb1a
+      - f7c4fe6d-960b-4d11-9783-0f81765dc629
       X-Runtime:
-      - '0.288397'
+      - '0.246176'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"60","type":"user","attributes":{"email":"steve.labadie@crona.biz","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:24 GMT
+      string: '{"data":{"id":"218","type":"user","attributes":{"email":"trang@swaniawski-haag.name","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:54 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/60
+    uri: http://localhost:5000/api/v1/users/218
     body:
       encoding: US-ASCII
       string: ''
@@ -57,17 +57,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"abe113298beed948ad07f23a7c53e9c1"
+      - W/"b09e86ed5bf983c27859f3085d574d29"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fd438079-6835-424b-b98f-90c81da51b82
+      - fa9a4c53-a24d-48f2-aaf3-876f4b205d2e
       X-Runtime:
-      - '0.004222'
+      - '0.002178'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"60","type":"user","attributes":{"email":"steve.labadie@crona.biz","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:24 GMT
-recorded_with: VCR 6.0.0
+      string: '{"data":{"id":"218","type":"user","attributes":{"email":"trang@swaniawski-haag.name","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:54 GMT
+recorded_with: VCR 6.1.0

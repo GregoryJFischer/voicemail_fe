@@ -7,7 +7,7 @@ describe 'users dashboard' do
       @session = { user_id: @user.id, token: 'abcd', google_id: '12345' }
 
       allow_any_instance_of(ApplicationController).to receive(:session).and_return(@session)
-      stub_request(:get, "http://localhost:5000/api/v1/users/#{@user.id}")
+      stub_request(:get, "#{ENV['BASE_URL']}/api/v1/users/#{@user.id}")
         .with(
           headers: {
             'Accept' => '*/*',
@@ -30,7 +30,7 @@ describe 'users dashboard' do
               }
             } }.to_json,
                     headers: {})
-      stub_request(:get, "http://localhost:5000/api/v1/users/#{@user.id}/representatives")
+      stub_request(:get, "#{ENV['BASE_URL']}/api/v1/users/#{@user.id}/representatives")
         .with(
           headers: {
             'Accept' => '*/*',
@@ -73,7 +73,7 @@ describe 'users dashboard' do
     end
     it 'tells them they sent a letter' do
       visit '/dashboard?sent=true'
-  
+
       expect(page).to have_content('Your letter has been sent!')
     end
   end
