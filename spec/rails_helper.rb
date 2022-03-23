@@ -37,13 +37,6 @@ RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.include FactoryBot::Syntax::Methods
-  # config.before(:each, type: :system) do
-  #     driven_by(:selenium_chrome_headless)
-  #   end
-
-  #   config.before(:each, type: :system, js: true) do
-  #     driven_by(:selenium_chrome_headless)
-  #   end
     
     config.after(:each, type: :system) do
       FileUtils.rm Dir.glob(Rails.root.join('*.pdf'))
