@@ -16,7 +16,7 @@ jobs:
     steps:
       - checkout # pull down our git code.
       - ruby/install-deps # use the ruby orb to install dependencies
-      - run: 
+      - run:
           name: Setup Chrome
           command: |
             wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -63,6 +63,9 @@ jobs:
       #     cache-key: "yarn.lock"
       # Here we make sure that the secondary container boots
       # up before we run operations on the database.
+      - run:
+        name: Update Gemfile
+        command: bundle update
       - run:
           name: Wait for DB
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
