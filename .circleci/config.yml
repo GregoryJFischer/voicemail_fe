@@ -34,7 +34,7 @@ jobs:
     parallelism: 3
     # here we set TWO docker images.
     docker:
-      - image: cimg/ruby:2.7.2-node # this is our primary docker image, where step commands run.
+      - image: cimg/ruby:2.7.2-node-browsers # this is our primary docker image, where step commands run.
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
@@ -46,10 +46,7 @@ jobs:
           POSTGRES_USER: circleci-demo-ruby
           POSTGRES_DB: rails_blog_test
           POSTGRES_PASSWORD: ""
-      - image: circleci/ruby:2.7.2-node-browsers # use a tailored CircleCI docker image.
-        auth:
-          username: mydockerhub-user
-          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+
     # environment variables specific to Ruby/Rails, applied to the primary container.
     environment:
       BUNDLE_JOBS: "3"
