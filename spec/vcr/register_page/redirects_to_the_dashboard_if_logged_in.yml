@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"dolly_rippin@bergnaum.info","name":"Alex"}'
+      string: '{"email":"nereida.mcdermott@hane.io","name":"Alex"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a905ab85f0672293e2affea5c5886096"
+      - W/"099946714f7924a311651ec5c4835280"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a38af033-32b9-4db9-b8f9-54695846acfe
+      - e3fdd83e-2e99-410e-adc8-3844151bc884
       X-Runtime:
-      - '0.004839'
+      - '0.002848'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"188","type":"user","attributes":{"email":"dolly_rippin@bergnaum.info","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 22 Mar 2022 18:54:34 GMT
+      string: '{"data":{"id":"220","type":"user","attributes":{"email":"nereida.mcdermott@hane.io","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:55 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/188
+    uri: http://localhost:5000/api/v1/users/220
     body:
       encoding: US-ASCII
       string: ''
@@ -57,17 +57,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a905ab85f0672293e2affea5c5886096"
+      - W/"099946714f7924a311651ec5c4835280"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c231d852-69c3-4474-af85-b76dc8b29c1a
+      - f1ba1a7e-536f-4776-aa4b-a605bc2e5c8f
       X-Runtime:
-      - '0.001938'
+      - '0.001278'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"188","type":"user","attributes":{"email":"dolly_rippin@bergnaum.info","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 22 Mar 2022 18:54:34 GMT
-recorded_with: VCR 6.0.0
+      string: '{"data":{"id":"220","type":"user","attributes":{"email":"nereida.mcdermott@hane.io","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:55 GMT
+recorded_with: VCR 6.1.0

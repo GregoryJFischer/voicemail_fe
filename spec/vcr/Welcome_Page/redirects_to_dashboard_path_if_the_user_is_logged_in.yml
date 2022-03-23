@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"boris@strosin.name","name":"Alex"}'
+      string: '{"email":"klara_lang@schiller.info","name":"Alex"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"88556194ccf34c7f29a4b9491332f9e5"
+      - W/"dc4607c7440555006ea145aab9b4050b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4c25f86c-6d66-4a14-8462-b6cb6be50b3f
+      - bc52688c-172d-4e36-bba2-25d811d9f1d7
       X-Runtime:
-      - '0.006546'
+      - '0.002990'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"189","type":"user","attributes":{"email":"boris@strosin.name","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 22 Mar 2022 18:54:34 GMT
+      string: '{"data":{"id":"221","type":"user","attributes":{"email":"klara_lang@schiller.info","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:55 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/189
+    uri: http://localhost:5000/api/v1/users/221
     body:
       encoding: US-ASCII
       string: ''
@@ -57,17 +57,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"88556194ccf34c7f29a4b9491332f9e5"
+      - W/"dc4607c7440555006ea145aab9b4050b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 568f7606-0728-4d4e-a8ee-9350d5cee6b8
+      - 5949d277-901b-40e2-9938-a4cf60913f79
       X-Runtime:
-      - '0.002103'
+      - '0.001372'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"189","type":"user","attributes":{"email":"boris@strosin.name","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 22 Mar 2022 18:54:34 GMT
-recorded_with: VCR 6.0.0
+      string: '{"data":{"id":"221","type":"user","attributes":{"email":"klara_lang@schiller.info","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:55 GMT
+recorded_with: VCR 6.1.0

@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"everette_ritchie@hartmann.com","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"allen@schneider-dach.net","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"cd702336d1656a5aa703cd23a781bd06"
+      - W/"f8c92085cd36da7b5c3b25e4fc8b26a9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0574a240-20c3-41f2-8004-516077b13f8f
+      - 20aabbfb-bd1c-44d3-b6b7-7252ae92c0ce
       X-Runtime:
-      - '0.282819'
+      - '0.248414'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"176","type":"user","attributes":{"email":"everette_ritchie@hartmann.com","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 22 Mar 2022 18:54:28 GMT
+      string: '{"data":{"id":"208","type":"user","attributes":{"email":"allen@schneider-dach.net","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:50 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/176
+    uri: http://localhost:5000/api/v1/users/208
     body:
       encoding: US-ASCII
       string: ''
@@ -57,25 +57,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"cd702336d1656a5aa703cd23a781bd06"
+      - W/"f8c92085cd36da7b5c3b25e4fc8b26a9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a81966b4-dfee-4183-b860-81b58a014889
+      - ecdfa4a7-427d-4ef4-9f23-d4924fd5a2e5
       X-Runtime:
-      - '0.002790'
+      - '0.002189'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"176","type":"user","attributes":{"email":"everette_ritchie@hartmann.com","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 22 Mar 2022 18:54:28 GMT
+      string: '{"data":{"id":"208","type":"user","attributes":{"email":"allen@schneider-dach.net","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:50 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/sessions
     body:
       encoding: UTF-8
-      string: '{"email":"everette_ritchie@hartmann.com","password":"password"}'
+      string: '{"email":"allen@schneider-dach.net","password":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -93,22 +93,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"cd702336d1656a5aa703cd23a781bd06"
+      - W/"f8c92085cd36da7b5c3b25e4fc8b26a9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c44b869e-9d96-49d9-9c34-d67754772685
+      - 1ac52f90-0029-4853-b436-5652257b8e1a
       X-Runtime:
-      - '0.272954'
+      - '0.243303'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"176","type":"user","attributes":{"email":"everette_ritchie@hartmann.com","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 22 Mar 2022 18:54:28 GMT
+      string: '{"data":{"id":"208","type":"user","attributes":{"email":"allen@schneider-dach.net","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:50 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/176
+    uri: http://localhost:5000/api/v1/users/208
     body:
       encoding: US-ASCII
       string: ''
@@ -127,17 +127,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"cd702336d1656a5aa703cd23a781bd06"
+      - W/"f8c92085cd36da7b5c3b25e4fc8b26a9"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a0ac2f8e-e5a1-4a49-a91c-c5e88170f97c
+      - 37ae7f5d-9070-4b41-bf1b-ca6d4bb3e79c
       X-Runtime:
-      - '0.002357'
+      - '0.001351'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"176","type":"user","attributes":{"email":"everette_ritchie@hartmann.com","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 22 Mar 2022 18:54:28 GMT
-recorded_with: VCR 6.0.0
+      string: '{"data":{"id":"208","type":"user","attributes":{"email":"allen@schneider-dach.net","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:50 GMT
+recorded_with: VCR 6.1.0

@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"elayne_bailey@schneider.info","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"kay.lebsack@goodwin.org","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"bebadbec0f06e09fd0783b7bd2632892"
+      - W/"7c54d8a09a93d4d35b24f5e8bec0af4f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 50c9e280-f805-4d39-9e8a-0d37161e520c
+      - e7ec98a5-0cf2-412e-bfd8-5c50d3f4c700
       X-Runtime:
-      - '0.278915'
+      - '0.245035'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"177","type":"user","attributes":{"email":"elayne_bailey@schneider.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 22 Mar 2022 18:54:29 GMT
+      string: '{"data":{"id":"209","type":"user","attributes":{"email":"kay.lebsack@goodwin.org","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:50 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/177
+    uri: http://localhost:5000/api/v1/users/209
     body:
       encoding: US-ASCII
       string: ''
@@ -57,19 +57,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"bebadbec0f06e09fd0783b7bd2632892"
+      - W/"7c54d8a09a93d4d35b24f5e8bec0af4f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 63a7872a-d040-45e4-9801-9e62a473e5c2
+      - c45a0ba6-2a06-4eb3-b454-38413fef3e9b
       X-Runtime:
-      - '0.003308'
+      - '0.001163'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"177","type":"user","attributes":{"email":"elayne_bailey@schneider.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 22 Mar 2022 18:54:29 GMT
+      string: '{"data":{"id":"209","type":"user","attributes":{"email":"kay.lebsack@goodwin.org","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:50 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/sessions
@@ -95,13 +95,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 0f5a1921-8187-4d20-b2ab-0d83678e91a9
+      - b1e7afb8-15c5-4a1b-ac02-1a7d17abe46a
       X-Runtime:
-      - '0.002376'
+      - '0.001042'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"error":"Invalid Credentials"}'
-  recorded_at: Tue, 22 Mar 2022 18:54:29 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Wed, 23 Mar 2022 21:31:50 GMT
+recorded_with: VCR 6.1.0

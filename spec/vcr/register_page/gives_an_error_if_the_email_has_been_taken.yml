@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"edgardo@torphy-sporer.info","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"sherley@orn.name","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"af05463771020f57207a73522ba47856"
+      - W/"2658f8e36392c0f6963a8cb2a8e35884"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 219329d3-9c1b-4e33-8cc4-0b2b78a93cd0
+      - 6d79d222-8e9d-4bc2-ab06-361aac2da541
       X-Runtime:
-      - '0.275923'
+      - '0.244573'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"187","type":"user","attributes":{"email":"edgardo@torphy-sporer.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 22 Mar 2022 18:54:34 GMT
+      string: '{"data":{"id":"219","type":"user","attributes":{"email":"sherley@orn.name","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:55 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/187
+    uri: http://localhost:5000/api/v1/users/219
     body:
       encoding: US-ASCII
       string: ''
@@ -57,25 +57,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"af05463771020f57207a73522ba47856"
+      - W/"2658f8e36392c0f6963a8cb2a8e35884"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6a68cb0d-2b06-4801-8b03-49408a16dd5c
+      - b6cd71a3-7f37-4422-9789-545f0cc446ca
       X-Runtime:
-      - '0.003222'
+      - '0.001243'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"187","type":"user","attributes":{"email":"edgardo@torphy-sporer.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 22 Mar 2022 18:54:34 GMT
+      string: '{"data":{"id":"219","type":"user","attributes":{"email":"sherley@orn.name","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:55 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"edgardo@torphy-sporer.info","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"sherley@orn.name","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -95,13 +95,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - be58fd74-c329-4e14-9c32-7ecfebc6f746
+      - 37919dea-4ed2-4423-89f3-027f6b486d14
       X-Runtime:
-      - '0.002434'
+      - '0.001152'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"error":"Email has already been registered"}'
-  recorded_at: Tue, 22 Mar 2022 18:54:34 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Wed, 23 Mar 2022 21:31:55 GMT
+recorded_with: VCR 6.1.0

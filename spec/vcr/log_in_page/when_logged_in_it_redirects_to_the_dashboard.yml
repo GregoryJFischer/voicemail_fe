@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"courtney.purdy@waters.org","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"bryan@bradtke.com","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f9aea716afcf5c243c91f19219a5db65"
+      - W/"9d26e88a349600805c634f399092414b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b186ecc9-5272-4e31-8033-df494bc01121
+      - 5635b38e-0bf4-405b-bcda-cc26f0f0df50
       X-Runtime:
-      - '0.278966'
+      - '0.275730'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"180","type":"user","attributes":{"email":"courtney.purdy@waters.org","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 22 Mar 2022 18:54:30 GMT
+      string: '{"data":{"id":"212","type":"user","attributes":{"email":"bryan@bradtke.com","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:52 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/180
+    uri: http://localhost:5000/api/v1/users/212
     body:
       encoding: US-ASCII
       string: ''
@@ -57,25 +57,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f9aea716afcf5c243c91f19219a5db65"
+      - W/"9d26e88a349600805c634f399092414b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8f87f3d6-e6e7-41bf-a619-9abea6fce317
+      - f7f1db8d-2591-49b6-aae9-8f6f2f6fe7ee
       X-Runtime:
-      - '0.002372'
+      - '0.001997'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"180","type":"user","attributes":{"email":"courtney.purdy@waters.org","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 22 Mar 2022 18:54:30 GMT
+      string: '{"data":{"id":"212","type":"user","attributes":{"email":"bryan@bradtke.com","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:52 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"damon_schoen@ernser.net","name":"Alex"}'
+      string: '{"email":"houston.wyman@spinka.co","name":"Alex"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -93,22 +93,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"bbd07c23044d23649a91e89b3c588805"
+      - W/"a2f0482757430198424cc49f3aa1a281"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d811c396-1436-4114-95c1-48473ebf0416
+      - 6a18dae3-02f3-4ae9-81c7-86790d0bd1bd
       X-Runtime:
-      - '0.007258'
+      - '0.002821'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"181","type":"user","attributes":{"email":"damon_schoen@ernser.net","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 22 Mar 2022 18:54:30 GMT
+      string: '{"data":{"id":"213","type":"user","attributes":{"email":"houston.wyman@spinka.co","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:52 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/181
+    uri: http://localhost:5000/api/v1/users/213
     body:
       encoding: US-ASCII
       string: ''
@@ -127,17 +127,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"bbd07c23044d23649a91e89b3c588805"
+      - W/"a2f0482757430198424cc49f3aa1a281"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3fe271a7-5caf-4626-ae98-aadb63cdf05c
+      - 3b894ea2-58d2-4523-9cd4-25c6ae0693dc
       X-Runtime:
-      - '0.002639'
+      - '0.001190'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"181","type":"user","attributes":{"email":"damon_schoen@ernser.net","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 22 Mar 2022 18:54:30 GMT
-recorded_with: VCR 6.0.0
+      string: '{"data":{"id":"213","type":"user","attributes":{"email":"houston.wyman@spinka.co","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:52 GMT
+recorded_with: VCR 6.1.0

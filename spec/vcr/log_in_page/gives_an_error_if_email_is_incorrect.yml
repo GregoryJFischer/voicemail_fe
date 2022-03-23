@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"jae@weissnat.info","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"tommie@upton.info","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"56167b2b1c5910484f5414f7e0f5694a"
+      - W/"568717543af3d290a9f051e2d7bc0e8b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 815cbfbe-bef4-4b40-880e-0b0fef4517ce
+      - a84de0b5-71e7-43e4-a631-e7f87cd9a119
       X-Runtime:
-      - '0.305277'
+      - '0.244812'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"179","type":"user","attributes":{"email":"jae@weissnat.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 22 Mar 2022 18:54:30 GMT
+      string: '{"data":{"id":"211","type":"user","attributes":{"email":"tommie@upton.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:51 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/179
+    uri: http://localhost:5000/api/v1/users/211
     body:
       encoding: US-ASCII
       string: ''
@@ -57,19 +57,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"56167b2b1c5910484f5414f7e0f5694a"
+      - W/"568717543af3d290a9f051e2d7bc0e8b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 475100ce-8246-4dde-b4e4-43c8460634ad
+      - 02b841bf-0043-4b40-b433-90b02c2312c2
       X-Runtime:
-      - '0.005189'
+      - '0.045474'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"179","type":"user","attributes":{"email":"jae@weissnat.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 22 Mar 2022 18:54:30 GMT
+      string: '{"data":{"id":"211","type":"user","attributes":{"email":"tommie@upton.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Wed, 23 Mar 2022 21:31:51 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/sessions
@@ -95,13 +95,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 93ccc194-c419-47ee-852e-11f951f2ddd2
+      - 3c24c29d-be1d-414e-8224-e5441ec11f78
       X-Runtime:
-      - '0.002634'
+      - '0.024542'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"error":"Invalid Credentials"}'
-  recorded_at: Tue, 22 Mar 2022 18:54:30 GMT
-recorded_with: VCR 6.0.0
+  recorded_at: Wed, 23 Mar 2022 21:31:51 GMT
+recorded_with: VCR 6.1.0
