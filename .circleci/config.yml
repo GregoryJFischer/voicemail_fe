@@ -46,6 +46,10 @@ jobs:
           POSTGRES_USER: circleci-demo-ruby
           POSTGRES_DB: rails_blog_test
           POSTGRES_PASSWORD: ""
+      - image: circleci/ruby:2.7.2-node-browsers # use a tailored CircleCI docker image.
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     # environment variables specific to Ruby/Rails, applied to the primary container.
     environment:
       BUNDLE_JOBS: "3"
@@ -72,6 +76,11 @@ jobs:
       - run:
           name: Database setup
           command: bundle exec rails db:create db:schema:load db:seed --trace
+      - run:
+          name: Setup Chrome
+          command: |
+            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            sudo apt install ./google-chrome-stable_current_amd64.deb
       # Run rspec in parallel
       - ruby/rspec-test
 
