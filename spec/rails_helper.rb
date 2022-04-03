@@ -115,10 +115,13 @@ OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
                                                                        expires: true
                                                                      }
                                                                    })
-  def wait_for_stripe_pageload(limit = 50)
+
+# takes in a CSS element we know is on the page and waits up to 5 seconds for that element to load
+
+  def wait_for_pageload(css, limit = 50)
     time_counter = 0
 
-    until (time_counter == limit || page.has_css?('.ProductSummary'))
+    until (time_counter == limit || page.has_css?(css))
       sleep 0.1
       time_counter += 1
     end

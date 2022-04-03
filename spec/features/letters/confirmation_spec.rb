@@ -51,7 +51,7 @@ describe 'letter confirmation', type: :system do
 
     click_button('Confirm Letter and Pay')
 
-    wait_for_stripe_pageload
+    wait_for_pageload('.ProductSummary')
 
     expect(page).to have_css('.ProductSummary')
     expect(page).to have_css('.App-Payment')
