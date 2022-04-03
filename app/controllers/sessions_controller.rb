@@ -38,11 +38,6 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
-  def failure
-    flash[:error] = 'Validation failed. Please try again.'
-    redirect_to root_path
-  end
-
   private
 
   def auth_hash

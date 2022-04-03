@@ -26,13 +26,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 7ae79bb4-7fce-4f90-9deb-5be6e43f5344
+      - 9900f57d-ec1a-46d6-a56f-f6fcdae8fe35
       X-Runtime:
-      - '0.017052'
+      - '0.007949'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"error":"Validation failed: Email can''t be blank"}'
-  recorded_at: Tue, 08 Feb 2022 03:13:25 GMT
+  recorded_at: Sun, 03 Apr 2022 20:55:12 GMT
 recorded_with: VCR 6.0.0

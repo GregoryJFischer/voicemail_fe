@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"kyle.berge@considine.info","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"luis@blanda-rosenbaum.net","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c2e1577635b7ab71068a78ab4ba19670"
+      - W/"382baf278e2b06d505eb110fe1c545e7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a460dc6c-a21d-4e4b-918f-186590e2cfdb
+      - 73b2c319-da9d-4d96-8314-db05b7ae5d65
       X-Runtime:
-      - '0.306777'
+      - '0.272207'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"50","type":"user","attributes":{"email":"kyle.berge@considine.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:17 GMT
+      string: '{"data":{"id":"217","type":"user","attributes":{"email":"luis@blanda-rosenbaum.net","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 03 Apr 2022 20:55:00 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/50
+    uri: http://localhost:5000/api/v1/users/217
     body:
       encoding: US-ASCII
       string: ''
@@ -57,25 +57,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c2e1577635b7ab71068a78ab4ba19670"
+      - W/"382baf278e2b06d505eb110fe1c545e7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d606c059-6380-4921-98a5-e252a17eb05a
+      - fc0113bd-4fee-42b7-b46e-0adbb34d2c2b
       X-Runtime:
-      - '0.005213'
+      - '0.003449'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"50","type":"user","attributes":{"email":"kyle.berge@considine.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:17 GMT
+      string: '{"data":{"id":"217","type":"user","attributes":{"email":"luis@blanda-rosenbaum.net","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 03 Apr 2022 20:55:00 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/sessions
     body:
       encoding: UTF-8
-      string: '{"email":"kyle.berge@considine.info","password":"password"}'
+      string: '{"email":"luis@blanda-rosenbaum.net","password":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -93,22 +93,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c2e1577635b7ab71068a78ab4ba19670"
+      - W/"382baf278e2b06d505eb110fe1c545e7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e4c0557e-18fc-41cd-ae4e-8804f7ca4a02
+      - cba397f2-f009-4076-8e8f-8c4000fba15f
       X-Runtime:
-      - '0.360047'
+      - '0.269192'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"50","type":"user","attributes":{"email":"kyle.berge@considine.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:18 GMT
+      string: '{"data":{"id":"217","type":"user","attributes":{"email":"luis@blanda-rosenbaum.net","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 03 Apr 2022 20:55:01 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/50
+    uri: http://localhost:5000/api/v1/users/217
     body:
       encoding: US-ASCII
       string: ''
@@ -127,17 +127,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"c2e1577635b7ab71068a78ab4ba19670"
+      - W/"382baf278e2b06d505eb110fe1c545e7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e27f1a0f-cf05-4194-b48f-f25f943f3986
+      - d77f6d10-a2e4-4171-9d6f-241483027e90
       X-Runtime:
-      - '0.005532'
+      - '0.002026'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"50","type":"user","attributes":{"email":"kyle.berge@considine.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:18 GMT
+      string: '{"data":{"id":"217","type":"user","attributes":{"email":"luis@blanda-rosenbaum.net","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 03 Apr 2022 20:55:01 GMT
 recorded_with: VCR 6.0.0

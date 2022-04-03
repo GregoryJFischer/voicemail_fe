@@ -47,4 +47,22 @@ describe 'letters new', type: :system do
 
     expect(current_path).to include('/letters')
   end
+
+  it 'errors out if letter is blank' do
+    rep_attributes = { attributes: {
+      address_city: 'Denver',
+      address_line1: '200 East Colfax Avenue',
+      address_state: 'CO',
+      address_zip: '80203',
+      name: 'CO State Representative Alec Garnett'
+    } }
+    visit new_letter_path(rep_attributes)
+    within('div.m-3') do
+      fill_in :body, with: ''
+    end
+    click_button 'Create Letter'
+
+    expect(current_path).to eq("/letters/new")
+    expect(page).to have_content('Please fill out the letter before sending.')
+  end
 end

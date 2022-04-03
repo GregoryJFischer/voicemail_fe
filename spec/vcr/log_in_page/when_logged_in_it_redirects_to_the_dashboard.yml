@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"cleora@ondricka.co","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"marcelino_jacobs@welch.org","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"4764f66df19b0dd93988909164d955a9"
+      - W/"f59bfa28c8833e36a583f36e433e2b73"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7122ba5e-7764-486b-9b53-915bbce7f595
+      - 2a48f6fb-80e3-4f71-b704-3e7be04825eb
       X-Runtime:
-      - '0.306148'
+      - '0.265535'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"54","type":"user","attributes":{"email":"cleora@ondricka.co","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:20 GMT
+      string: '{"data":{"id":"221","type":"user","attributes":{"email":"marcelino_jacobs@welch.org","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 03 Apr 2022 20:55:02 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/54
+    uri: http://localhost:5000/api/v1/users/221
     body:
       encoding: US-ASCII
       string: ''
@@ -57,25 +57,25 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"4764f66df19b0dd93988909164d955a9"
+      - W/"f59bfa28c8833e36a583f36e433e2b73"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e0bbf9c8-27a5-4b81-bc62-11ee23839286
+      - f2be66ae-1326-4bd6-a33c-0af71a9bb76c
       X-Runtime:
-      - '0.007736'
+      - '0.002514'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"54","type":"user","attributes":{"email":"cleora@ondricka.co","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:20 GMT
+      string: '{"data":{"id":"221","type":"user","attributes":{"email":"marcelino_jacobs@welch.org","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 03 Apr 2022 20:55:02 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"ivelisse@wiza.com","name":"Alex"}'
+      string: '{"email":"wayne@romaguera.name","name":"Alex"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -93,22 +93,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ca6dcf95f732d6bbbb30540a2c8fd79f"
+      - W/"9e8928543be8fedb9a3857820a247013"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4277f44a-ebef-41b2-a0b5-540f42505530
+      - e18a4c5c-c4c2-4c0e-97b6-046d2e745ac3
       X-Runtime:
-      - '0.004958'
+      - '0.004304'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"55","type":"user","attributes":{"email":"ivelisse@wiza.com","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:20 GMT
+      string: '{"data":{"id":"222","type":"user","attributes":{"email":"wayne@romaguera.name","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 03 Apr 2022 20:55:02 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/55
+    uri: http://localhost:5000/api/v1/users/222
     body:
       encoding: US-ASCII
       string: ''
@@ -127,17 +127,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ca6dcf95f732d6bbbb30540a2c8fd79f"
+      - W/"9e8928543be8fedb9a3857820a247013"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f8e2c2b1-12b1-4561-aa8a-fa2581ff781a
+      - f2610d21-014f-486c-bf84-70990554e325
       X-Runtime:
-      - '0.002625'
+      - '0.002019'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"55","type":"user","attributes":{"email":"ivelisse@wiza.com","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:20 GMT
+      string: '{"data":{"id":"222","type":"user","attributes":{"email":"wayne@romaguera.name","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 03 Apr 2022 20:55:02 GMT
 recorded_with: VCR 6.0.0

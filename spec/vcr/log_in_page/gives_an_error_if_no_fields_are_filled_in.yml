@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"kelvin@boehm.net","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"barbra.koelpin@kutch.org","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"3728a1c17cf1ab6abc071141bf6c4d45"
+      - W/"a2ead43b95ada1afcafde1285b6f933a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c643657f-cf24-40bf-8a23-29226d5e2158
+      - 95f3884b-b9d1-4c76-9f7b-caa9a558946c
       X-Runtime:
-      - '0.271147'
+      - '0.267980'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"51","type":"user","attributes":{"email":"kelvin@boehm.net","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:18 GMT
+      string: '{"data":{"id":"218","type":"user","attributes":{"email":"barbra.koelpin@kutch.org","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 03 Apr 2022 20:55:01 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/51
+    uri: http://localhost:5000/api/v1/users/218
     body:
       encoding: US-ASCII
       string: ''
@@ -57,19 +57,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"3728a1c17cf1ab6abc071141bf6c4d45"
+      - W/"a2ead43b95ada1afcafde1285b6f933a"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6639b177-15f6-474a-b806-495f04d66798
+      - 70b45b58-d53f-4ec6-ade8-81b007fa316b
       X-Runtime:
-      - '0.002373'
+      - '0.001935'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"51","type":"user","attributes":{"email":"kelvin@boehm.net","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Tue, 08 Feb 2022 03:13:18 GMT
+      string: '{"data":{"id":"218","type":"user","attributes":{"email":"barbra.koelpin@kutch.org","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
+  recorded_at: Sun, 03 Apr 2022 20:55:01 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/sessions
@@ -95,13 +95,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 83400d28-54a5-4409-a4f7-ab375673db9b
+      - a01e26f5-cb90-4192-b45f-ed7278b79ac5
       X-Runtime:
-      - '0.002698'
+      - '0.002012'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"error":"Invalid Credentials"}'
-  recorded_at: Tue, 08 Feb 2022 03:13:18 GMT
+  recorded_at: Sun, 03 Apr 2022 20:55:01 GMT
 recorded_with: VCR 6.0.0
