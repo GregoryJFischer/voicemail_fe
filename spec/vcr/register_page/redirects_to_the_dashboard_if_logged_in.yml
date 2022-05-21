@@ -1,44 +1,8 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://localhost:5000/api/v1/users
-    body:
-      encoding: UTF-8
-      string: '{"email":"nereida.mcdermott@hane.io","name":"Alex"}'
-    headers:
-      User-Agent:
-      - Faraday v1.9.3
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"099946714f7924a311651ec5c4835280"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - e3fdd83e-2e99-410e-adc8-3844151bc884
-      X-Runtime:
-      - '0.002848'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"220","type":"user","attributes":{"email":"nereida.mcdermott@hane.io","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:55 GMT
-- request:
     method: get
-    uri: http://localhost:5000/api/v1/users/220
+    uri: http://localhost:5000/api/v1/users/184
     body:
       encoding: US-ASCII
       string: ''
@@ -57,17 +21,87 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"099946714f7924a311651ec5c4835280"
+      - W/"534d44e607bc610aeb807197e2330713"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f1ba1a7e-536f-4776-aa4b-a605bc2e5c8f
+      - 377e6c62-86d7-455f-a6b7-40a97d68158f
       X-Runtime:
-      - '0.001278'
+      - '0.003769'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"220","type":"user","attributes":{"email":"nereida.mcdermott@hane.io","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:55 GMT
+      string: '{"data":{"id":"184","type":"user","attributes":{"email":"mirian.runolfsson@weimann.co","name":"Alex","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 16:53:25 GMT
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"edmundo@okeefe.net","name":"Alex"}'
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"53cc7519ef84c6929702b89c22b69e97"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9efc3957-4fb3-4393-b5fb-c6d35716b21e
+      X-Runtime:
+      - '0.005051'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"204","type":"user","attributes":{"email":"edmundo@okeefe.net","name":"Alex","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 17:09:01 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/204
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"53cc7519ef84c6929702b89c22b69e97"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cd55d59a-fad8-46ac-8462-c4127c395a5b
+      X-Runtime:
+      - '0.002355'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"204","type":"user","attributes":{"email":"edmundo@okeefe.net","name":"Alex","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 17:09:01 GMT
 recorded_with: VCR 6.1.0

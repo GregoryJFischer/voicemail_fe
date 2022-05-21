@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"rocco.halvorson@brekke.com","name":"Greg"}'
+      string: '{"email":"hai_lang@koss-bahringer.co","name":"Greg"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"2dea3143a74b563775cbdbcc5d55a0c2"
+      - W/"af754ddb63879211551c5cacc73da94d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3458e985-cf97-4a1b-aade-d77996810501
+      - 88eac318-cbfa-4626-8532-36501ac72afd
       X-Runtime:
-      - '0.012491'
+      - '0.164998'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"204","type":"user","attributes":{"email":"rocco.halvorson@brekke.com","name":"Greg","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:33 GMT
+      string: '{"data":{"id":"168","type":"user","attributes":{"email":"hai_lang@koss-bahringer.co","name":"Greg","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 16:52:02 GMT
 - request:
     method: patch
-    uri: http://localhost:5000/api/v1/users/204
+    uri: http://localhost:5000/api/v1/users/168
     body:
       encoding: UTF-8
       string: '{"address_line1":"12012 starboard dr","address_line2":"apt 205","address_city":"reston","address_state":"va","address_zip":"20194"}'
@@ -59,23 +59,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"361276033611ec14c6cff0767b6eaf60"
+      - W/"00869bb70452ab91a3aeb8e3fe5abd46"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 10aae80c-2459-4224-9f9d-4ce1b05c00f2
+      - f5392279-9f0a-4802-b686-dd8c3468af41
       X-Runtime:
-      - '0.391134'
+      - '3.113669'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"204","type":"user","attributes":{"email":"rocco.halvorson@brekke.com","name":"Greg","google_id":null,"address_line1":"12012
-        starboard dr","address_line2":"apt 205","address_city":"reston","address_state":"va","address_zip":"20194"}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:33 GMT
+      string: '{"data":{"id":"168","type":"user","attributes":{"email":"hai_lang@koss-bahringer.co","name":"Greg","google_id":null,"address":{"id":142,"address_line1":"12012
+        starboard dr","address_line2":"apt 205","address_city":"reston","address_state":"va","address_zip":"20194","created_at":"2022-05-21T16:52:05.454Z","updated_at":"2022-05-21T16:52:05.460Z","user_id":168,"name":"Greg","address_country":"US"}}}}'
+  recorded_at: Sat, 21 May 2022 16:52:05 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/204
+    uri: http://localhost:5000/api/v1/users/168
     body:
       encoding: US-ASCII
       string: ''
@@ -94,85 +94,26 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"361276033611ec14c6cff0767b6eaf60"
+      - W/"00869bb70452ab91a3aeb8e3fe5abd46"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 47a3dcef-f8b2-4461-9802-e7e79eecf692
+      - 2b758184-c2cd-4173-80b5-06a3077cc634
       X-Runtime:
-      - '0.002388'
+      - '0.002946'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"204","type":"user","attributes":{"email":"rocco.halvorson@brekke.com","name":"Greg","google_id":null,"address_line1":"12012
-        starboard dr","address_line2":"apt 205","address_city":"reston","address_state":"va","address_zip":"20194"}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:33 GMT
-- request:
-    method: get
-    uri: http://localhost:5000/api/v1/users/204/representatives
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.9.3
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"19bbdda6b2641e47cff9fa85193db499"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 8219d253-91d1-443b-afef-b79cf0a71cd2
-      X-Runtime:
-      - '0.159244'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":[{"id":"0","type":"representative","attributes":{"address_city":"Washington","address_line1":"1600
-        Pennsylvania Avenue Northwest","address_state":"DC","address_zip":"20500","name":"Joseph
-        R. Biden","title":"President of the United States","photo_url":null}},{"id":"1","type":"representative","attributes":{"address_city":"Washington","address_line1":"1600
-        Pennsylvania Avenue Northwest","address_state":"DC","address_zip":"20500","name":"Kamala
-        D. Harris","title":"Vice President of the United States","photo_url":null}},{"id":"2","type":"representative","attributes":{"address_city":"Washington","address_line1":"703
-        Hart Senate Office Building","address_state":"DC","address_zip":"20510","name":"Mark
-        R. Warner","title":"U.S. Senator","photo_url":"http://bioguide.congress.gov/bioguide/photo/W/W000805.jpg"}},{"id":"3","type":"representative","attributes":{"address_city":"Washington","address_line1":"231
-        Russell Senate Office Building","address_state":"DC","address_zip":"20510","name":"Tim
-        Kaine","title":"U.S. Senator","photo_url":"http://bioguide.congress.gov/bioguide/photo/K/K000384.jpg"}},{"id":"4","type":"representative","attributes":{"address_city":"Washington","address_line1":"2238
-        Rayburn House Office Building","address_state":"DC","address_zip":"20515","name":"Gerald
-        E. \"Gerry\" Connolly","title":"U.S. Representative","photo_url":"http://bioguide.congress.gov/bioguide/photo/C/C001078.jpg"}},{"id":"5","type":"representative","attributes":{"address_city":"Richmond","address_line1":"P.O.
-        Box 1475","address_state":"VA","address_zip":"23218","name":"Glenn Youngkin","title":"Governor
-        of Virginia","photo_url":null}},{"id":"6","type":"representative","attributes":{"address_city":"Richmond","address_line1":"P.O.
-        Box 1195","address_state":"VA","address_zip":"23218","name":"Winsome Earle-Sears","title":"Lieutenant
-        Governor of Virginia","photo_url":null}},{"id":"7","type":"representative","attributes":{"address_city":"Richmond","address_line1":"202
-        North 9th Street","address_state":"VA","address_zip":"23219","name":"Jason
-        S. Miyares","title":"VA Attorney General","photo_url":null}},{"id":"8","type":"representative","attributes":{"address_city":"Richmond","address_line1":"900
-        East Main Street","address_state":"VA","address_zip":"23219","name":"Janet
-        D. Howell","title":"VA State Senator","photo_url":"http://apps.lis.virginia.gov/senatepics/newbiopics/Howell32.jpg"}},{"id":"9","type":"representative","attributes":{"address_city":"Richmond","address_line1":"900
-        East Main Street","address_state":"VA","address_zip":"23219","name":"Kenneth
-        R. Plum","title":"VA State Delegate","photo_url":"http://virginiageneralassembly.gov/house/members/photos/36.jpg"}},{"id":"10","type":"representative","attributes":{"address_city":"Fairfax","address_line1":"12000
-        Government Center Parkway","address_state":"VA","address_zip":"22035","name":"Jeffrey
-        C. McKay","title":"Fairfax County Supervisor","photo_url":null}},{"id":"11","type":"representative","attributes":{"address_city":"Fairfax","address_line1":"12000
-        Government Center Parkway","address_state":"VA","address_zip":"22035","name":"Walter
-        L. Alcorn","title":"Fairfax County Supervisor","photo_url":null}}]}'
-  recorded_at: Wed, 23 Mar 2022 21:31:33 GMT
+      string: '{"data":{"id":"168","type":"user","attributes":{"email":"hai_lang@koss-bahringer.co","name":"Greg","google_id":null,"address":{"id":142,"address_line1":"12012
+        starboard dr","address_line2":"apt 205","address_city":"reston","address_state":"va","address_zip":"20194","created_at":"2022-05-21T16:52:05.454Z","updated_at":"2022-05-21T16:52:05.460Z","user_id":168,"name":"Greg","address_country":"US"}}}}'
+  recorded_at: Sat, 21 May 2022 16:52:05 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/letters
     body:
       encoding: UTF-8
-      string: '{"to_address_line1":"200 East Colfax Avenue","to_address_line2":null,"to_address_city":"Denver","to_address_state":"CO","to_address_zip":"80203","from_address_line1":"12012
-        starboard dr","from_address_line2":"apt 205","from_address_city":"reston","from_address_state":"va","from_address_zip":"20194","body":"test","user_id":"204","to_name":"CO
+      string: '{"to_address_line1":"200 East Colfax Avenue","to_address_line2":null,"to_address_city":"Denver","to_address_state":"CO","to_address_zip":"80203","from_address_line1":null,"from_address_line2":null,"from_address_city":null,"from_address_state":null,"from_address_zip":null,"body":"test","user_id":"168","to_name":"CO
         State Representative Alec Garnett","from_name":"Greg"}'
     headers:
       User-Agent:
@@ -191,28 +132,28 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ec8804138701a2914e51725574909b1d"
+      - W/"f8b052dd7b2f6b4a934cd64947c4e6e4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8ad9fa2a-8447-4305-9930-fef9835684ed
+      - 193cdf0c-fcd6-4674-acc9-72d3ef922a86
       X-Runtime:
-      - '0.007503'
+      - '0.038660'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"134","type":"letter","attributes":{"send_date":null,"delivery_date":null,"to_address_line1":"200
-        East Colfax Avenue","to_address_line2":null,"to_address_city":"Denver","to_address_state":"CO","to_address_zip":"80203","from_address_line1":"12012
-        starboard dr","from_address_line2":"apt 205","from_address_city":"reston","from_address_state":"va","from_address_zip":"20194","body":"test","user_id":204,"to_name":"CO
-        State Representative Alec Garnett","from_name":"Greg","preview_url":null}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:33 GMT
+      string: '{"data":{"id":"31","type":"letter","attributes":{"send_date":null,"delivery_date":null,"body":"test","user_id":168,"preview_url":null,"to":{"id":143,"address_line1":"200
+        East Colfax Avenue","address_line2":null,"address_city":"Denver","address_state":"CO","address_zip":"80203","created_at":"2022-05-21T16:52:05.507Z","updated_at":"2022-05-21T16:52:05.507Z","user_id":null,"name":"CO
+        State Representative Alec Garnett","address_country":"US"},"from":{"id":142,"address_line1":"12012
+        starboard dr","address_line2":"apt 205","address_city":"reston","address_state":"va","address_zip":"20194","created_at":"2022-05-21T16:52:05.454Z","updated_at":"2022-05-21T16:52:05.460Z","user_id":168,"name":"Greg","address_country":"US"}}}}'
+  recorded_at: Sat, 21 May 2022 16:52:05 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/letters/send
     body:
       encoding: UTF-8
-      string: '{"email":"rocco.halvorson@brekke.com"}'
+      string: '{"email":"hai_lang@koss-bahringer.co"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -230,20 +171,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"3f34ecda6d06a47014569d32854e82f2"
+      - W/"ed4b32a0f983472239de96695bb7f888"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a813d5c6-bad5-4b08-b96e-fdfedfc46947
+      - 8e9ceb6e-5697-4950-b56a-10695bf7c632
       X-Runtime:
-      - '0.949950'
+      - '2.616634'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"134","type":"letter","attributes":{"send_date":"2022-03-23","delivery_date":"2022-03-31","to_address_line1":"200
-        East Colfax Avenue","to_address_line2":null,"to_address_city":"Denver","to_address_state":"CO","to_address_zip":"80203","from_address_line1":"12012
-        starboard dr","from_address_line2":"apt 205","from_address_city":"reston","from_address_state":"va","from_address_zip":"20194","body":"test","user_id":204,"to_name":"CO
-        State Representative Alec Garnett","from_name":"Greg","preview_url":"https://lob-assets.com/letters/ltr_5b60168f9609559b.pdf?version=v1\u0026expires=1650663095\u0026signature=2YLUrhJljJcseD7PmaxEO3vpv8SLOqxhZoiGtBM9d2MuwYYlb5wEVU6Te9bHVAO87O-eTdBZIaz2fuz3qdSjAg"}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:34 GMT
+      string: '{"data":{"id":"31","type":"letter","attributes":{"send_date":"2022-05-21","delivery_date":"2022-05-31","body":"test","user_id":168,"preview_url":"https://lob-assets.com/letters/ltr_67d4ab56b4ca3797.pdf?version=v1\u0026expires=1655743928\u0026signature=JhxggQKqJpl2H0KsbzXQrLz2TU1_uQFwGFojPPEhBdqG7RlF6YkYgQsRjYhhaS5isKfIwOVCUGWWTiqqcW7mDA","to":{"id":143,"address_line1":"200
+        East Colfax Avenue","address_line2":null,"address_city":"Denver","address_state":"CO","address_zip":"80203","created_at":"2022-05-21T16:52:05.507Z","updated_at":"2022-05-21T16:52:05.507Z","user_id":null,"name":"CO
+        State Representative Alec Garnett","address_country":"US"},"from":{"id":142,"address_line1":"12012
+        starboard dr","address_line2":"apt 205","address_city":"reston","address_state":"va","address_zip":"20194","created_at":"2022-05-21T16:52:05.454Z","updated_at":"2022-05-21T16:52:05.460Z","user_id":168,"name":"Greg","address_country":"US"}}}}'
+  recorded_at: Sat, 21 May 2022 16:52:08 GMT
 recorded_with: VCR 6.1.0

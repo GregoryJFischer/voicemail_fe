@@ -1,44 +1,8 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://localhost:5000/api/v1/users
-    body:
-      encoding: UTF-8
-      string: '{"email":"klara_lang@schiller.info","name":"Alex"}'
-    headers:
-      User-Agent:
-      - Faraday v1.9.3
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"dc4607c7440555006ea145aab9b4050b"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - bc52688c-172d-4e36-bba2-25d811d9f1d7
-      X-Runtime:
-      - '0.002990'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"221","type":"user","attributes":{"email":"klara_lang@schiller.info","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:55 GMT
-- request:
     method: get
-    uri: http://localhost:5000/api/v1/users/221
+    uri: http://localhost:5000/api/v1/users/185
     body:
       encoding: US-ASCII
       string: ''
@@ -57,17 +21,87 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"dc4607c7440555006ea145aab9b4050b"
+      - W/"207c340bcb186281d2e230dffdb13fab"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 5949d277-901b-40e2-9938-a4cf60913f79
+      - 5dc70c44-014c-48ce-97ee-0610a6019924
       X-Runtime:
-      - '0.001372'
+      - '0.002692'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"221","type":"user","attributes":{"email":"klara_lang@schiller.info","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:55 GMT
+      string: '{"data":{"id":"185","type":"user","attributes":{"email":"jimmy@harris.biz","name":"Alex","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 16:53:25 GMT
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"email":"farrah@reinger.io","name":"Alex"}'
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"295205281c58e8297826ee106fa81f31"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a3bc6ab4-b5fd-4ea0-b76d-958e39245b18
+      X-Runtime:
+      - '0.007041'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"205","type":"user","attributes":{"email":"farrah@reinger.io","name":"Alex","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 17:09:01 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/205
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"295205281c58e8297826ee106fa81f31"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 89c762c6-dd4f-4448-91fb-e45e40ebcdda
+      X-Runtime:
+      - '0.010066'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"205","type":"user","attributes":{"email":"farrah@reinger.io","name":"Alex","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 17:09:01 GMT
 recorded_with: VCR 6.1.0

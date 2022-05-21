@@ -1,44 +1,8 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://localhost:5000/api/v1/users
-    body:
-      encoding: UTF-8
-      string: '{"email":"emile@borer.name","name":"Alex"}'
-    headers:
-      User-Agent:
-      - Faraday v1.9.3
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"b0f013b881dbfa11ec6299ae66b0ddd7"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - f20070d6-bca3-43a7-b756-7d40a60f99ec
-      X-Runtime:
-      - '0.026809'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"179","type":"user","attributes":{"email":"emile@borer.name","name":"Alex","google_id":null,"address":null}}}'
-  recorded_at: Sat, 21 May 2022 16:53:21 GMT
-- request:
     method: get
-    uri: http://localhost:5000/api/v1/users/179
+    uri: http://localhost:5000/api/v1/users/1
     body:
       encoding: US-ASCII
       string: ''
@@ -57,59 +21,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"b0f013b881dbfa11ec6299ae66b0ddd7"
+      - W/"f1f634457d8227306116ae387aa0659f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8270d30f-d281-4072-b39d-701473ef661a
+      - 321dca39-49a6-4f37-813b-a943094defe1
       X-Runtime:
-      - '0.003527'
+      - '0.010485'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"179","type":"user","attributes":{"email":"emile@borer.name","name":"Alex","google_id":null,"address":null}}}'
-  recorded_at: Sat, 21 May 2022 16:53:21 GMT
-- request:
-    method: patch
-    uri: http://localhost:5000/api/v1/users/179
-    body:
-      encoding: UTF-8
-      string: '{"address_line1":"12012 Starboard Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194"}'
-    headers:
-      User-Agent:
-      - Faraday v1.9.3
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"bbd631d9b9115ba084670170d97d122e"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 5b844c33-218c-421d-8ee0-033b1d707a35
-      X-Runtime:
-      - '0.730095'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"179","type":"user","attributes":{"email":"emile@borer.name","name":"Alex","google_id":null,"address":{"id":149,"address_line1":"12012
-        Starboard Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194","created_at":"2022-05-21T16:53:22.210Z","updated_at":"2022-05-21T16:53:22.214Z","user_id":179,"name":"Alex","address_country":"US"}}}}'
-  recorded_at: Sat, 21 May 2022 16:53:22 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"isabel_wuckert@damore-feil.name","name":"Greg","google_id":null,"address":{"id":1,"address_line1":"12012
+        starboard dr","address_line2":"apt 205","address_city":"reston","address_state":"va","address_zip":"20194","created_at":"2022-05-19T20:01:43.555Z","updated_at":"2022-05-19T20:01:43.570Z","user_id":1,"name":"Greg","address_country":"US"}}}}'
+  recorded_at: Fri, 20 May 2022 06:41:14 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/179
+    uri: http://localhost:5000/api/v1/users/1
     body:
       encoding: US-ASCII
       string: ''
@@ -128,23 +56,23 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"bbd631d9b9115ba084670170d97d122e"
+      - W/"f1f634457d8227306116ae387aa0659f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - bcc27867-0f23-4e0a-a3f7-0b585ff860fb
+      - f355f9db-5c59-4bc9-a58f-fea4a803008e
       X-Runtime:
-      - '0.002874'
+      - '0.003774'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"179","type":"user","attributes":{"email":"emile@borer.name","name":"Alex","google_id":null,"address":{"id":149,"address_line1":"12012
-        Starboard Dr","address_line2":"Apt 205","address_city":"Reston","address_state":"VA","address_zip":"20194","created_at":"2022-05-21T16:53:22.210Z","updated_at":"2022-05-21T16:53:22.214Z","user_id":179,"name":"Alex","address_country":"US"}}}}'
-  recorded_at: Sat, 21 May 2022 16:53:22 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"isabel_wuckert@damore-feil.name","name":"Greg","google_id":null,"address":{"id":1,"address_line1":"12012
+        starboard dr","address_line2":"apt 205","address_city":"reston","address_state":"va","address_zip":"20194","created_at":"2022-05-19T20:01:43.555Z","updated_at":"2022-05-19T20:01:43.570Z","user_id":1,"name":"Greg","address_country":"US"}}}}'
+  recorded_at: Fri, 20 May 2022 06:41:14 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/179/representatives
+    uri: http://localhost:5000/api/v1/users/1/representatives
     body:
       encoding: US-ASCII
       string: ''
@@ -167,9 +95,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e64dcb1b-f7e6-4642-838a-dc410a98c9f6
+      - 3251f389-f191-46e0-b854-8236df2398a9
       X-Runtime:
-      - '0.595905'
+      - '2.709326'
       Transfer-Encoding:
       - chunked
     body:
@@ -199,5 +127,98 @@ http_interactions:
         C. McKay","title":"Fairfax County Supervisor","photo_url":null}},{"id":"11","type":"representative","attributes":{"address_city":"Fairfax","address_line1":"12000
         Government Center Parkway","address_state":"VA","address_zip":"22035","name":"Walter
         L. Alcorn","title":"Fairfax County Supervisor","photo_url":null}}]}'
-  recorded_at: Sat, 21 May 2022 16:53:22 GMT
+  recorded_at: Fri, 20 May 2022 06:41:19 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f1f634457d8227306116ae387aa0659f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 85a9b6fc-330b-4946-9838-f669f38079ab
+      X-Runtime:
+      - '0.003032'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"email":"isabel_wuckert@damore-feil.name","name":"Greg","google_id":null,"address":{"id":1,"address_line1":"12012
+        starboard dr","address_line2":"apt 205","address_city":"reston","address_state":"va","address_zip":"20194","created_at":"2022-05-19T20:01:43.555Z","updated_at":"2022-05-19T20:01:43.570Z","user_id":1,"name":"Greg","address_country":"US"}}}}'
+  recorded_at: Fri, 20 May 2022 06:41:19 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1/representatives
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"240cb8b9fe03ee7b9535870ba60bda20"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ea2541f0-2c9f-4714-b372-4c47dbfb1c41
+      X-Runtime:
+      - '1.494308'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"0","type":"representative","attributes":{"address_city":"Washington","address_line1":"1600
+        Pennsylvania Avenue Northwest","address_state":"DC","address_zip":"20500","name":"Joseph
+        R. Biden","title":"President of the United States","photo_url":null}},{"id":"1","type":"representative","attributes":{"address_city":"Washington","address_line1":"1600
+        Pennsylvania Avenue Northwest","address_state":"DC","address_zip":"20500","name":"Kamala
+        D. Harris","title":"Vice President of the United States","photo_url":null}},{"id":"2","type":"representative","attributes":{"address_city":"Washington","address_line1":"703
+        Hart Senate Office Building","address_state":"DC","address_zip":"20510","name":"Mark
+        R. Warner","title":"U.S. Senator","photo_url":"http://bioguide.congress.gov/bioguide/photo/W/W000805.jpg"}},{"id":"3","type":"representative","attributes":{"address_city":"Washington","address_line1":"231
+        Russell Senate Office Building","address_state":"DC","address_zip":"20510","name":"Tim
+        Kaine","title":"U.S. Senator","photo_url":"http://bioguide.congress.gov/bioguide/photo/K/K000384.jpg"}},{"id":"4","type":"representative","attributes":{"address_city":"Washington","address_line1":"2238
+        Rayburn House Office Building","address_state":"DC","address_zip":"20515","name":"Gerald
+        E. \"Gerry\" Connolly","title":"U.S. Representative","photo_url":"http://bioguide.congress.gov/bioguide/photo/C/C001078.jpg"}},{"id":"5","type":"representative","attributes":{"address_city":"Richmond","address_line1":"P.O.
+        Box 1475","address_state":"VA","address_zip":"23218","name":"Glenn Youngkin","title":"Governor
+        of Virginia","photo_url":null}},{"id":"6","type":"representative","attributes":{"address_city":"Richmond","address_line1":"P.O.
+        Box 1195","address_state":"VA","address_zip":"23218","name":"Winsome Earle-Sears","title":"Lieutenant
+        Governor of Virginia","photo_url":null}},{"id":"7","type":"representative","attributes":{"address_city":"Richmond","address_line1":"202
+        North 9th Street","address_state":"VA","address_zip":"23219","name":"Jason
+        S. Miyares","title":"VA State Attorney General","photo_url":null}},{"id":"8","type":"representative","attributes":{"address_city":"Richmond","address_line1":"900
+        East Main Street","address_state":"VA","address_zip":"23219","name":"Janet
+        D. Howell","title":"VA State Senator","photo_url":"http://apps.lis.virginia.gov/senatepics/newbiopics/Howell32.jpg"}},{"id":"9","type":"representative","attributes":{"address_city":"Richmond","address_line1":"900
+        East Main Street","address_state":"VA","address_zip":"23219","name":"Kenneth
+        R. Plum","title":"VA State Delegate","photo_url":"http://virginiageneralassembly.gov/house/members/photos/36.jpg"}},{"id":"10","type":"representative","attributes":{"address_city":"Fairfax","address_line1":"12000
+        Government Center Parkway","address_state":"VA","address_zip":"22035","name":"Jeffrey
+        C. McKay","title":"Fairfax County Supervisor","photo_url":null}},{"id":"11","type":"representative","attributes":{"address_city":"Fairfax","address_line1":"12000
+        Government Center Parkway","address_state":"VA","address_zip":"22035","name":"Walter
+        L. Alcorn","title":"Fairfax County Supervisor","photo_url":null}}]}'
+  recorded_at: Fri, 20 May 2022 06:41:23 GMT
 recorded_with: VCR 6.1.0

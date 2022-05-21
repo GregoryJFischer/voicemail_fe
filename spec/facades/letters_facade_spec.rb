@@ -26,11 +26,9 @@ describe LettersFacade do
    
     BackendService.update_address(user[:data][:id], address_params)
 
-    letter = LettersFacade.create_letter(body, user[:data][:id], rep_attributes)
+    LettersFacade.create_letter(body, user[:data][:id], rep_attributes)
 
-    response = BackendService.post('letters/send', {email: email})
-
-    confirmation = JSON.parse(response.body, symbolize_names: true)
+    confirmation = BackendService.send_letter({email: email})
 
     expect(confirmation).to be_a(Hash)
     expect(confirmation).to have_key(:data)

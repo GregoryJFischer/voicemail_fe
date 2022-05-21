@@ -110,3 +110,23 @@ OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
                                                                        expires: true
                                                                      }
                                                                    })
+def user_data_no_address
+   {data: {:id=>"1",
+   :type=>"user",
+   :attributes=>
+    {:email=>"isabel_wuckert@damore-feil.name",
+     :name=>"Greg",
+     :google_id=>nil,
+     :address=>
+      {:id=>1,
+       :address_line1=> nil,
+       :address_line2=> nil,
+       :address_city=> nil,
+       :address_state=> nil,
+       :address_zip=> nil,
+       :created_at=>"2022-05-19T20:01:43.555Z",
+       :updated_at=>"2022-05-19T20:01:43.570Z",
+       :user_id=>1,
+       :name=>"Greg",
+       :address_country=> nil}}}}
+end

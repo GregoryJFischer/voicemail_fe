@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1/representatives
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"240cb8b9fe03ee7b9535870ba60bda20"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a041b704-da88-4880-b190-a84b7a8056a0
+      X-Runtime:
+      - '0.491036'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"0","type":"representative","attributes":{"address_city":"Washington","address_line1":"1600
+        Pennsylvania Avenue Northwest","address_state":"DC","address_zip":"20500","name":"Joseph
+        R. Biden","title":"President of the United States","photo_url":null}},{"id":"1","type":"representative","attributes":{"address_city":"Washington","address_line1":"1600
+        Pennsylvania Avenue Northwest","address_state":"DC","address_zip":"20500","name":"Kamala
+        D. Harris","title":"Vice President of the United States","photo_url":null}},{"id":"2","type":"representative","attributes":{"address_city":"Washington","address_line1":"703
+        Hart Senate Office Building","address_state":"DC","address_zip":"20510","name":"Mark
+        R. Warner","title":"U.S. Senator","photo_url":"http://bioguide.congress.gov/bioguide/photo/W/W000805.jpg"}},{"id":"3","type":"representative","attributes":{"address_city":"Washington","address_line1":"231
+        Russell Senate Office Building","address_state":"DC","address_zip":"20510","name":"Tim
+        Kaine","title":"U.S. Senator","photo_url":"http://bioguide.congress.gov/bioguide/photo/K/K000384.jpg"}},{"id":"4","type":"representative","attributes":{"address_city":"Washington","address_line1":"2238
+        Rayburn House Office Building","address_state":"DC","address_zip":"20515","name":"Gerald
+        E. \"Gerry\" Connolly","title":"U.S. Representative","photo_url":"http://bioguide.congress.gov/bioguide/photo/C/C001078.jpg"}},{"id":"5","type":"representative","attributes":{"address_city":"Richmond","address_line1":"P.O.
+        Box 1475","address_state":"VA","address_zip":"23218","name":"Glenn Youngkin","title":"Governor
+        of Virginia","photo_url":null}},{"id":"6","type":"representative","attributes":{"address_city":"Richmond","address_line1":"P.O.
+        Box 1195","address_state":"VA","address_zip":"23218","name":"Winsome Earle-Sears","title":"Lieutenant
+        Governor of Virginia","photo_url":null}},{"id":"7","type":"representative","attributes":{"address_city":"Richmond","address_line1":"202
+        North 9th Street","address_state":"VA","address_zip":"23219","name":"Jason
+        S. Miyares","title":"VA State Attorney General","photo_url":null}},{"id":"8","type":"representative","attributes":{"address_city":"Richmond","address_line1":"900
+        East Main Street","address_state":"VA","address_zip":"23219","name":"Janet
+        D. Howell","title":"VA State Senator","photo_url":"http://apps.lis.virginia.gov/senatepics/newbiopics/Howell32.jpg"}},{"id":"9","type":"representative","attributes":{"address_city":"Richmond","address_line1":"900
+        East Main Street","address_state":"VA","address_zip":"23219","name":"Kenneth
+        R. Plum","title":"VA State Delegate","photo_url":"http://virginiageneralassembly.gov/house/members/photos/36.jpg"}},{"id":"10","type":"representative","attributes":{"address_city":"Fairfax","address_line1":"12000
+        Government Center Parkway","address_state":"VA","address_zip":"22035","name":"Jeffrey
+        C. McKay","title":"Fairfax County Supervisor","photo_url":null}},{"id":"11","type":"representative","attributes":{"address_city":"Fairfax","address_line1":"12000
+        Government Center Parkway","address_state":"VA","address_zip":"22035","name":"Walter
+        L. Alcorn","title":"Fairfax County Supervisor","photo_url":null}}]}'
+  recorded_at: Fri, 20 May 2022 15:42:03 GMT
+recorded_with: VCR 6.1.0

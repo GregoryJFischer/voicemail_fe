@@ -1,16 +1,16 @@
 <div class="container">
-<h1>Welcome, <%= @dashboard_facade.user.name %></h1>
-<% if @dashboard_facade.user.address_line1 == nil %>
+<h1>Welcome, <%= @user.name %></h1>
+<% if @user.address_line1.nil? || @user.address_line1.blank?%>
   <%= button_to 'Add a valid return address to see your representatives', "/edit", class: "btn btn-secondary", method: :get %><br>
 <% else %>
   <p>
     <h5>Your current address:</h5>
-    <%= @dashboard_facade.user.address %>
+    <%= @user.address %>
   </p>
   <%= button_to 'Edit your return address', "/edit", class: "btn btn-secondary", method: :get %><br>
-    <% cache "representatives-#{@dashboard_facade.user.user_id}", expires_in: 1.month do %>
+    <% cache "representatives-#{@user.user_id}", expires_in: 1.month do %>
       <h2>Your Representatives:</h2>
-        <% @dashboard_facade.representatives.each_with_index do |rep, index| %>
+        <% @user.representatives.each_with_index do |rep, index| %>
             <p>
               <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#representative-<%= index %>" aria-expanded="false" aria-controls="#representative-<%= index %>">
                 <%= rep.name %> - <%= rep.title %>

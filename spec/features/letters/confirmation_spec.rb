@@ -30,9 +30,9 @@ describe 'letter confirmation', type: :system do
     within('div.m-3') do
       fill_in :body, with: 'Senator Alec Garnett, Please make GrubHub free. Your other constituent, Alex'
     end
-    within('div.button') do
-      click_button 'Create Letter'
-    end
+    # within('div.button') do
+    click_button 'Create Letter'
+    # end
 
     expect(current_path).to include('/letters')
       

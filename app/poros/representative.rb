@@ -19,7 +19,7 @@ class Representative
   end
 
   def attributes
-    wip = { attributes: {
+    { attributes: {
       id: nil,
       name: @name,
       title: @title,

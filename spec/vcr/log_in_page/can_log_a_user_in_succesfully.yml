@@ -1,44 +1,8 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://localhost:5000/api/v1/users
-    body:
-      encoding: UTF-8
-      string: '{"name":"Bob","email":"allen@schneider-dach.net","password":"password","password_confirmation":"password"}'
-    headers:
-      User-Agent:
-      - Faraday v1.9.3
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"f8c92085cd36da7b5c3b25e4fc8b26a9"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 20aabbfb-bd1c-44d3-b6b7-7252ae92c0ce
-      X-Runtime:
-      - '0.248414'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"208","type":"user","attributes":{"email":"allen@schneider-dach.net","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:50 GMT
-- request:
     method: get
-    uri: http://localhost:5000/api/v1/users/208
+    uri: http://localhost:5000/api/v1/users/172
     body:
       encoding: US-ASCII
       string: ''
@@ -57,25 +21,129 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f8c92085cd36da7b5c3b25e4fc8b26a9"
+      - W/"47cfe0fdca08bc6467d2cb7e6559ba10"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ecdfa4a7-427d-4ef4-9f23-d4924fd5a2e5
+      - 7c4b6162-d7fd-4e09-b9fe-c5846a0b3532
       X-Runtime:
-      - '0.002189'
+      - '0.004453'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"208","type":"user","attributes":{"email":"allen@schneider-dach.net","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:50 GMT
+      string: '{"data":{"id":"172","type":"user","attributes":{"email":"kasi@medhurst.name","name":"Bob","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 16:53:16 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/172
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"47cfe0fdca08bc6467d2cb7e6559ba10"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d3e65b8b-702b-4a52-9c7a-9b054a5972bd
+      X-Runtime:
+      - '0.003828'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"172","type":"user","attributes":{"email":"kasi@medhurst.name","name":"Bob","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 16:53:16 GMT
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"name":"Bob","email":"kareem@labadie.io","password":"password","password_confirmation":"password"}'
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"50bdf922ef99676b42abd9053406f36e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - faffe3a5-0631-4531-9d96-1541c07a8fcb
+      X-Runtime:
+      - '0.303910'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"195","type":"user","attributes":{"email":"kareem@labadie.io","name":"Bob","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 17:08:56 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/195
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"50bdf922ef99676b42abd9053406f36e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a93b3289-b7bb-48bd-a6dc-28459090a14d
+      X-Runtime:
+      - '0.003458'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"195","type":"user","attributes":{"email":"kareem@labadie.io","name":"Bob","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 17:08:56 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/sessions
     body:
       encoding: UTF-8
-      string: '{"email":"allen@schneider-dach.net","password":"password"}'
+      string: '{"email":"kareem@labadie.io","password":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -93,22 +161,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f8c92085cd36da7b5c3b25e4fc8b26a9"
+      - W/"50bdf922ef99676b42abd9053406f36e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 1ac52f90-0029-4853-b436-5652257b8e1a
+      - 0a492162-2246-4d54-9c27-a0b07de77c8e
       X-Runtime:
-      - '0.243303'
+      - '0.278328'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"208","type":"user","attributes":{"email":"allen@schneider-dach.net","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:50 GMT
+      string: '{"data":{"id":"195","type":"user","attributes":{"email":"kareem@labadie.io","name":"Bob","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 17:08:57 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/208
+    uri: http://localhost:5000/api/v1/users/195
     body:
       encoding: US-ASCII
       string: ''
@@ -127,17 +195,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f8c92085cd36da7b5c3b25e4fc8b26a9"
+      - W/"50bdf922ef99676b42abd9053406f36e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 37ae7f5d-9070-4b41-bf1b-ca6d4bb3e79c
+      - 3a3588bc-f343-43a9-ade6-d418d1e9c624
       X-Runtime:
-      - '0.001351'
+      - '0.007657'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"208","type":"user","attributes":{"email":"allen@schneider-dach.net","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:50 GMT
+      string: '{"data":{"id":"195","type":"user","attributes":{"email":"kareem@labadie.io","name":"Bob","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 17:08:57 GMT
 recorded_with: VCR 6.1.0
