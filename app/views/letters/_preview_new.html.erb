@@ -1,4 +1,11 @@
 <div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src=<%="#{@preview_url}"%> width="800px" height="700px" allowfullscreen></iframe>
+   <object class="embed-responsive-item" data=<%="#{@preview_url}"%>
+      type="application/pdf" internalinstanceid="9" title="" width="800px" height="700px" allowfullscreen>
+      <p>
+         Your browser isn't supporting embedded pdf files. You can download the file
+         <a href=<%="#{@preview_url}"%>>here</a>
+      </p>
+   </object>
 </div>
+
 Estimated Arrival Date: <%= @delivery_date %>

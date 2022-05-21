@@ -1,44 +1,8 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://localhost:5000/api/v1/users
-    body:
-      encoding: UTF-8
-      string: '{"name":"Bob","email":"tommie@upton.info","password":"password","password_confirmation":"password"}'
-    headers:
-      User-Agent:
-      - Faraday v1.9.3
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"568717543af3d290a9f051e2d7bc0e8b"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - a84de0b5-71e7-43e4-a631-e7f87cd9a119
-      X-Runtime:
-      - '0.244812'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"211","type":"user","attributes":{"email":"tommie@upton.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:51 GMT
-- request:
     method: get
-    uri: http://localhost:5000/api/v1/users/211
+    uri: http://localhost:5000/api/v1/users/175
     body:
       encoding: US-ASCII
       string: ''
@@ -57,19 +21,89 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"568717543af3d290a9f051e2d7bc0e8b"
+      - W/"76762a2728fd99002dd38f48ede1201f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 02b841bf-0043-4b40-b433-90b02c2312c2
+      - 041d4bcd-ea15-4817-83c9-db663038e6e4
       X-Runtime:
-      - '0.045474'
+      - '0.003069'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"211","type":"user","attributes":{"email":"tommie@upton.info","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:51 GMT
+      string: '{"data":{"id":"175","type":"user","attributes":{"email":"kevin_erdman@halvorson.co","name":"Bob","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 16:53:18 GMT
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"name":"Bob","email":"maurita@treutel-leffler.biz","password":"password","password_confirmation":"password"}'
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c8f9723ebd7c209dc5bdd6a7d577833f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2f068ac7-03aa-47b8-870f-36efa8fd1e7d
+      X-Runtime:
+      - '0.278852'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"198","type":"user","attributes":{"email":"maurita@treutel-leffler.biz","name":"Bob","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 17:08:58 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/198
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c8f9723ebd7c209dc5bdd6a7d577833f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8ec1c97e-a151-4456-bc23-33816c48d20b
+      X-Runtime:
+      - '0.006334'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"198","type":"user","attributes":{"email":"maurita@treutel-leffler.biz","name":"Bob","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 17:08:58 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/sessions
@@ -95,13 +129,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 3c24c29d-be1d-414e-8224-e5441ec11f78
+      - 886c1863-3f07-45c3-8d0b-37ddd390ea99
       X-Runtime:
-      - '0.024542'
+      - '0.001942'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"error":"Invalid Credentials"}'
-  recorded_at: Wed, 23 Mar 2022 21:31:51 GMT
+  recorded_at: Sat, 21 May 2022 17:08:58 GMT
 recorded_with: VCR 6.1.0

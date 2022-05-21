@@ -2,8 +2,7 @@ class LettersController < ApplicationController
   protect_from_forgery except: :preview
   def new
     @rep = Representative.new(params)
-    @current_user = UserDashboardFacade.new(session[:user_id])
-    @user = @current_user.user
+    @user = DashboardFacade.new(session[:user_id]).user
     @letter_format = letter_format
   end
 

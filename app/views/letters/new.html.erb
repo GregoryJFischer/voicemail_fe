@@ -4,7 +4,6 @@
 
 <div class="row">
   <div class="col">
-    <div class='button'>
       <%= form_with url: "/fetch_preview", method: :get, remote: true do |f| %>
         <%= f.text_area :body, name: 'body', class: "form-control", rows: "29", onKeyUp: "wip()", value: @letter_format %><br/><br/>
         <%= f.hidden_field :rep_name, value: @rep.name %>
@@ -14,8 +13,6 @@
         <%= f.hidden_field :rep_address_zip, value: @rep.address_zip %>
         <%= f.submit 'Create Letter', class: "btn btn-secondary" %>
       <% end %>
-    </div>
-
 </div>
 <div class="col" id="preview2">
 

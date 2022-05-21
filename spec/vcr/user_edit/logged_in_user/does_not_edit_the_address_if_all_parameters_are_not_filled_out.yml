@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"email":"shanda@quitzon.net","name":"Alex"}'
+      string: '{"email":"cori.bradtke@kassulke.net","name":"Alex"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"0d11ca9eacb280000db7fca66b1875a4"
+      - W/"eec24bb73a988df1d563bcd71f084ea6"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2339737e-59b6-420f-a459-7b62eeb10ea7
+      - 77060412-90b6-4a67-8720-a21f36c24cde
       X-Runtime:
-      - '0.004535'
+      - '0.013998'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"216","type":"user","attributes":{"email":"shanda@quitzon.net","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:53 GMT
+      string: '{"data":{"id":"180","type":"user","attributes":{"email":"cori.bradtke@kassulke.net","name":"Alex","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 16:53:23 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/216
+    uri: http://localhost:5000/api/v1/users/180
     body:
       encoding: US-ASCII
       string: ''
@@ -57,22 +57,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"0d11ca9eacb280000db7fca66b1875a4"
+      - W/"eec24bb73a988df1d563bcd71f084ea6"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - f32000bb-ecec-4d64-9ec5-fbf8030f049e
+      - c9171ac0-2e4c-4109-9eb9-0d3d7f9402c9
       X-Runtime:
-      - '0.004196'
+      - '0.007534'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"216","type":"user","attributes":{"email":"shanda@quitzon.net","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:53 GMT
+      string: '{"data":{"id":"180","type":"user","attributes":{"email":"cori.bradtke@kassulke.net","name":"Alex","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 16:53:23 GMT
 - request:
     method: patch
-    uri: http://localhost:5000/api/v1/users/216
+    uri: http://localhost:5000/api/v1/users/180
     body:
       encoding: UTF-8
       string: '{"address_line1":"","address_line2":"","address_city":"","address_state":"","address_zip":""}'
@@ -93,18 +93,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       X-Request-Id:
-      - f9d1aca7-9599-4311-b7a3-9f4f6aac64bf
+      - db28220a-7c20-44d0-b591-70977705f13d
       X-Runtime:
-      - '0.284258'
+      - '0.537304'
       Content-Length:
-      - '11000'
+      - '10770'
     body:
       encoding: UTF-8
       string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cLob::InvalidRequestError:
         (Status 422) primary_line is required or address is required \n {\n    \"error\":
         {\n        \"message\": \"primary_line is required or address is required\",\n        \"status_code\":
         422,\n        \"code\": \"invalid\"\n    }\n}\u003e","traces":{"Application
-        Trace":[{"id":4,"trace":"app/facades/lob_facade.rb:5:in `verify_address''"},{"id":5,"trace":"app/controllers/api/v1/users_controller.rb:24:in
+        Trace":[{"id":4,"trace":"app/facades/lob_facade.rb:6:in `verify_address''"},{"id":5,"trace":"app/controllers/api/v1/users_controller.rb:27:in
         `update''"}],"Framework Trace":[{"id":0,"trace":"lob (5.4.6) lib/lob/resources/resource_base.rb:112:in
         `handle_api_error''"},{"id":1,"trace":"lob (5.4.6) lib/lob/resources/resource_base.rb:102:in
         `rescue in submit''"},{"id":2,"trace":"lob (5.4.6) lib/lob/resources/resource_base.rb:90:in
@@ -150,22 +150,20 @@ http_interactions:
         (5.2.6) lib/rails/rack/logger.rb:26:in `call''"},{"id":45,"trace":"actionpack
         (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":46,"trace":"actionpack
         (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":47,"trace":"rack
-        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":48,"trace":"activesupport
-        (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"id":49,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in
-        `call''"},{"id":50,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in
-        `call''"},{"id":51,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":52,"trace":"railties
-        (5.2.6) lib/rails/engine.rb:524:in `call''"},{"id":53,"trace":"puma (3.12.6)
-        lib/puma/configuration.rb:227:in `call''"},{"id":54,"trace":"puma (3.12.6)
-        lib/puma/server.rb:706:in `handle_request''"},{"id":55,"trace":"puma (3.12.6)
-        lib/puma/server.rb:476:in `process_client''"},{"id":56,"trace":"puma (3.12.6)
-        lib/puma/server.rb:334:in `block in run''"},{"id":57,"trace":"puma (3.12.6)
-        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"lob
-        (5.4.6) lib/lob/resources/resource_base.rb:112:in `handle_api_error''"},{"id":1,"trace":"lob
-        (5.4.6) lib/lob/resources/resource_base.rb:102:in `rescue in submit''"},{"id":2,"trace":"lob
-        (5.4.6) lib/lob/resources/resource_base.rb:90:in `submit''"},{"id":3,"trace":"lob
-        (5.4.6) lib/lob/resources/us_verifications.rb:22:in `verify''"},{"id":4,"trace":"app/facades/lob_facade.rb:5:in
-        `verify_address''"},{"id":5,"trace":"app/controllers/api/v1/users_controller.rb:24:in
+        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":48,"trace":"actionpack (5.2.6)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":49,"trace":"actionpack
+        (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call''"},{"id":50,"trace":"rack
+        (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":51,"trace":"railties (5.2.6)
+        lib/rails/engine.rb:524:in `call''"},{"id":52,"trace":"puma (3.12.6) lib/puma/configuration.rb:227:in
+        `call''"},{"id":53,"trace":"puma (3.12.6) lib/puma/server.rb:706:in `handle_request''"},{"id":54,"trace":"puma
+        (3.12.6) lib/puma/server.rb:476:in `process_client''"},{"id":55,"trace":"puma
+        (3.12.6) lib/puma/server.rb:334:in `block in run''"},{"id":56,"trace":"puma
+        (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full
+        Trace":[{"id":0,"trace":"lob (5.4.6) lib/lob/resources/resource_base.rb:112:in
+        `handle_api_error''"},{"id":1,"trace":"lob (5.4.6) lib/lob/resources/resource_base.rb:102:in
+        `rescue in submit''"},{"id":2,"trace":"lob (5.4.6) lib/lob/resources/resource_base.rb:90:in
+        `submit''"},{"id":3,"trace":"lob (5.4.6) lib/lob/resources/us_verifications.rb:22:in
+        `verify''"},{"id":4,"trace":"app/facades/lob_facade.rb:6:in `verify_address''"},{"id":5,"trace":"app/controllers/api/v1/users_controller.rb:27:in
         `update''"},{"id":6,"trace":"actionpack (5.2.6) lib/action_controller/metal/basic_implicit_render.rb:6:in
         `send_action''"},{"id":7,"trace":"actionpack (5.2.6) lib/abstract_controller/base.rb:194:in
         `process_action''"},{"id":8,"trace":"actionpack (5.2.6) lib/action_controller/metal/rendering.rb:30:in
@@ -207,21 +205,19 @@ http_interactions:
         (5.2.6) lib/rails/rack/logger.rb:26:in `call''"},{"id":45,"trace":"actionpack
         (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":46,"trace":"actionpack
         (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":47,"trace":"rack
-        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":48,"trace":"activesupport
-        (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"id":49,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in
-        `call''"},{"id":50,"trace":"actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in
-        `call''"},{"id":51,"trace":"rack (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":52,"trace":"railties
-        (5.2.6) lib/rails/engine.rb:524:in `call''"},{"id":53,"trace":"puma (3.12.6)
-        lib/puma/configuration.rb:227:in `call''"},{"id":54,"trace":"puma (3.12.6)
-        lib/puma/server.rb:706:in `handle_request''"},{"id":55,"trace":"puma (3.12.6)
-        lib/puma/server.rb:476:in `process_client''"},{"id":56,"trace":"puma (3.12.6)
-        lib/puma/server.rb:334:in `block in run''"},{"id":57,"trace":"puma (3.12.6)
-        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:54 GMT
+        (2.2.3) lib/rack/runtime.rb:22:in `call''"},{"id":48,"trace":"actionpack (5.2.6)
+        lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":49,"trace":"actionpack
+        (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call''"},{"id":50,"trace":"rack
+        (2.2.3) lib/rack/sendfile.rb:110:in `call''"},{"id":51,"trace":"railties (5.2.6)
+        lib/rails/engine.rb:524:in `call''"},{"id":52,"trace":"puma (3.12.6) lib/puma/configuration.rb:227:in
+        `call''"},{"id":53,"trace":"puma (3.12.6) lib/puma/server.rb:706:in `handle_request''"},{"id":54,"trace":"puma
+        (3.12.6) lib/puma/server.rb:476:in `process_client''"},{"id":55,"trace":"puma
+        (3.12.6) lib/puma/server.rb:334:in `block in run''"},{"id":56,"trace":"puma
+        (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
+  recorded_at: Sat, 21 May 2022 16:53:23 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/216
+    uri: http://localhost:5000/api/v1/users/180
     body:
       encoding: US-ASCII
       string: ''
@@ -240,17 +236,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"0d11ca9eacb280000db7fca66b1875a4"
+      - W/"eec24bb73a988df1d563bcd71f084ea6"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8b903d20-79ec-44da-8137-5ada082acf6a
+      - f7f90a7f-4d90-4020-aa62-d4c25f311073
       X-Runtime:
-      - '0.002070'
+      - '0.002842'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"216","type":"user","attributes":{"email":"shanda@quitzon.net","name":"Alex","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:54 GMT
+      string: '{"data":{"id":"180","type":"user","attributes":{"email":"cori.bradtke@kassulke.net","name":"Alex","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 16:53:23 GMT
 recorded_with: VCR 6.1.0

@@ -1,44 +1,8 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://localhost:5000/api/v1/users
-    body:
-      encoding: UTF-8
-      string: '{"name":"Bob","email":"sherley@orn.name","password":"password","password_confirmation":"password"}'
-    headers:
-      User-Agent:
-      - Faraday v1.9.3
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"2658f8e36392c0f6963a8cb2a8e35884"
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 6d79d222-8e9d-4bc2-ab06-361aac2da541
-      X-Runtime:
-      - '0.244573'
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"219","type":"user","attributes":{"email":"sherley@orn.name","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:55 GMT
-- request:
     method: get
-    uri: http://localhost:5000/api/v1/users/219
+    uri: http://localhost:5000/api/v1/users/183
     body:
       encoding: US-ASCII
       string: ''
@@ -57,25 +21,95 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"2658f8e36392c0f6963a8cb2a8e35884"
+      - W/"b57bac83cc4b4794058ee230db5946fe"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b6cd71a3-7f37-4422-9789-545f0cc446ca
+      - 994e2daa-4ac7-480f-b313-c71dddf66a81
       X-Runtime:
-      - '0.001243'
+      - '0.005982'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"219","type":"user","attributes":{"email":"sherley@orn.name","name":"Bob","google_id":null,"address_line1":null,"address_line2":null,"address_city":null,"address_state":null,"address_zip":null}}}'
-  recorded_at: Wed, 23 Mar 2022 21:31:55 GMT
+      string: '{"data":{"id":"183","type":"user","attributes":{"email":"inell@rau.io","name":"Bob","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 16:53:24 GMT
 - request:
     method: post
     uri: http://localhost:5000/api/v1/users
     body:
       encoding: UTF-8
-      string: '{"name":"Bob","email":"sherley@orn.name","password":"password","password_confirmation":"password"}'
+      string: '{"name":"Bob","email":"maynard_gutkowski@cartwright.info","password":"password","password_confirmation":"password"}'
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d6b1428cac6368d38aa6a19bbff241ce"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8def7f23-3752-4f80-a6ed-bfcb8ea4dbc2
+      X-Runtime:
+      - '0.277791'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"203","type":"user","attributes":{"email":"maynard_gutkowski@cartwright.info","name":"Bob","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 17:09:00 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/203
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.9.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d6b1428cac6368d38aa6a19bbff241ce"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8d011006-87b7-49fe-b4e1-1e0665a911e4
+      X-Runtime:
+      - '0.006006'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"203","type":"user","attributes":{"email":"maynard_gutkowski@cartwright.info","name":"Bob","google_id":null,"address":null}}}'
+  recorded_at: Sat, 21 May 2022 17:09:00 GMT
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/users
+    body:
+      encoding: UTF-8
+      string: '{"name":"Bob","email":"maynard_gutkowski@cartwright.info","password":"password","password_confirmation":"password"}'
     headers:
       User-Agent:
       - Faraday v1.9.3
@@ -95,13 +129,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 37919dea-4ed2-4423-89f3-027f6b486d14
+      - db37ddea-9fbd-4941-b581-c70bd9f3ed10
       X-Runtime:
-      - '0.001152'
+      - '0.001945'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"error":"Email has already been registered"}'
-  recorded_at: Wed, 23 Mar 2022 21:31:55 GMT
+  recorded_at: Sat, 21 May 2022 17:09:00 GMT
 recorded_with: VCR 6.1.0

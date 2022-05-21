@@ -28,6 +28,7 @@ class UsersController < ApplicationController
 
     if response.status == 200 && address_params.except(:address_line2).values.all? { |address_param| address_param.present?}
       Rails.cache.delete_matched("representatives-#{session[:user_id]}")
+
       redirect_to '/dashboard'
     else
       flash[:error] = 'Address invalid. Please make sure all fields are filled in and correct.'
@@ -44,9 +45,10 @@ class UsersController < ApplicationController
   def show
     if session[:user_id] && params[:sent]
       flash[:notice] = 'Your letter has been sent!'
-      @dashboard_facade = UserDashboardFacade.new(session[:user_id])
+      @user = DashboardFacade.new(session[:user_id]).user
     elsif session[:user_id]
-      @dashboard_facade = UserDashboardFacade.new(session[:user_id])
+      dashboard = DashboardFacade.new(session[:user_id])
+      @user = dashboard.user
     else
       flash[:error] = 'You must be logged in to visit this page'
       redirect_to root_path

@@ -40,14 +40,14 @@ describe 'user edit' do
       fill_in :address_city, with: 'Reston'
       fill_in :address_state, with: 'VA'
       fill_in :address_zip, with: '20194'
-
+      
       click_button 'Save'
 
       expect(current_path).to eq('/dashboard')
       expect(page).to have_content('12012 Starboard Dr Apt 205 Reston, VA 20194')
     end
 
-    it 'doesnt edit the address if all parameters arent filled out' do
+    it 'does not edit the address if all parameters are not filled out' do
       visit '/edit'
 
       fill_in :address_line1, with: ''

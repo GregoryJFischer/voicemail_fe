@@ -4,6 +4,21 @@ Capybara.default_driver = :rack_test
 Capybara.javascript_driver = JS_DRIVER
 Capybara.default_max_wait_time = 2
 
+Capybara.register_driver :selenium do |app|
+
+  http_client = Selenium::WebDriver::Remote::Http::Default.new
+  http_client.timeout = 120
+
+  capabilities = Selenium::WebDriver::Remote::Capabilities.chrome( :elementScrollBehavior => 1 )
+
+  Capybara::Selenium::Driver.new(
+    app,
+    :browser => :chrome,
+    :desired_capabilities  => capabilities,
+    :http_client => http_client
+  )
+end
+
 RSpec.configure do |config|
   config.before(:each) do |example|
     Capybara.current_driver = JS_DRIVER if example.metadata[:js]

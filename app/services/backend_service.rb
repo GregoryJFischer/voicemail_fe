@@ -1,7 +1,9 @@
 class BackendService
   class << self
     def get_user(user_id)
-      fetch("users/#{user_id}")
+      response = conn.get("/api/v1/users/#{user_id}")
+
+      parse_response(response)
     end
 
     def find_or_create_user(user_params)
@@ -16,13 +18,28 @@ class BackendService
       patch("users/#{user_id}", address_params)
     end
 
-    def representatives(user_id)
-      fetch("users/#{user_id}/representatives")
+    def create_letter(url: 'letters', letter_attributes:)
+      response = post('letters', letter_attributes)
+      parse_response(response)
     end
 
-    def fetch(url)
-      parse_response(conn.get("/api/v1/#{url}"))
+    def preview_letter(url: 'letters/preview', letter_attributes:)
+      response = post(url, letter_attributes)
+      parse_response(response)
     end
+
+    def send_letter(email, url: 'letters/send')
+      response = post(url, email)
+      parse_response(response)
+    end
+
+    def representatives(user_id)
+      response = conn.get("/api/v1/users/#{user_id}/representatives")
+
+      parse_response(response)
+    end
+
+  private
 
     def post(url, json)
       conn.post do |req|
@@ -33,11 +50,11 @@ class BackendService
 
     end
 
-    def patch(url, json)
+    def patch(url, body)
       conn.patch do |req|
         req.url "/api/v1/#{url}"
         req.headers['Content-Type'] = 'application/json'
-        req.body = json.to_json
+        req.body = body.to_json
       end
     end
 
@@ -46,7 +63,7 @@ class BackendService
     end
 
     def conn
-      Faraday.new(url: (ENV['BASE_URL']).to_s)
+      Faraday.new(url: ENV['BASE_URL'])
     end
   end
 end
