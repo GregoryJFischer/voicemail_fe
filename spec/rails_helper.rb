@@ -130,3 +130,24 @@ def user_data_no_address
        :name=>"Greg",
        :address_country=> nil}}}}
 end
+def user_data_with_address
+  {data: 
+      {id: "1",
+      type: "user",
+      attributes: 
+        {email: "isabel_wuckert@damore-feil.name",
+        name: "Greg",
+        google_id: nil,
+        address: 
+          {id: 1,
+          address_line1: "12012 starboard dr",
+          address_line2: "apt 205",
+          address_city: "reston",
+          address_state: "va",
+          address_zip: "20194",
+          created_at: "2022-05-19T20:01:43.555Z",
+          updated_at: "2022-05-19T20:01:43.570Z",
+          user_id: 1,
+          name: "Greg",
+          address_country: "US"}}}}
+end

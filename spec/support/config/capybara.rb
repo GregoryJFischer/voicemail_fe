@@ -13,7 +13,7 @@ Capybara.register_driver :selenium do |app|
 
   Capybara::Selenium::Driver.new(
     app,
-    :browser => :firefox,
+    :browser => :chrome,
     :desired_capabilities  => capabilities,
     :http_client => http_client
   )

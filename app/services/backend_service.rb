@@ -67,23 +67,3 @@ class BackendService
     end
   end
 end
-
-
-# find_or_create_user
-# user (user show)
-# update_user (name)
-# destroy_user (name)
-
-# create_letter
-# send_letter
-# destroy_letter
-
-# create_preview
-
-# create_address (for user)
-# update_address
-# destroy_address
-
-# representatives
-
-# create_session
